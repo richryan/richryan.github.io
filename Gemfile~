@@ -12,7 +12,10 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.4.3"
+
+# Comment out -- see https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
+# gem "jekyll", "3.4.3"
+gem 'github-pages', group: :jekyll_plugins
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
@@ -29,5 +32,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
+
+
