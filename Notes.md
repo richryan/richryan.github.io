@@ -17,25 +17,3 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
-
-
-and
-
-
-and
-
-
-
-and
-
-You
-
-can see all
-
-of
-
-the
-different
-
-
-levels of work that coes
