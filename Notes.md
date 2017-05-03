@@ -19,6 +19,7 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 * [Choice]({{ site.url }}/pdfs/w2015_class5.pdf)
 * [Problems]({{ site.url }}/pdfs/w2015_class6.pdf)
 * Comparative statics and the [WARP police]({{ site.url }}/pdfs/w2015_class7.pdf)
+* WARP/SARP, [Slutsky]({{ site.url }}/pdfs/w2015_class8.pdf)
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
