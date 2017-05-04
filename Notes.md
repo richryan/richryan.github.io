@@ -38,6 +38,12 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 24. The Edgeworth box: Exchange and [general equilibrium]({{ site.url }}/pdfs/w2015_class24.pdf)
 25. [Exchange continued]({{ site.url }}/pdfs/w2015_class25.pdf)
 26. [Auctions]({{ site.url }}/pdfs/w2015_class26.pdf)
+27. [Externalities]({{ site.url }}/pdfs/w2015_class27.pdf)
+28. [Asymmetric information]({{ site.url }}/pdfs/w2015_class28.pdf)
+
+Yet more Edgeworth box
+* [Leontief]({{ site.url }}/pdfs/Edgeworth_box_Leontief.pdf)
+* [Quasilinear]({{ site.url }}/pdfs/Edgeworth_box_quasilinear.pdf)
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
