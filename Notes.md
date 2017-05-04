@@ -61,3 +61,4 @@ zero-coupon bond,
 4. [Valuing stocks]({{ site.url }}/pdfs/econ435/w2016_class4.pdf)
 5. Happy Labor Market Friday, Exam 1 [solutions]({{ site.url }}/pdfs/econ435/w2016_class5.pdf)
 6. Random variables, variance, standard deviation, [diversification in stock portfolios]({{ site.url }}/pdfs/econ435/w2016_class6.pdf)
+7. The volatility of a large portfolio, [risk-free saving and borrowing]({{ site.url }}/pdfs/econ435/w2016_class7.pdf)
