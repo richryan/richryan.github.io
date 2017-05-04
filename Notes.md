@@ -58,3 +58,6 @@ coupon rate,
 zero-coupon bond,
 [yield to maturity]({{ site.url }}/pdfs/econ435/w2016_class2.pdf)
 3. Bonds continued, [stocks]({{ site.url }}/pdfs/econ435/w2016_class3.pdf)
+4. [Valuing stocks]({{ site.url }}/pdfs/econ435/w2016_class4.pdf)
+5. Happy Labor Market Friday, Exam 1 [solutions]({{ site.url }}/pdfs/econ435/w2016_class5.pdf)
+6. Random variables, variance, standard deviation, [diversification in stock portfolios]({{ site.url }}/pdfs/econ435/w2016_class6.pdf)
