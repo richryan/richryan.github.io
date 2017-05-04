@@ -37,7 +37,7 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 23. Applications of game theory: [Oligopoly]({{ site.url }}/pdfs/w2015_class23.pdf)
 24. The Edgeworth box: Exchange and [general equilibrium]({{ site.url }}/pdfs/w2015_class24.pdf)
 25. [Exchange continued]({{ site.url }}/pdfs/w2015_class25.pdf)
-26. [Auctions]({{ site.url }}/pdfs/w2015_class26.pdf)
+26. More Edgeworth box and [auctions]({{ site.url }}/pdfs/w2015_class26.pdf)
 27. [Externalities]({{ site.url }}/pdfs/w2015_class27.pdf)
 28. [Asymmetric information]({{ site.url }}/pdfs/w2015_class28.pdf)
 
