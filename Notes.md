@@ -24,6 +24,10 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 10. [Endowments]({{ site.url }}/pdfs/w2015_class10.pdf)
 11. [Intertemporal choice]({{ site.url }}/pdfs/w2015_class11.pdf)
 12. Consumer's surplus, EV, [CV]({{ site.url }}/pdfs/w2015_class12.pdf)
+13. [Market demand]({{ site.url }}/pdfs/w2015_class13.pdf)
+14. A notion of [equilibrium]({{ site.url }}/pdfs/w2015_class14.pdf)
+15. Technology and [profit maximization]({{ site.url }}/pdfs/w2015_class15.pdf)
+16. [Cost minimization]({{ site.url }}/pdfs/w2015_class16.pdf)
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
