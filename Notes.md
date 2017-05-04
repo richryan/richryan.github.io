@@ -12,14 +12,18 @@ order: 2
 ## ECON 401
 Notes for ECON 401, Intermediate Microeconomic Theory
 
-* Introduction, review of [mathematics]({{ site.url }}/pdfs/w2015_class1.pdf)
-* Budget sets, [preferences]({{ site.url }}/pdfs/w2015_class2.pdf)
-* Where we are: constraints, preferences, [utility functions]({{ site.url }}/pdfs/w2015_class3.pdf)
-* [Utility functions]({{ site.url }}/pdfs/w2015_class4.pdf)
-* [Choice]({{ site.url }}/pdfs/w2015_class5.pdf)
-* [Problems]({{ site.url }}/pdfs/w2015_class6.pdf)
-* Comparative statics and the [WARP police]({{ site.url }}/pdfs/w2015_class7.pdf)
-* WARP/SARP, [Slutsky]({{ site.url }}/pdfs/w2015_class8.pdf)
+1. Introduction, review of [mathematics]({{ site.url }}/pdfs/w2015_class1.pdf)
+2. Budget sets, [preferences]({{ site.url }}/pdfs/w2015_class2.pdf)
+3. Where we are: constraints, preferences, [utility functions]({{ site.url }}/pdfs/w2015_class3.pdf)
+4. [Utility functions]({{ site.url }}/pdfs/w2015_class4.pdf)
+5. [Choice]({{ site.url }}/pdfs/w2015_class5.pdf)
+6. [Problems]({{ site.url }}/pdfs/w2015_class6.pdf)
+7. Comparative statics and the [WARP police]({{ site.url }}/pdfs/w2015_class7.pdf)
+8. WARP/SARP, [Slutsky]({{ site.url }}/pdfs/w2015_class8.pdf)
+9. The [Slutsky equation]({{ site.url }}/pdfs/w2015_class9.pdf)
+10. [Endowments]({{ site.url }}/pdfs/w2015_class10.pdf)
+11. [Intertemporal choice]({{ site.url }}/pdfs/w2015_class11.pdf)
+12. Consumer's surplus, EV, [CV]({{ site.url }}/pdfs/w2015_class12.pdf)
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
