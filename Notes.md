@@ -33,6 +33,9 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 19. Industry supply and brief review for the [exam]({{ site.url }}/pdfs/w2015_class19.pdf)
 20. [Monopoly]({{ site.url }}/pdfs/w2015_class20.pdf)
 21. Getting to know the customer: [Monopoly behavior]({{ site.url }}/pdfs/w2015_class21.pdf)
+22. A too brief introduction to [game theory]({{ site.url }}/pdfs/w2015_class22.pdf)
+23. Applications of game theory: [Oligopoly]({{ site.url }}/pdfs/w2015_class23.pdf)
+24. The Edgeworth box: Exchange and [general equilibrium]({{ site.url }}/pdfs/w2015_class24.pdf)
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
