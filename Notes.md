@@ -47,3 +47,5 @@ Yet more Edgeworth box
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
+
+1. What an interest rate is, the value of money over time, annuities, perpetuities, [bonds]({{ site.url }}/pdfs/econ435/w2016_class1.pdf)
