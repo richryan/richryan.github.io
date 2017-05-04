@@ -28,6 +28,11 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 14. A notion of [equilibrium]({{ site.url }}/pdfs/w2015_class14.pdf)
 15. Technology and [profit maximization]({{ site.url }}/pdfs/w2015_class15.pdf)
 16. [Cost minimization]({{ site.url }}/pdfs/w2015_class16.pdf)
+17. [Cost curves]({{ site.url }}/pdfs/w2015_class17.pdf)
+18. [Firm supply]({{ site.url }}/pdfs/w2015_class18.pdf)
+19. Industry supply and brief review for the [exam]({{ site.url }}/pdfs/w2015_class19.pdf)
+20. [Monopoly]({{ site.url }}/pdfs/w2015_class20.pdf)
+21. Getting to know the customer: [Monopoly behavior]({{ site.url }}/pdfs/w2015_class21.pdf)
 
 ## ECON 435
 Notes for ECON 435, Financial Economics
