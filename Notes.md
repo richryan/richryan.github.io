@@ -49,3 +49,12 @@ Yet more Edgeworth box
 Notes for ECON 435, Financial Economics
 
 1. What an interest rate is, the value of money over time, annuities, perpetuities, [bonds]({{ site.url }}/pdfs/econ435/w2016_class1.pdf)
+2. Present value,
+future value,
+internal rate of return,
+effective annual rate,
+annual percentage rate,
+coupon rate,
+zero-coupon bond,
+[yield to maturity]({{ site.url }}/pdfs/econ435/w2016_class2.pdf)
+3. Bonds continued, [stocks]({{ site.url }}/pdfs/econ435/w2016_class3.pdf)
