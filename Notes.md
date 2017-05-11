@@ -70,3 +70,5 @@ zero-coupon bond,
 call option, put option, option writer, strike or exercise price, American option, European option, long and short positions,
 option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 [deep in-the-money or out-of-the-money]({{ site.url }}/pdfs/econ435/w2016_class12.pdf)
+13. Put--call parity, \(S + P = \text{PV}(K) + C\\), [\\(\text{PV}(K) = K - D(K)\\)]({{ site.url }}/pdfs/econ435/w2016_class13.pdf)
+14. A call option graphically, more put-call parity, [thanks]({{ site.url }}/pdfs/econ435/w2016_class14.pdf)
