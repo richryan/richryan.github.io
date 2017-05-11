@@ -62,3 +62,11 @@ zero-coupon bond,
 5. Happy Labor Market Friday, Exam 1 [solutions]({{ site.url }}/pdfs/econ435/w2016_class5.pdf)
 6. Random variables, variance, standard deviation, [diversification in stock portfolios]({{ site.url }}/pdfs/econ435/w2016_class6.pdf)
 7. The volatility of a large portfolio, [risk-free saving and borrowing]({{ site.url }}/pdfs/econ435/w2016_class7.pdf)
+8. The efficient portfolio, [CAPM]({{ site.url }}/pdfs/econ435/w2016_class8.pdf)
+9. Identifying a stock's \\(\alpha\\), [Fama--French--Carhart]({{ site.url }}/pdfs/econ435/w2016_class9.pdf)
+10. Capital structure, unlevered equity, levered equity, [Modigliani--Miler]({{ site.url }}/pdfs/econ435/w2016_class10.pdf)
+11. MM continued, Vandelay Industries, [interest tax shield]({{ site.url }}/pdfs/econ435/w2016_class11.pdf)
+12. Happy Labor Market Friday, \\(V^{\text{L}} = V^{\text{U}} + \text{PV}(\text{interest tax shield})\\), financial options,
+call option, put option, option writer, strike or exercise price, American option, European option, long and short positions,
+option premium, open interest, at-the-money, in-the-money, out-of-the-money,
+[deep in-the-money or out-of-the-money]({{ site.url }}/pdfs/econ435/w2016_class12.pdf)
