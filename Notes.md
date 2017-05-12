@@ -77,13 +77,13 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 
 ### Problem sets
 
-1. [Problem set 1](({{ site.url }}/pdfs/econ435/solutions_pset1.pdf))
-2. [Problem set 2](({{ site.url }}/pdfs/econ435/solutions_pset2.pdf))
-3. [Problem set 3](({{ site.url }}/pdfs/econ435/solutions_pset3.pdf))
-4. [Problem set 4](({{ site.url }}/pdfs/econ435/solutions_pset4.pdf))
-5. [Problem set 5](({{ site.url }}/pdfs/econ435/solutions_pset5.pdf))
-6. [Problem set 6](({{ site.url }}/pdfs/econ435/solutions_pset6.pdf))
-7. [Problem set 7](({{ site.url }}/pdfs/econ435/solutions_pset7.pdf))
-8. [Problem set 8](({{ site.url }}/pdfs/econ435/solutions_pset8.pdf))
-9. [Problem set 9](({{ site.url }}/pdfs/econ435/solutions_pset9.pdf))
-10. [Problem set 10](({{ site.url }}/pdfs/econ435/solutions_pset10.pdf))
+1. [Problem set 1]({{ site.url }}/pdfs/econ435/solutions_pset1.pdf)
+2. [Problem set 2]({{ site.url }}/pdfs/econ435/solutions_pset2.pdf)
+3. [Problem set 3]({{ site.url }}/pdfs/econ435/solutions_pset3.pdf)
+4. [Problem set 4]({{ site.url }}/pdfs/econ435/solutions_pset4.pdf)
+5. [Problem set 5]({{ site.url }}/pdfs/econ435/solutions_pset5.pdf)
+6. [Problem set 6]({{ site.url }}/pdfs/econ435/solutions_pset6.pdf)
+7. [Problem set 7]({{ site.url }}/pdfs/econ435/solutions_pset7.pdf)
+8. [Problem set 8]({{ site.url }}/pdfs/econ435/solutions_pset8.pdf)
+9. [Problem set 9]({{ site.url }}/pdfs/econ435/solutions_pset9.pdf)
+10. [Problem set 10]({{ site.url }}/pdfs/econ435/solutions_pset10.pdf)
