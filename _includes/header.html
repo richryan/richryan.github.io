@@ -1,7 +1,8 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper">
-      <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <!-- Commented out by rwr: remove name from header -->
+      <!-- <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
 
   <nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -14,6 +15,9 @@
             </svg>
           </span>
         </label>
+        <!-- Added by rwr -->
+        <!-- Creates a "home button" -->
+        <a class="page-link" href="{{ site.baseurl }}/">Home</a>
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for page in sorted_pages %}
           <!-- Order navigation buttons by order that is assigned in the markdown files -->
