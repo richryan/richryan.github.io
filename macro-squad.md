@@ -2,11 +2,11 @@
 layout: default
 title: MacroSquad
 permalink: /macrosquad/
-order: 3
+order: 4
 ---
 
-## Introduction
+# Introduction
 
-## Notes
+# Notes
 
-## Summer presentation schedule
+# Summer presentation schedule

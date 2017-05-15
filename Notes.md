@@ -2,7 +2,7 @@
 layout: default
 title: Notes
 permalink: /notes/
-order: 2
+order: 3
 ---
 <!-- You can add formatting to the TOC -->
 <!-- See: http://stackoverflow.com/questions/9602936/how-to-create-a-table-of-contents-to-jekyll-blog-post -->

@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-order: 1
+order: 2
 ---
 
 This site was built with [Jekyll](https://jekyllrb.com/) and is hosted by [GitHub Pages](https://pages.github.com/).
