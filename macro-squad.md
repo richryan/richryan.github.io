@@ -9,4 +9,4 @@ order: 4
 
 # Notes
 
-# Summer presentation schedule
+# Summer presentation schedule, including topics
