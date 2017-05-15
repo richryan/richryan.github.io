@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: MacroSquad
 permalink: /macrosquad/
 order: 3
@@ -10,4 +10,3 @@ order: 3
 ## Notes
 
 ## Summer presentation schedule
-

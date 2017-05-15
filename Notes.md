@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Notes
 permalink: /notes/
 order: 2
