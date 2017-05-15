@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Notes
 permalink: /notes/
 order: 2
