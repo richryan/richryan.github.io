@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html>
+  <!-- <head> -->
+  <!--   <title>{{ page.title }}</title> -->
+  <!--   <\!-- link to main stylesheet -\-> -->
+  <!--   <link rel="stylesheet" type="text/css" href="/css/main.css"> -->
+  <!-- </head> -->
 
   {% include head.html %}
-
+  
   <body>
+    <!-- <nav> -->
+    <!--   <ul> -->
+    <!-- 	<li><a href="/">Home</a></li> -->
+    <!-- 	<li><a href="/about">About</a></li> -->
+    <!-- 	<li><a href="/cv">CV</a></li> -->
+    <!-- 	<li><a href="/blog">Blog</a></li> -->
+    <!--   </ul> -->
+    <!-- </nav> -->
 
     {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+    
+    <div class="container">
+      
+      {{ content }}
+      
+    </div><!-- /.container -->
 
     {% include footer.html %}
-
+    
   </body>
-
 </html>

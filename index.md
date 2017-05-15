@@ -1,6 +1,23 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-layout: home
+layout: default
+title: Home
+order: 1
 ---
+
+<ul class="posts">
+  {% for post in site.posts %}
+  <li>
+    <br>
+    <h3>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h3>
+    <span class="post-meta">{{ post.date | date: "%b %-d, %Y %l:%m %p" }}</span>
+    <hr id="line">
+    <div class="content">
+      {{ post.excerpt }}
+    </div>
+    <br>
+  </li>
+  {% endfor %}
+</ul>
+
