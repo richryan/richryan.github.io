@@ -10,7 +10,10 @@ order: 3
 {:toc}
 
 ## ECON 401
-Notes for ECON 401, Intermediate Microeconomic Theory
+
+### Winter 2015
+
+Section notes for ECON 401, Intermediate Microeconomic Theory, with Dr. [Chris Proulx](https://lsa.umich.edu/econ/people/faculty/rabbit.html)
 
 1. Introduction, review of [mathematics]({{ site.url }}/pdfs/econ401_proulx/w2015_class1.pdf)
 2. Budget sets, [preferences]({{ site.url }}/pdfs/econ401_proulx/w2015_class2.pdf)
@@ -44,6 +47,30 @@ Notes for ECON 401, Intermediate Microeconomic Theory
 Yet more Edgeworth box
 * [Leontief]({{ site.url }}/pdfs/econ401_proulx/Edgeworth_box_Leontief.pdf)
 * [Quasilinear]({{ site.url }}/pdfs/econ401_proulx/Edgeworth_box_quasilinear.pdf)
+
+### Fall 2014
+
+Section notes for ECON 401, Intermediate Microeconomic Theory, with Professor
+[Tilman B&ouml;rgers](http://www-personal.umich.edu/~tborgers/)
+
+1. Happy Labor Market Friday, valuing time, the rationality hypothesis, the transitive property,
+[choices and consistent rankings]({{ site.url }}/pdfs/econ401-tilman/f2014_class2.pdf)
+2. CES utility functions, convex preferences,
+[depicting indifference curves]({{ site.url }}/pdfs/econ401-tilman/f2014_class3.pdf)
+3. Checking rationality continued, demand functions, Cobb--Douglas preferences,
+monotonic transformations, more [CES preferences]({{ site.url }}/pdfs/econ401-tilman/f2014_class4.pdf)
+4. Income and substitution effects, in pictures,
+numerically calculating the income and substitution effects,
+[the sign of the substitution effect]({{ site.url }}/pdfs/econ401-tilman/f2014_class5.pdf)
+5. Marshalian demand, elasticities, Hicksian (compensated) demand,
+[verifying that the Slutsky equation holds]({{ site.url }}/pdfs/econ401-tilman/f2014_class6v2.pdf)
+6. Comparative statics: prices, complements and substitutes,
+perfect complements, perfect complements,  
+slightly imperfect substitutes,
+[slightly imperfect complements]({{ site.url }}/pdfs/econ401-tilman/f2014_class7.pdf)
+7. Hicksian demand with perfect substitutes,
+labor supply, labor supply with perfect substitutes,
+[labor-supply elasticity]({{ site.url }}/pdfs/econ401-tilman/f2014_class8.pdf)
 
 ## ECON 435
 Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
