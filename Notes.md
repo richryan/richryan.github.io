@@ -71,6 +71,18 @@ slightly imperfect substitutes,
 7. Hicksian demand with perfect substitutes,
 labor supply, labor supply with perfect substitutes,
 [labor-supply elasticity]({{ site.url }}/pdfs/econ401-tilman/f2014_class8.pdf)
+8. Firms' profit maximization, isoquants, cost minimization,
+cost minimization with Cobb--Douglas technology,
+[conditional factor demand functions]({{ site.url }}/pdfs/econ401-tilman/f2014_class10.pdf)
+9. Cost functions and returns to scale, \\(p \geq \min \text{AC}(q) \\),
+[returns to scale and Cobb--Douglas]({{ site.url }}/pdfs/econ401-tilman/f2014_class11.pdf)
+10. Exam review, quadratic marginal cost, [circle isoquants]({{ site.url }}/pdfs/econ401-tilman/f2014_class12.pdf)
+11. Equilibrium supply and demand, taxes, it doesn't matter who pays the tax,
+taxation with linear demand and supply,
+[nonlinear demand and elasticities]({{ site.url }}/pdfs/econ401-tilman/f2014_class13.pdf):
+\\[ \frac{d p}{d \tau} = \frac{\eta}{\eta + \varepsilon}\\]
+12. Equilibrium in several interacting markets,
+[partial equilibrium]({{ site.url }}/pdfs/econ401-tilman/f2014_class14.pdf)
 
 ## ECON 435
 Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
