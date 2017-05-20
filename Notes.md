@@ -65,8 +65,7 @@ numerically calculating the income and substitution effects,
 5. Marshalian demand, elasticities, Hicksian (compensated) demand,
 [verifying that the Slutsky equation holds]({{ site.url }}/pdfs/econ401-tilman/f2014_class6v2.pdf)
 6. Comparative statics: prices, complements and substitutes,
-perfect complements, perfect complements,  
-slightly imperfect substitutes,
+perfect complements, perfect complements, slightly imperfect substitutes,
 [slightly imperfect complements]({{ site.url }}/pdfs/econ401-tilman/f2014_class7.pdf)
 7. Hicksian demand with perfect substitutes,
 labor supply, labor supply with perfect substitutes,
@@ -95,6 +94,9 @@ equivalent and compensating variation with perfect complements and
 [linear utility]({{ site.url }}/pdfs/econ401-tilman/f2014_class17.pdf)
 16. Tax incidence analysis: deadweight loss, Professor B&ouml;rgers milk farm,
 Arrow's Impossibility theorem, the [Condorcet cycle]({{ site.url }}/pdfs/econ401-tilman/f2014_class19.pdf)
+17. Monopoly, the markup:
+\\[\frac{P(Q)}{\text{MC}(Q)} = \frac{1}{1- 1/ |\varepsilon|}, \\]
+[first-degree price discrimination]({{ site.url }}/pdfs/econ401-tilman/f2014_class20.pdf)
 
 ## ECON 435
 Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
