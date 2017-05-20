@@ -83,6 +83,18 @@ taxation with linear demand and supply,
 \\[ \frac{d p}{d \tau} = \frac{\eta}{\eta + \varepsilon}\\]
 12. Equilibrium in several interacting markets,
 [partial equilibrium]({{ site.url }}/pdfs/econ401-tilman/f2014_class14.pdf)
+13. Equilibrium in several markets continued,
+[short- vs long-run cost]({{ site.url }}/pdfs/econ401-tilman/f2014_class15.pdf)
+14. The *change* in consumer surplus, the slope of the demand curve,
+compensating variation, equivalent variation, for normal goods:
+\\[ \text{EV} < \text{CS loss} < \text{CV}, \\]
+[for quasilinear utility: EV = CV]({{ site.url }}/pdfs/econ401-tilman/f2014_class16.pdf)
+15. Markets and efficiency; EV = old prices, new utility; CV = new prices, old utility;
+with transfers, all agents prefer equilibrium to all other allocations;
+equivalent and compensating variation with perfect complements and
+[linear utility]({{ site.url }}/pdfs/econ401-tilman/f2014_class17.pdf)
+16. Tax incidence analysis: deadweight loss, Professor B&ouml;rgers milk farm,
+Arrow's Impossibility theorem, the [Condorcet cycle]({{ site.url }}/pdfs/econ401-tilman/f2014_class19.pdf)
 
 ## ECON 435
 Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
