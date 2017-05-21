@@ -92,11 +92,24 @@ compensating variation, equivalent variation, for normal goods:
 with transfers, all agents prefer equilibrium to all other allocations;
 equivalent and compensating variation with perfect complements and
 [linear utility]({{ site.url }}/pdfs/econ401-tilman/f2014_class17.pdf)
-16. Tax incidence analysis: deadweight loss, Professor B&ouml;rgers milk farm,
+16. Tax incidence analysis: deadweight loss, Professor B&ouml;rgers's milk farm,
 Arrow's Impossibility theorem, the [Condorcet cycle]({{ site.url }}/pdfs/econ401-tilman/f2014_class19.pdf)
 17. Monopoly, the markup:
 \\[\frac{P(Q)}{\text{MC}(Q)} = \frac{1}{1- 1/ |\varepsilon|}, \\]
 [first-degree price discrimination]({{ site.url }}/pdfs/econ401-tilman/f2014_class20.pdf)
+18. Price discrimination: first-, second-, and third-degree price discrimination,
+sale in different markets,
+\\[p_1 > p_2 \iff |\varepsilon_1| < |\varepsilon_2| \\],
+[Professor B&ouml;rgers's cat farm]({{ site.url }}/pdfs/econ401-tilman/f2014_class21.pdf)
+19. A very brief introduction to game theory, Nash equilibrium, chicken, modified picnic,
+modified traffic, [beauty contest]({{ site.url }}/pdfs/econ401-tilman/f2014_class22.pdf)
+20. Game theory continued: Bertrand and Cournot, Braess's paradox,
+[Bertrand with differentiated products]({{ site.url }}/pdfs/econ401-tilman/f2014_class23.pdf)
+21. Risk and uncertainty, lotteries, St. Petersburg paradox, concavity and risk aversion,
+[von Neumann Morgenstern utility function]({{ site.url }}/pdfs/econ401-tilman/f2014_class24.pdf)
+22. Externalities, a negative externality in consumption,
+[strategic interaction and externalities]({{ site.url }}/pdfs/econ401-tilman/f2014_class25.pdf)
+23. The picnic example continued, moral hazard, [thanks]({{ site.url }}/pdfs/econ401-tilman/f2014_class24.pdf)
 
 ## ECON 435
 Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
