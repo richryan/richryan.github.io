@@ -99,7 +99,7 @@ Arrow's Impossibility theorem, the [Condorcet cycle]({{ site.url }}/pdfs/econ401
 [first-degree price discrimination]({{ site.url }}/pdfs/econ401-tilman/f2014_class20.pdf)
 18. Price discrimination: first-, second-, and third-degree price discrimination,
 sale in different markets,
-\\[p_1 > p_2 \iff |\varepsilon_1| < |\varepsilon_2| \\],
+\\[p_1 > p_2 \iff |\varepsilon_1| < |\varepsilon_2|, \\]
 [Professor B&ouml;rgers's cat farm]({{ site.url }}/pdfs/econ401-tilman/f2014_class21.pdf)
 19. A very brief introduction to game theory, Nash equilibrium, chicken, modified picnic,
 modified traffic, [beauty contest]({{ site.url }}/pdfs/econ401-tilman/f2014_class22.pdf)
