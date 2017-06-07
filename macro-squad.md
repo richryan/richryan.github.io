@@ -36,3 +36,5 @@ $(document).ready(function() {
 <div id="calendar"></div>
 
 # Notes
+
+Coming soon.
