@@ -37,4 +37,4 @@ $(document).ready(function() {
 
 # Notes
 
-Coming soon.
+Coming soon...
