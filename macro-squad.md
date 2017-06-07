@@ -5,7 +5,10 @@ permalink: /macrosquad/
 order: 4
 ---
 
-# Introduction
+* TOC
+{:toc}
+
+# Schedule
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   
 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
@@ -33,5 +36,3 @@ $(document).ready(function() {
 <div id="calendar"></div>
 
 # Notes
-
-# Summer presentation schedule, including topics
