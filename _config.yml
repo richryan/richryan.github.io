@@ -1,3 +1,10 @@
 name: Rich
 markdown: kramdown
 github_username: richryan
+
+
+collections:
+  events:
+    output: true
+    permalink: /events/:path/
+    title: Events

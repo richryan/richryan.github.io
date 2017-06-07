@@ -1,11 +1,9 @@
 ---
-layout: default
-title: MacroSquad
-permalink: /macrosquad/
-order: 4
+layout: page
+title: Event Calendar
+permalink: /calendar/
+order: 5
 ---
-
-# Introduction
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   
 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
@@ -31,7 +29,3 @@ $(document).ready(function() {
 {% endfor %} -->
 
 <div id="calendar"></div>
-
-# Notes
-
-# Summer presentation schedule, including topics
