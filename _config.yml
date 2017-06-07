@@ -2,6 +2,8 @@ name: Rich
 markdown: kramdown
 github_username: richryan
 
+gems:
+  - jekyll-feed
 
 collections:
   events:
