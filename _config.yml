@@ -1,7 +1,8 @@
 name: Rich
 markdown: kramdown
 github_username: richryan
-baseurl:
+baseurl: ""
+url: ""
 
 # gems:
 #   - jekyll-feed
@@ -12,6 +13,6 @@ baseurl:
 
 collections:
   events:
-    # output: true
+    output: true
     permalink: /events/:path/
     title: Events
