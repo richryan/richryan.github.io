@@ -1,6 +1,7 @@
 name: Rich
 markdown: kramdown
 github_username: richryan
+baseurl: 
 
 gems:
   - jekyll-feed
