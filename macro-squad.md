@@ -10,11 +10,6 @@ order: 4
 
 # Schedule
 
-<!-- <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
-<script src='lib/jquery.min.js'></script>
-<script src='lib/moment.min.js'></script>
-<script src='fullcalendar/fullcalendar.js'></script> -->
-
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"   
 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
 <script type="text/javascript" src="/scripts/moment.min.js"></script>

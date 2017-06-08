@@ -6,7 +6,6 @@ url: ""
 
 gems:
   - jekyll-feed
-  # - github-pages
 exclude:
   - Gemfile
   - Gemfile.lock
