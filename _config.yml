@@ -1,14 +1,14 @@
 name: Rich
 markdown: kramdown
 github_username: richryan
-baseurl: 
+baseurl:
 
-gems:
-  - jekyll-feed
-  # - github-pages
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# gems:
+#   - jekyll-feed
+#   # - github-pages
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
 
 collections:
   events:
