@@ -12,6 +12,6 @@ baseurl:
 
 collections:
   events:
-    output: true
+    # output: true
     permalink: /events/:path/
     title: Events
