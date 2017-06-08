@@ -4,12 +4,12 @@ github_username: richryan
 baseurl: ""
 url: ""
 
-# gems:
-#   - jekyll-feed
-#   # - github-pages
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
+gems:
+  - jekyll-feed
+  # - github-pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
 
 collections:
   events:
