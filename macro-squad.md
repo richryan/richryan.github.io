@@ -5,6 +5,8 @@ permalink: /macrosquad/
 order: 4
 ---
 
+Schedule and updates for MacroSquad.
+
 * TOC
 {:toc}
 
@@ -34,6 +36,27 @@ $(document).ready(function() {
 {% endfor %} -->
 
 <div id="calendar"></div>
+
+# Updates
+
+<ul class="posts">
+  {% for post in site.posts %}
+	{% if post.macrosquad_event %}
+  <li>
+    <br>
+    <h3>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h3>
+    <span class="post-meta">{{ post.date | date: "%b %-d, %Y %l:%m %p" }}</span>
+    <hr id="line">
+    <div class="content">
+      {{ post.excerpt }}
+    </div>
+    <br>
+  </li>
+	{% endif %}
+  {% endfor %}
+</ul>
 
 # Notes
 
