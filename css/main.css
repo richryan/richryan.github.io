@@ -42,14 +42,15 @@ p {
     color: #000000;
 }
 footer {
-    border-top: 1px solid #d5d5d5;
+    border-top: 1.2px solid #d5d5d5;
     font-size: .8em;
 }
 
-/* header { */
-/*     border-bottom: 1px solid #d5d5d5; */
-/*     font-size: .8em; */
-/* } */
+header {
+     border-bottom: 1.2px solid #d5d5d5;
+     /*font-size: .8em;*/
+     font-size: 1em;
+}
 
 ul.posts {
     margin: 20px auto 40px;
