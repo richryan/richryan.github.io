@@ -51,3 +51,4 @@ Here is a catalogue of the changes:
 There are probably several other additions that I forgot to catalogue.
 And don't forget that Parts 5 and 6 of the ECON 605 Leahy notes were primarily covered in ECON 607 with Professor Leahy,
 as 607 was a continuation of 605.
+Notes for the Stolyarov review are also posted [here](https://umich.box.com/s/14r5lvjjoq9wwz0d6mor8jn49v6vig5g).
