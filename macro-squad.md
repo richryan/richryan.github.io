@@ -5,7 +5,7 @@ permalink: /macrosquad/
 order: 4
 ---
 
-Schedule and updates for MacroSquad.
+Schedule and updates for MacroSquad:
 
 * TOC
 {:toc}
@@ -59,5 +59,13 @@ $(document).ready(function() {
 </ul>
 
 # Notes
+
+## Macroeconomic Theory I, ECON 605
+
+* [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
+* [ECON 605 Stolyarov review](https://umich.box.com/s/14r5lvjjoq9wwz0d6mor8jn49v6vig5g)
+* [ECON 605 Leahy notes](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y)
+
+## Macroeconomic Theory II, ECON 607
 
 Coming soon...
