@@ -4,6 +4,10 @@ github_username: richryan
 baseurl: ""
 url: ""
 
+# Add excerpt separator
+# Include this in long posts that need to be separated
+excerpt_separator: <!--more-->
+
 gems:
   - jekyll-feed
 exclude:
