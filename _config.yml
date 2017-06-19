@@ -9,7 +9,8 @@ url: ""
 excerpt_separator: <!--more-->
 
 gems:
-  - jekyll-feed
+  # - jekyll-feed
+  - jemoji
 exclude:
   - Gemfile
   - Gemfile.lock
