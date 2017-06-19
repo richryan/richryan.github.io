@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 <div id="calendar"></div>
 
-# Updates
+# Posts
 
 <ul class="posts">
   {% for post in site.posts %}
