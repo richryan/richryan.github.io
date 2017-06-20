@@ -11,4 +11,6 @@ that address the OLG question from the 2007 macro prelim.
 The economy is a special case of the economy discussed is section 8.
 The comments address the scope for rolling over government debt.
 
+I also posted the suggested answers to the 605 midterm to the 605 Canvas website in the "Section stuff" directory.
+
 <!--more-->
