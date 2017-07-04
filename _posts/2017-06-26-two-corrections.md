@@ -9,7 +9,7 @@ Two minor corrections were incorporated into the 605 notes.
 
 <!--more-->
 
-These were pointed out by Shawn---thank you.
+These were pointed out by Shawn---thank you. :clap:
 
 First, in figure H5.5 of the Stolyarov notes,
 consumption should jump up on impact and the economy should head in a northwesterly direction until the economy reaches the new stable arm at \\(t=10\\).

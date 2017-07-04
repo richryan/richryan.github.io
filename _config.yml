@@ -8,10 +8,13 @@ url: ""
 # Include this in long posts that need to be separated
 excerpt_separator: <!--more-->
 
+# Allow posts in the future
+future: true
+
 gems:
   # - jekyll-feed
   - jemoji
-  - json
+  # - json
 exclude:
   - Gemfile
   - Gemfile.lock
