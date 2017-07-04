@@ -68,4 +68,5 @@ $(document).ready(function() {
 
 ## Macroeconomic Theory II, ECON 607
 
-Coming soon...
+* [ECON 607 Leahy notes](https://umich.box.com/s/0tvft1t167we2xsn2xp4uacetoy5gcyw)
+* [ECON 607 Ottonello notes]()
