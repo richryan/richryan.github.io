@@ -52,7 +52,7 @@ $$
 \end{align*}
 $$
 
-where \\( L^{-1} x_{t} = x_{t+1} \\).
+where \\( L^{-1} x_{t} = x_{t+1} \\), \\( L^{-2} x_{t} = x_{t+2} \\), etc.
 In other words, you solve the difference equation forward as opposed to backward.
 
 The details are included in section 2 of the
