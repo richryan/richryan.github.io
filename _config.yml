@@ -14,6 +14,7 @@ future: true
 gems:
   # - jekyll-feed
   - jemoji
+  - jekyll-scholar
   # - json
 exclude:
   - Gemfile
@@ -24,3 +25,25 @@ collections:
     output: true
     permalink: /events/:path/
     title: Events
+
+scholar:
+  style: apa
+  locale: en
+
+  sort_by: none
+  order: ascending
+
+  # source: ./_bibliography
+  source: ./
+  bibliography: references.bib
+  bibliography_template: "{{reference}}"
+  use_raw_bibtex_entry: true
+
+  replace_strings: true
+  join_strings:    true
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"

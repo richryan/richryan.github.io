@@ -18,7 +18,7 @@ We'll try out this time and adjust accordingly.
 
 ***
 
-These notes mostly come from chapter 2 of James Hamilton's _Time Series Analysis_.
+These notes mostly come from chapter 2 of James Hamilton's _Time Series Analysis_ {% cite hamilton/1994 %}.
 They were motivated by the proposed solutions to the 2011 midterm.
 Michael alerted me to some dubious algebra there and we came up with a few notes on the inverse operator that is seemingly used in the solution.[^fn1]
 The result is a very useful framework for solving linear difference equations.
@@ -63,3 +63,9 @@ There's also an example based on, of course, Jorgenson's formula :sparkles:
 [^fn1]: Does anyone know what's going on there?
 
 [^fn2]: We also applied this technique on the last day of 605 or 607 and I remember commenting that it took the whole year to finally use the result we wrote down on day 1 of class.
+
+### Reference
+
+{% bibliography %}
+
+***
