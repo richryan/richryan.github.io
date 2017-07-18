@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes on classical monetary model"
+title:  "Notes on classical monetary models"
 date:   2017-07-18 11:07:00 -0400
 categories: update
 macrosquad_event: true
@@ -22,7 +22,7 @@ But remember: we still need to distinguish labor _supply_ from labor _demand_
 Starting from the household's budget constraint,
 which is normally ignored by appealing to Walras's law (see section 3 of the ECON 607 Leahy notes),
 we can derive the material-balance condition for the economy,
-establishing that one of the equations is redundant. 
+establishing that one of the equations is redundant.
 3. How does money grow at a constant rate?
 The notes go through the case where the government's only function is printing money that is transfered to the household through lump-sum transfers.
 4. Here's the open question: what happens when the ownership of capital is transferred to a capital-leasing firm?
