@@ -38,4 +38,4 @@ You're almost there.
 
 ***
 
-[^fn1]: I mistakenly said this was like a capital-leasing firm in an earlier version of this post. Of course not---the firm produces bananas; it does not rent bricks to banana-producing firms. This was corrected on 7/18 at 6:40 pm.
+[^fn1]: I mistakenly said this was like a capital-leasing firm in an earlier version of this post. Of course not: the firm produces bananas; it does not rent bricks to banana-producing firms. This was corrected on 7/18 at 6:40 pm :postal_horn: :memo:
