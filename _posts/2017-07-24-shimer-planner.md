@@ -51,7 +51,8 @@ $$
 \end{equation}
 $$
 
-Parameterizing utility this way means productivity has no effect on decisions because productivity enters additively into the objective function:
+Parameterizing utility this way means productivity has no effect on decisions because productivity enters additively into the objective function.
+Using properties of the \\( \log \\) function the objective can be written as
 
 $$
 \begin{align*}
