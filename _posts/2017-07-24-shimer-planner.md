@@ -162,7 +162,7 @@ $$
 
 which gives the expression for \\( \mathcal{T} \\) on p 43.
 
-# How we normally solve the problem
+# How we usually solve the problem
 The procedure in the previous section is not the procedure we've used to solve dynamic programming problems.
 Indeed, not.
 Usually we choose next period's state;
