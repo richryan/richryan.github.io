@@ -65,7 +65,7 @@ $$
 Because productivity does not affect the evolution of employment,
 productivity has no effect on the planner's choices of employment, tightness, and recruiter share.
 
-# Algebra from the lecture notes
+# Algebra behind the lecture notes
 
 The planner's problem written recursively is
 
