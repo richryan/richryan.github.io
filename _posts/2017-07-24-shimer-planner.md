@@ -186,7 +186,7 @@ $$
 Now the problem is in the familiar form.
 Seeing a problem like this on an exam, this is the approach I'd take---this is how we've solved these types of problems all year.
 
-## First-order conditions
+<!-- ## First-order conditions -->
 
 The first-order condition for \\( n^{\prime} \\) is
 
