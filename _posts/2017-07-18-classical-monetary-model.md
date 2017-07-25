@@ -24,7 +24,7 @@ which is normally ignored by appealing to Walras's law (see section 3 of the ECO
 we can derive the material-balance condition for the economy,
 establishing that one of the equations is redundant.
 3. How does money grow at a constant rate?
-The notes go through the case where the government's only function is printing money that is transfered to the household through lump-sum transfers.
+The notes go through the case where the government's only function is printing money that is transferred to the household through lump-sum transfers.
 4. Here's the open question: what happens when the ownership of capital is transferred to firms that produce the final good (using no labor)?
 This market structure adds a variation to the list in remark 3.1 of the
 [ECON 607 Ottonello notes](https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud).
