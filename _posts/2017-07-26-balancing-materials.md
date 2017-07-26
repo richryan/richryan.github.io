@@ -108,7 +108,7 @@ Putting these pieces together, an allocation must satisfy
 $$
 \begin{aligned}
 C_{t} + \frac{M_{t+1}}{P_{t}} + \frac{B_{t+1}}{(1+i_{t})P_{t}} =
-W_{t}N_{t} + \Pi^{\text{leasing}}_{t} + \frac{B_{t}}{P_{t}} + \frac{M_{t}}{P_{t}} + T_{t}.
+W_{t}N_{t} + \Pi^{\text{leasing}}_{t} + \frac{B_{t}}{P_{t}} + \frac{M_{t}}{P_{t}} + \frac{T_{t}}{P_{t}}.
 \end{aligned}$$
 
 Note that the budget constraint is in *real* terms; that is, in terms of
