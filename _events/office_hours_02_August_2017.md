@@ -1,7 +1,7 @@
 ---
 layout: event
 title:  "Office hours"
-event_date:   2017-07-31 15:00:00 -0400
+event_date:   2017-08-02 15:00:00 -0400
 start: 15:00:00
 ---
 
