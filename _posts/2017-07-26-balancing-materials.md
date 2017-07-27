@@ -95,8 +95,10 @@ this is the treasury, which is the only function of the government.[^1]
 In other words,
 
 $$
+\begin{equation}
 \label{eq:1}
 M_{t+1}-M_{t} = T_{t}.
+\end{equation}
 $$
 
 Turning to the household’s budget constraint, the household divides its
