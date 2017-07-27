@@ -73,11 +73,11 @@ household earns labor income by supplying labor to final-good firms.
 
 Let’s also suppose that the household carries around cash to purchase
 goods. At this point, we have to make a timing assumption. Let \\( M_{t} \\)
-denote the beginning of period cash. \\( M_{t} \\) represents the stock of
+denote the beginning-of-period cash. \\( M_{t} \\) represents the _stock_ of
 money the household enters the period with. At the end of the period the
 household will have \\( M_{t+1} \\) dollars.
 
-Everything so far is pretty standard—you’ve heard this story before.
+Everything so far is pretty standard---you’ve heard this story before.
 Here’s more of the story. Let’s follow the convention of denoting
 everything in real terms; that is, in terms of bananas.
 
@@ -119,7 +119,7 @@ constraint.
 Balancing materials
 -------------------
 
-If bonds are in zero net supply, then \\( B_{t} = 0 \\).[^2] Combined with the
+If bonds are in zero net supply, then \\( B_{t} = 0 \\).[^2] Combined with \eqref{eq:1}, the
 household budget constraint becomes
 
 $$
@@ -161,7 +161,7 @@ C_{t} + I_{t} = Y_{t} - \Psi_{t}.
 \end{aligned}
 $$
 
-Professor Stolyarov would call this “bananas into the sea.” The adjustment costs are
+Professor Stolyarov would call this “bananas into the sea.” The adjustment costs are simply
 subtracted from output.
 
 If the adjustment costs are parameterized as in section 11.1 of the ECON
