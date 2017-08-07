@@ -48,8 +48,8 @@ Define the operator \\(T\\) on \\(B(\Psi)\\) as
 $$
 \begin{aligned}
 (TR)(k,p,s) = \max_{\text{trade}, \text{no trade}}  \Bigg\{
-&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E}_{Q,R} \left[ R(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
-& u(k) + \beta \mathbb{E}_{Q,R} \left[ R(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\}.
+&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E} \left[ R(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
+& u(k) + \beta \mathbb{E} \left[ R(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\}.
 \end{aligned}
 $$
 
@@ -72,8 +72,8 @@ Then
 $$
 \begin{aligned}
 (TR)(k,p,s) &= \max_{\text{trade}, \text{no trade}}  \Bigg\{
-&&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E}_{Q,R} \left[ R(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
-&&& u(k) + \beta \mathbb{E}_{Q,R} \left[ R(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\} \\
+&&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E} \left[ R(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
+&&& u(k) + \beta \mathbb{E} \left[ R(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\} \\
 &\leq \max_{\text{trade}, \text{no trade}} \Bigg\{
 && u(k^{N}) + \beta \overline{R}, \\
 &&& u(k) + \beta \overline{R} \Bigg\},
