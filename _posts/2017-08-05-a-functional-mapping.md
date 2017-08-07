@@ -48,8 +48,8 @@ Define the operator \\(T\\) on \\(B(\Psi)\\) as
 $$
 \begin{aligned}
 (TR)(k,p,s) = \max_{\text{trade}, \text{no trade}}  \Bigg\{
-&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E}_{Q,R} \left[ V(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
-& u(k) + \beta \mathbb{E}_{Q,R} \left[ V(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\}.
+&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E}_{Q,R} \left[ R(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
+& u(k) + \beta \mathbb{E}_{Q,R} \left[ R(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\}.
 \end{aligned}
 $$
 
@@ -72,8 +72,8 @@ Then
 $$
 \begin{aligned}
 (TR)(k,p,s) &= \max_{\text{trade}, \text{no trade}}  \Bigg\{
-&&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E}_{Q,R} \left[ V(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
-&&& u(k) + \beta \mathbb{E}_{Q,R} \left[ V(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\} \\
+&&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E}_{Q,R} \left[ R(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
+&&& u(k) + \beta \mathbb{E}_{Q,R} \left[ R(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\} \\
 &\leq \max_{\text{trade}, \text{no trade}} \Bigg\{
 && u(k^{N}) + \beta \overline{R}, \\
 &&& u(k) + \beta \overline{R} \Bigg\},
@@ -112,7 +112,7 @@ of the [ECON 605 Leahy notes](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwh
 I was very lose with defining the set \\(\Psi \\) and laying out the properties of \\( u \\), etc.
 These details, along with details about establishing monotonicity and discounting, are provided in several places in the notes.
 See, for example, Remark 5.8; sections 6.1, 6.2, and 6.4; the introduction to Section 11; and section 11.2.
-Those parts of the notes apply the theorems more rigorously. 
+Those parts of the notes apply the theorems more rigorously.
 This post is meant to be a *sketch*.
 
 ***
