@@ -18,7 +18,7 @@ where
 
 $$
 \begin{aligned}
-V_{\text{trade}} = u(k^{N}) - pk^{N} + spk^{N} + \mathbb{E}_{Q,R} \left[ V(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right]
+V_{\text{trade}} = u(k^{N}) - pk^{N} + spk^{N} + \mathbb{E} \left[ V(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right]
 \end{aligned}
 $$
 
@@ -26,7 +26,7 @@ and
 
 $$
 \begin{aligned}
-V_{\text{no trade}} = u(k) + \beta \mathbb{E}_{Q,R} \left[ V(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right]
+V_{\text{no trade}} = u(k) + \beta \mathbb{E} \left[ V(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right]
 \end{aligned}
 $$
 
