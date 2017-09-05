@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 ### Fall 2017
 
-
+* [ECON 605 Stolyarov notes](https://umich.box.com/s/ta1x51zfrxs64nw0e3mk18auhgm5gg92)
 
 ## Macroeconomic Theory II, ECON 607
 
