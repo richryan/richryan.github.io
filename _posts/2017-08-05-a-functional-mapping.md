@@ -41,7 +41,7 @@ The \\( T \\) operator
 
 Let \\(B(\Psi) \\) denote the set of bounded functions
 \\( R: \Psi \rightarrow \mathbb{R} \\) equipped with the \\( \sup \\) norm
-\\( \lVert \mathbb{R} \rVert = \sup_{\psi \in \Psi} R(\psi) \\).
+\\( \lVert R \rVert = \sup_{\psi \in \Psi} R(\psi) \\).
 
 Define the operator \\(T\\) on \\(B(\Psi)\\) as
 
