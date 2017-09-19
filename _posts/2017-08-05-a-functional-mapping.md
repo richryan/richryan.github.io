@@ -75,7 +75,7 @@ $$
 &&u(k^{N}) - pk^{N} + spk^{N} + \beta \mathbb{E} \left[ R(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right], \\
 &&& u(k) + \beta \mathbb{E} \left[ R(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] \Bigg\} \\
 &\leq \max_{\text{trade}, \text{no trade}} \Bigg\{
-&& u(k^{N}) + \beta \overline{R}, \\
+&& u(k^{N}) + pk^{N} + \beta \overline{R}, \\
 &&& u(k) + \beta \overline{R} \Bigg\},
 \end{aligned}
 $$
@@ -85,7 +85,7 @@ line uses properties of the stochastic process for \\(s\\). Then
 
 $$
 \begin{aligned}
-(TR)(k,p,s) \leq u(k^{N}) + \beta \overline{R},
+(TR)(k,p,s) \leq u(k^{N}) + pk^{N} + \beta \overline{R},
 \end{aligned}
 $$
 
