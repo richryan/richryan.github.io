@@ -11,6 +11,11 @@ excerpt_separator: <!--more-->
 # Allow posts in the future
 future: true
 
+highlighter: rouge
+
+exclude:
+  - _ipynb
+
 gems:
   # - jekyll-feed
   - jemoji
