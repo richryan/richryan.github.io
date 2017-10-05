@@ -1,5 +1,8 @@
 name: Rich
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 github_username: richryan
 baseurl: ""
 url: ""
@@ -10,8 +13,6 @@ excerpt_separator: <!--more-->
 
 # Allow posts in the future
 future: true
-
-highlighter: rouge
 
 exclude:
   - _ipynb
