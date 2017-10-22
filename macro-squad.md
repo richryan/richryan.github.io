@@ -63,9 +63,9 @@ $(document).ready(function() {
 ## Macroeconomic Theory I, ECON 605
 
 ### Fall 2016
-* [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
+<!-- * [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
 * [ECON 605 Stolyarov review](https://umich.box.com/s/14r5lvjjoq9wwz0d6mor8jn49v6vig5g)
-* [ECON 605 Leahy notes](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y)
+* [ECON 605 Leahy notes](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y) -->
 
 ### Fall 2017
 
@@ -73,5 +73,5 @@ $(document).ready(function() {
 
 ## Macroeconomic Theory II, ECON 607
 
-* [ECON 607 Leahy notes](https://umich.box.com/s/0tvft1t167we2xsn2xp4uacetoy5gcyw)
-* [ECON 607 Ottonello notes](https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud)
+<!-- * [ECON 607 Leahy notes](https://umich.box.com/s/0tvft1t167we2xsn2xp4uacetoy5gcyw)
+* [ECON 607 Ottonello notes](https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud) -->

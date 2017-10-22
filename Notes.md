@@ -156,10 +156,10 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 
 ## Macroeconomic Theory I, ECON 605
 
-* [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
-* [ECON 605 Leahy notes](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y)
+<!-- * [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
+* [ECON 605 Leahy notes](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y) -->
 
 ## Macroeconomic Theory II, ECON 607
 
-* [ECON 607 Leahy notes](https://umich.box.com/s/0tvft1t167we2xsn2xp4uacetoy5gcyw)
-* [ECON 607 Ottonello notes](https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud)
+<!-- * [ECON 607 Leahy notes](https://umich.box.com/s/0tvft1t167we2xsn2xp4uacetoy5gcyw)
+* [ECON 607 Ottonello notes](https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud) -->
