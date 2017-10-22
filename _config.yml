@@ -5,6 +5,7 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
   auto_ids: true
+  extensions: fenced_code_blocks
 #   syntax_highlighter_opts:
 #         # Use existing pygments syntax highlighting css
 #         css_class: 'highlight'
