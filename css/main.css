@@ -69,3 +69,6 @@ ul.posts li {
 li {
   margin: 1.0em 0px;
 }
+
+/* Add emacs.css code highlighting */
+@import url(emacs.css);
