@@ -25,6 +25,7 @@ gems:
   # - jekyll-feed
   - jemoji
   - jekyll-scholar
+  - rouge
   # - json
 exclude:
   - Gemfile
