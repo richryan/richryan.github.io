@@ -1,14 +1,26 @@
 name: Rich
 highlighter: rouge
 markdown: kramdown
+# Note: To change the syntax coloring choose one of the styles
+# that can be viewed with the command
+# > rougify help style
+# Put one of these styles into syntax.css; e.g.,
+# > rougify style monokai > syntax.css
+# (Note: this command must be issued in the directory where syntax.css is
+# or the command must put the path where syntax.css is.)
+# The file head.html links to syntax.css, so the highlighting is included in the
+# html code automatically.
 kramdown:
   input: GFM
   syntax_highlighter: rouge
   auto_ids: true
   extensions: fenced_code_blocks
-#   syntax_highlighter_opts:
-#         # Use existing pygments syntax highlighting css
-#         css_class: 'highlight'
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
 github_username: richryan
 baseurl: ""
 url: ""
