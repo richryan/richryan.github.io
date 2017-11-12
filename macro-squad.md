@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 ### Fall 2017
 
-* [ECON 605 Stolyarov notes](https://umich.box.com/s/ta1x51zfrxs64nw0e3mk18auhgm5gg92)
+* [ECON 605 Stolyarov notes](https://umich.box.com/s/en7jhgvw65df3wfkjzb646wdfr4hg3v9)
 * [Notes on an alternative asset-market structure](https://umich.box.com/s/5qpfey58m9jdblyjpt3h2ljbvt8hnqfc)
 * [Slide deck for review session](https://umich.box.com/s/hue9d7wsuo5tnttuah21f58tzg4y864r)
 
