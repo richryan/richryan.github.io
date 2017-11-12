@@ -166,6 +166,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 * [ECON 605 Stolyarov notes](https://umich.box.com/s/en7jhgvw65df3wfkjzb646wdfr4hg3v9)
 * [Notes on an alternative asset-market structure](https://umich.box.com/s/5qpfey58m9jdblyjpt3h2ljbvt8hnqfc)
 * [Slide deck for review session](https://umich.box.com/s/hue9d7wsuo5tnttuah21f58tzg4y864r)
+* [An example of discrete dynamic programming using McCall's search model](https://umich.box.com/s/qdjzbsqttnjp9be6alvkmlrulclky14m)
 
 ## Macroeconomic Theory II, ECON 607
 
