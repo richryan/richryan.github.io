@@ -6,8 +6,8 @@ categories: update
 macrosquad_event: true
 ---
 ECON 605 notes are uploaded.
-<!-- The ECON 605 Stolyarov notes are available [here](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g). -->
-<!-- The ECON 605 Leahy notes are available [here](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y). -->
+The ECON 605 Stolyarov notes are available [here](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g).
+The ECON 605 Leahy notes are available [here](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y).
 I made several additions to both the Stolyarov and Leahy notes,
 which you might find helpful.
 
