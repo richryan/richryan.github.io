@@ -106,7 +106,7 @@ $$
 
 where \\( k^{1} \\) is the lowest level of capital in the discrete state space,
 establishing a lower bound for \\( T \\).
-Therefore \\(T\\) is a self map.
+Therefore \\(T\\) is a self map, mapping bounded functions to bounded functions.
 
 Satisfying Blackwell’s sufficiency conditions for a contraction
 ---------------------------------------------------------------
