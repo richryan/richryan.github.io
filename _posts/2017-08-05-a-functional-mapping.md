@@ -90,9 +90,23 @@ $$
 $$
 
 assuming that \\(u\\) is increasing. As long as \\(u\\) is bounded (meaning
-\\(u(k^{N}) < M\\) for some \\(M \in \mathbb{R} \\)), we’ve established that \\(T\\)
-takes the space of bounded functions to bounded functions; that is, \\(T\\)
-is a self map.
+\\(u(k^{N}) < M\\) for some \\(M \in \mathbb{R} \\)), we’ve established that \\(T\\) is bounded above.
+Along the same lines,
+
+$$
+\begin{align*}
+(TR)(k,p,s) &\geq \max_{\text{trade}, \text{no trade}}
+\begin{cases}
+u(k^{1}) - pk^{N} + \beta \underline{R}, &\text{(trade)} \\
+u(k^{1}) + \beta \underline{R} & \text{(no trade)} \\
+\end{cases} \\
+&\geq u(k^{1}) - pk^{N} + \beta \underline{R},
+\end{align*}
+$$
+
+where \\( k^{1} \\) is the lowest level of capital in the discrete state space,
+establishing a lower bound for \\( T \\).
+Therefore \\(T\\) is a self map.
 
 Satisfying Blackwell’s sufficiency conditions for a contraction
 ---------------------------------------------------------------
