@@ -76,5 +76,5 @@ $(document).ready(function() {
 
 ## Macroeconomic Theory II, ECON 607
 
-<!-- * [ECON 607 Leahy notes](https://umich.box.com/s/0tvft1t167we2xsn2xp4uacetoy5gcyw)
-* [ECON 607 Ottonello notes](https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud) -->
+* [ECON 607 Leahy notes](https://umich.box.com/s/eavv25aglyxfnsewbl5fq1vhjtwg0svq)
+* [ECON 607 Ottonello notes](https://umich.box.com/s/asenqn5dn9d0pv9yyexigt5wk7uu201r)
