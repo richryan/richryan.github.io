@@ -20,4 +20,3 @@ order: 1
   </li>
   {% endfor %}
 </ul>
-
