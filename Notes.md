@@ -111,6 +111,13 @@ modified traffic, [beauty contest]({{ site.url }}/pdfs/econ401-tilman/f2014_clas
 [strategic interaction and externalities]({{ site.url }}/pdfs/econ401-tilman/f2014_class25.pdf)
 23. The picnic example continued, moral hazard, [thanks]({{ site.url }}/pdfs/econ401-tilman/f2014_class24.pdf)
 
+## Intermediate Macroeconomics, ECON 402
+Materials for ECON 402, Intermediate Macroeconomics, with Professor [Chris House](http://www-personal.umich.edu/~chouse/)
+
+### Notes
+
+### Data work
+
 ## Financial Economics, ECON 435
 Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
 
@@ -159,6 +166,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 ### Fall 2016
 
 * [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
+* [ECON 605 Stolyarov review](https://umich.box.com/s/14r5lvjjoq9wwz0d6mor8jn49v6vig5g)
 * [ECON 605 Leahy notes](https://umich.box.com/s/wzd5zsbxmjxukkriwemd516foxpui7e6)
 
 ### Fall 2017
@@ -166,11 +174,12 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 #### Stolyarov
 * [ECON 605 Stolyarov notes](https://umich.box.com/s/en7jhgvw65df3wfkjzb646wdfr4hg3v9)
 * [Notes on an alternative asset-market structure](https://umich.box.com/s/5qpfey58m9jdblyjpt3h2ljbvt8hnqfc)
+* [The effect of corporate taxation on wages in the neoclassical growth model without labor choice](https://umich.box.com/s/lbqucbsg1ujf5or6xzjoj3sh775x9cfd)
 * [Slide deck for review session](https://umich.box.com/s/hue9d7wsuo5tnttuah21f58tzg4y864r)
-* [An example of discrete dynamic programming using McCall's search model](https://umich.box.com/s/qdjzbsqttnjp9be6alvkmlrulclky14m)
 
 #### Leahy
 
+* [An example of discrete dynamic programming using McCall's search model](https://umich.box.com/s/qdjzbsqttnjp9be6alvkmlrulclky14m)
 * [Slide deck for review session](https://umich.box.com/s/co1iwp07m8fn5wo00h7gormlt84rzax4)
 * [Worked examples of dynamic programming](https://umich.box.com/s/xkm9tnama1w61lcx7r3gy0l2jno9xayb)
 

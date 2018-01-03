@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 <ul class="posts">
   {% for post in site.posts %}
-	{% if post.macrosquad_event %}
+	{% if post.macrosquad_402 %}
   <li>
     <br>
     <h3>
@@ -59,22 +59,3 @@ $(document).ready(function() {
 </ul>
 
 # Notes
-
-## Macroeconomic Theory I, ECON 605
-
-### Fall 2016
-* [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
-* [ECON 605 Stolyarov review](https://umich.box.com/s/14r5lvjjoq9wwz0d6mor8jn49v6vig5g)
-<!-- * [ECON 605 Leahy notes](https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y) -->
-
-### Fall 2017
-
-* [ECON 605 Stolyarov notes](https://umich.box.com/s/en7jhgvw65df3wfkjzb646wdfr4hg3v9)
-* [Notes on an alternative asset-market structure](https://umich.box.com/s/5qpfey58m9jdblyjpt3h2ljbvt8hnqfc)
-* [Slide deck for review session](https://umich.box.com/s/hue9d7wsuo5tnttuah21f58tzg4y864r)
-* [An example of discrete dynamic programming using McCall's search model](https://umich.box.com/s/qdjzbsqttnjp9be6alvkmlrulclky14m)
-
-## Macroeconomic Theory II, ECON 607
-
-* [ECON 607 Leahy notes](https://umich.box.com/s/eavv25aglyxfnsewbl5fq1vhjtwg0svq)
-* [ECON 607 Ottonello notes](https://umich.box.com/s/asenqn5dn9d0pv9yyexigt5wk7uu201r)
