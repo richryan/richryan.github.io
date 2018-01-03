@@ -167,7 +167,6 @@ The improved Fall 2017 notes represent meaningful learning on my part&mdash;many
 I preserve the Fall 2016 notes as a reference to those who used them.
 The preservation also represents a desire not to obliterate the hard work that went into them.
 
-
 ### Fall 2016
 
 * [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
@@ -177,7 +176,7 @@ The preservation also represents a desire not to obliterate the hard work that w
 ### Fall 2017
 
 #### Stolyarov
-* [ECON 605 Stolyarov notes](https://umich.box.com/s/en7jhgvw65df3wfkjzb646wdfr4hg3v9)
+* [ECON 605 Stolyarov notes](https://umich.box.com/s/o9cx04ju9hu2q0s5xz8f6sqgidivrkyx)
 * [Notes on an alternative asset-market structure](https://umich.box.com/s/5qpfey58m9jdblyjpt3h2ljbvt8hnqfc)
 * [The effect of corporate taxation on wages in the neoclassical growth model without labor choice](https://umich.box.com/s/lbqucbsg1ujf5or6xzjoj3sh775x9cfd)
 * [Slide deck for review session](https://umich.box.com/s/hue9d7wsuo5tnttuah21f58tzg4y864r)
