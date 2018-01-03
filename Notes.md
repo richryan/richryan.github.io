@@ -163,6 +163,11 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 
 ## Macroeconomic Theory I, ECON 605
 
+The improved Fall 2017 notes represent meaningful learning on my part&mdash;many of the details are smoothed out in the updated notes.
+I preserve the Fall 2016 notes as a reference to those who used them.
+The preservation also represents a desire not to obliterate the hard work that went into them.
+
+
 ### Fall 2016
 
 * [ECON 605 Stolyarov notes](https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g)
