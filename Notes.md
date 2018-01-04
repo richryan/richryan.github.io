@@ -112,11 +112,10 @@ modified traffic, [beauty contest]({{ site.url }}/pdfs/econ401-tilman/f2014_clas
 23. The picnic example continued, moral hazard, [thanks]({{ site.url }}/pdfs/econ401-tilman/f2014_class24.pdf)
 
 ## Intermediate Macroeconomics, ECON 402
-Materials for ECON 402, Intermediate Macroeconomics, with Professor [Chris House](http://www-personal.umich.edu/~chouse/)
+Materials for ECON 402, Intermediate Macroeconomics, with Professor [Chris House](http://www-personal.umich.edu/~chouse/).
 
-### Notes
+The course website is [here](https://richryan.github.io/econ402/).
 
-### Data work
 
 ## Financial Economics, ECON 435
 Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
