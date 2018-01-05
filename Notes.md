@@ -18,7 +18,8 @@ Section notes for ECON 401, Intermediate Microeconomic Theory, with Dr. [Chris P
 1. Introduction, review of [mathematics]({{ site.url }}/pdfs/econ401_proulx/w2015_class1.pdf)
 2. Budget sets, [preferences]({{ site.url }}/pdfs/econ401_proulx/w2015_class2.pdf)
 3. Where we are: constraints, preferences, [utility functions]({{ site.url }}/pdfs/econ401_proulx/w2015_class3.pdf)
-4. [Utility functions]({{ site.url }}/pdfs/econ401_proulx/w2015_class4.pdf)
+<!-- 4. [Utility functions]({{ site.url }}/pdfs/econ401_proulx/w2015_class4.pdf) -->
+4. [Utility functions](https://umich.box.com/s/48hdke2bo2si7c32yba8x6ickv89tt3f)
 5. [Choice]({{ site.url }}/pdfs/econ401_proulx/w2015_class5.pdf)
 6. [Problems]({{ site.url }}/pdfs/econ401_proulx/w2015_class6.pdf)
 7. Comparative statics and the [WARP police]({{ site.url }}/pdfs/econ401_proulx/w2015_class7.pdf)
@@ -147,7 +148,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 13. Put--call parity, \\(S + P = \text{PV}(K) + C\\), [\\(\text{PV}(K) = K - D(K)\\)]({{ site.url }}/pdfs/econ435/w2016_class13.pdf)
 14. A call option graphically, more put-call parity, [thanks]({{ site.url }}/pdfs/econ435/w2016_class14.pdf)
 
-### Problem sets
+### Problem sets and proposed solutions
 
 1. [Problem set 1]({{ site.url }}/pdfs/econ435/solutions_pset1.pdf)
 2. [Problem set 2]({{ site.url }}/pdfs/econ435/solutions_pset2.pdf)
@@ -159,6 +160,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 8. [Problem set 8]({{ site.url }}/pdfs/econ435/solutions_pset8.pdf)
 9. [Problem set 9]({{ site.url }}/pdfs/econ435/solutions_pset9.pdf)
 10. [Problem set 10]({{ site.url }}/pdfs/econ435/solutions_pset10.pdf)
+11. [Proposed solutions to the Second Midterm Exam](https://umich.box.com/s/25igqg7f1tjrws2rxfuuh7xweyhrksr7)
 
 ## Macroeconomic Theory I, ECON 605
 
