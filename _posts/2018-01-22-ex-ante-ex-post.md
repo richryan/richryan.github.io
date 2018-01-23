@@ -2,7 +2,7 @@
 layout: post
 title:  "<em>Ex ante</em> versus <em>ex post</em> interest rates"
 date:   2018-01-22 18:56:00 -0400
-categories: 
+categories:
 macrosquad_402: true
 ---
 
@@ -20,9 +20,9 @@ i_t = r_t + \mathbb{E}_t \pi_{t+1},
 $$
 
 where \\( \mathbb{E}_t \\) is the expectations operator conditional on all information available at time \\( t \\).
-Which simply means that the decision maker is using newspapers, FRED, the internet, etc. 
+Which simply means that the decision maker is using newspapers, FRED, the internet, etc.
 to make a guess about what they think inflation will be.
-The decision maker has to make a guess because they don't know what inflation *will* be 
+The decision maker has to make a guess because they don't know what inflation *will* be
 between time \\( t \\) and \\( t+1 \\).
 
 Now think about a borrower and a lender deciding on the terms of a contract.
@@ -41,7 +41,7 @@ See p. 117 of Mankiw, 9e.
 When Chair Ben Bernanke came to U-M, he talked about "open mouth operations,"
 a play on open-market operations,
 which are the usual puchases and sales of government bonds that the Fed makes.
-Because interest rates were pinned at zero, 
+Because interest rates were pinned at zero,
 Chair Berenanke talked about lowering real interest rates by increasing inflation expectations:
 
 $$
@@ -50,11 +50,10 @@ r_t = i_t - \mathbb{E}_t \pi_t.
 \end{align*}
 $$
 
-Chair Bernanke talked about promising not to raise interest rates&mdash;no matter what&mdash;which 
+Chair Bernanke talked about promising not to raise interest rates&mdash;no matter what&mdash;which
 would increase \\( \mathbb{E}_t \pi_t \\) thereby lowering \\( r_t \\).
 It was pretty clear Chair Bernanke had the Fisher effect in mind.
 
 There's nothing deep behind the terms *ex ante* interest rate and *ex post* interest rate.
-And, in fact, it's even messier in practice&mdash;
-what interest rate and what measure of inflation?
-There are lots of interest rates and several measures of inflation. 
+And, in fact, it's even messier in practice&mdash;what interest rate and what measure of inflation?
+There are lots of interest rates and several measures of inflation.
