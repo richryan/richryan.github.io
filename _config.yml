@@ -25,6 +25,9 @@ github_username: richryan
 baseurl: ""
 url: ""
 
+# See https://github.com/github/pages-gem/issues/399
+github: [metadata]
+
 # Add excerpt separator
 # Include this in long posts that need to be separated
 excerpt_separator: <!--more-->
