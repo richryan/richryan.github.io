@@ -15,11 +15,11 @@ you'd expect the Fisher effect to be expressed as the relationship between the n
 
 $$
 \begin{align*}
-i_t = r_t + \mathbb{E}_t \pi_{t+1},
+i_t = r_t + E_t \pi_{t+1},
 \end{align*}
 $$
 
-where \\( \mathbb{E}_t \\) is the expectations operator conditional on all information available at time \\( t \\).
+where \\( E_t \\) is the expectations operator conditional on all information available at time \\( t \\).
 Which simply means that the decision maker is using newspapers, FRED, the internet, etc.
 to make a guess about what they think inflation will be.
 The decision maker has to make a guess because they don't know what inflation *will* be
@@ -46,12 +46,12 @@ Chair Berenanke talked about lowering real interest rates by increasing inflatio
 
 $$
 \begin{align*}
-r_t = i_t - \mathbb{E}_t \pi_{t+1}.
+r_t = i_t - E_t \pi_{t+1}.
 \end{align*}
 $$
 
 Chair Bernanke talked about promising not to raise interest rates&mdash;no matter what&mdash;which
-would increase \\( \mathbb{E}_t \pi_{t+1} \\) thereby lowering \\( r_t \\).
+would increase \\( E_t  \pi_{t+1} \\) thereby lowering \\( r_t \\).
 It was pretty clear Chair Bernanke had the Fisher effect in mind.
 
 There's nothing deep behind the terms *ex ante* interest rate and *ex post* interest rate.
