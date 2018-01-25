@@ -46,12 +46,12 @@ Chair Berenanke talked about lowering real interest rates by increasing inflatio
 
 $$
 \begin{align*}
-r_t = i_t - \mathbb{E}_t \pi_t.
+r_t = i_t - \mathbb{E}_t \pi_{t+1}.
 \end{align*}
 $$
 
 Chair Bernanke talked about promising not to raise interest rates&mdash;no matter what&mdash;which
-would increase \\( \mathbb{E}_t \pi_t \\) thereby lowering \\( r_t \\).
+would increase \\( \mathbb{E}_t \pi_{t+1} \\) thereby lowering \\( r_t \\).
 It was pretty clear Chair Bernanke had the Fisher effect in mind.
 
 There's nothing deep behind the terms *ex ante* interest rate and *ex post* interest rate.
