@@ -39,7 +39,7 @@ Initially each firm is called.
 Then data are collected according to something called Computer Assisted Telephone Interviewing,
 which hopefully leads to self-reporting.
 
-Fun fact: "Very large, multiestablishment firms are often enrolled via persona visit,
+Fun fact: "Very large, multiestablishment firms are often enrolled via personal visit,
 and ongoing reporting is established via electronic data interchange,"
 which are apparently "electronic files."[^3]
 
