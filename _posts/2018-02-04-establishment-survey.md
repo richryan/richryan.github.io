@@ -57,7 +57,7 @@ This fuzziness might explain the 97 percent coverage rate of the CES.
 ## Answer to the question
 
 If the 10 people running their own business in question 9 of Mankiw 9e, p 45 are paying UI taxes and the business is incorporated, then they are counted as employed in the establishment survey.
-If they own a fishing vessel in the state of Rhode Island and pay their crew according to a lay system (see _Moby Dick_ where Ishmael secured the 300th lay or 1/300 of net profits&mdash;Queequeg secured the 90th lay),
+If they own a fishing vessel in the state of Rhode Island and pay their crew according to a lay system (see _Moby-Dick_ where Ishmael secured the 300th lay or 1/300 of net profits&mdash;Queequeg secured the 90th lay),
 then no.
 
 If the person running their own business is doing it through 1099s or if the business is unincorporated,
