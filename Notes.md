@@ -187,6 +187,7 @@ The preservation also represents a desire not to obliterate the hard work that w
 * [An example of discrete dynamic programming using McCall's search model](https://umich.box.com/s/qdjzbsqttnjp9be6alvkmlrulclky14m)
 * [Slide deck for review session](https://umich.box.com/s/co1iwp07m8fn5wo00h7gormlt84rzax4)
 * [Worked examples of dynamic programming](https://umich.box.com/s/xkm9tnama1w61lcx7r3gy0l2jno9xayb)
+* [ECON 605 Leahy notes](https://umich.box.com/s/fy41pfiibebos1cuod48xo1etowjkc66)
 
 ## Macroeconomic Theory II, ECON 607
 
