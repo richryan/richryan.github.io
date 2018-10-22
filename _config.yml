@@ -42,9 +42,9 @@ plugins:
   # - jekyll-scholar
   - rouge
   # - json
-exclude:
-  - Gemfile
-  - Gemfile.lock
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
 
 collections:
   events:
