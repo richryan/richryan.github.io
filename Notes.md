@@ -11,6 +11,10 @@ order: 3
 
 ## Intermediate Microeconomic Theory, ECON 401
 
+### Fall 2018
+
+Section notes for Intermediate Microeconomic Theory, ECON 401, with Dr. [Chris Proulx](https://lsa.umich.edu/econ/people/faculty/rabbit.html) are collected [here](https://richryan.github.io/econ401/).
+
 ### Winter 2015
 
 Section notes for ECON 401, Intermediate Microeconomic Theory, with Dr. [Chris Proulx](https://lsa.umich.edu/econ/people/faculty/rabbit.html)
