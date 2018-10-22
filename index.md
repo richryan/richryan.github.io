@@ -4,10 +4,14 @@ title: Home
 order: 1
 ---
 
-Richard W. Ryan
+## Richard W. Ryan
 
+
+<!-- See https://stackoverflow.com/questions/17890493/how-can-i-show-just-the-most-recent-post-on-my-home-page-with-jekyll
+for information in listing the first few posts -->
+## Recent posts
 <ul class="posts">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:3 %}
   <li>
     <br>
     <h3>
