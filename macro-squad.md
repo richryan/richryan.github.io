@@ -1,10 +1,9 @@
 ---
 layout: default
-title: MacroSquad
 permalink: /macrosquad/
-order: 4
 ---
-
+<!-- title: MacroSquad -->
+<!-- order: 4 -->
 Schedule and updates for MacroSquad:
 
 * TOC

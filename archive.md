@@ -2,7 +2,7 @@
 layout: default
 title: Archive
 permalink: /archive/
-order: 5
+order: 4
 ---
 <ul class="posts">
   {% for post in site.posts %}
