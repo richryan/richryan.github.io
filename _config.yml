@@ -38,7 +38,7 @@ exclude:
 plugins:
   # - jekyll-feed
   - jemoji
-  - jekyll-scholar
+  # - jekyll-scholar
   - rouge
   # - json
 exclude:
@@ -51,27 +51,27 @@ collections:
     permalink: /events/:path/
     title: Events
 
-scholar:
-  style: apa
-  locale: en
+# scholar:
+#   style: apa
+#   locale: en
+#
+#   sort_by: none
+#   order: ascending
 
-  sort_by: none
-  order: ascending
-
-  # source: ./_bibliography
-  source: ./
-  bibliography: references.bib
-  bibliography_template: "{{reference}}"
-  use_raw_bibtex_entry: true
-
-  replace_strings: true
-  join_strings:    true
-
-  details_dir:    bibliography
-  details_layout: bibtex.html
-  details_link:   Details
-
-  query: "@*"
+  # # source: ./_bibliography
+  # source: ./
+  # bibliography: references.bib
+  # bibliography_template: "{{reference}}"
+  # use_raw_bibtex_entry: true
+  #
+  # replace_strings: true
+  # join_strings:    true
+  #
+  # details_dir:    bibliography
+  # details_layout: bibtex.html
+  # details_link:   Details
+  #
+  # query: "@*"
 
 # See https://github.com/github/pages-gem/issues/399
 github: [metadata]

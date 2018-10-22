@@ -17,7 +17,7 @@ Section notes for Intermediate Microeconomic Theory, ECON 401, with Dr. [Chris P
 
 ### Winter 2015
 
-Section notes for ECON 401, Intermediate Microeconomic Theory, with Dr. [Chris Proulx](https://lsa.umich.edu/econ/people/faculty/rabbit.html)
+Section notes for Intermediate Microeconomic Theory, ECON 401, with Dr. [Chris Proulx](https://lsa.umich.edu/econ/people/faculty/rabbit.html)
 
 1. Introduction, review of [mathematics]({{ site.url }}/pdfs/econ401_proulx/w2015_class1.pdf)
 2. Budget sets, [preferences]({{ site.url }}/pdfs/econ401_proulx/w2015_class2.pdf)
@@ -55,7 +55,7 @@ Yet more Edgeworth box
 
 ### Fall 2014
 
-Section notes for ECON 401, Intermediate Microeconomic Theory, with Professor
+Section notes for Intermediate Microeconomic Theory, ECON 401, with Professor
 [Tilman B&ouml;rgers](http://www-personal.umich.edu/~tborgers/)
 
 1. Happy Labor Market Friday, valuing time, the rationality hypothesis, the transitive property,
@@ -117,13 +117,13 @@ modified traffic, [beauty contest]({{ site.url }}/pdfs/econ401-tilman/f2014_clas
 23. The picnic example continued, moral hazard, [thanks]({{ site.url }}/pdfs/econ401-tilman/f2014_class24.pdf)
 
 ## Intermediate Macroeconomics, ECON 402
-Materials for ECON 402, Intermediate Macroeconomics, with Professor [Chris House](http://www-personal.umich.edu/~chouse/).
+Materials for Intermediate Macroeconomics, ECON 402, with Professor [Chris House](http://www-personal.umich.edu/~chouse/).
 
 The course website is [here](https://richryan.github.io/econ402/).
 
 
 ## Financial Economics, ECON 435
-Materials for ECON 435, Financial Economics, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
+Materials for Financial Economics, ECON 435, with Professor [Pablo Ottonello](https://sites.google.com/site/ottonellopablo/home)
 
 ### Notes
 
