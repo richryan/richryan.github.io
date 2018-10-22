@@ -4,6 +4,8 @@ title: Home
 order: 1
 ---
 
+Richard W. Ryan
+
 <ul class="posts">
   {% for post in site.posts %}
   <li>
