@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Archive
+title: Posts
 permalink: /archive/
 order: 4
 ---
