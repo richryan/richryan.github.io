@@ -10,7 +10,11 @@ order: 1
 <!--   University of Michigan<br> -->
 <!--   E-mail: RichRyan@umich.edu</p> -->
 
-<p style="margin:0;">E-mail: RichRyan@umich.edu</p>
+<!-- <p style="margin:0;">E-mail: RichRyan@umich.edu</p> -->
+
+E-mail: RichRyan@umich.edu
+
+[CV](https://umich.box.com/s/i8q697ho09qqutbakyn0go3doo6y761h)
 
 <!-- See https://stackoverflow.com/questions/17890493/how-can-i-show-just-the-most-recent-post-on-my-home-page-with-jekyll
 for information in listing the first few posts -->

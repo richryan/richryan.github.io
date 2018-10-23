@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: Posts
 permalink: /archive/
 order: 4
