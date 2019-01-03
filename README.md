@@ -7,3 +7,5 @@ Directions for updating the website.
 - Run > bundle exec jekyll serve
 
 Using Jekyll, pages can be hid by removing the title element (and maybe the order element).
+
+Starting 1/3/2019, I am moving the website to `blogdown`.
