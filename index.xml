@@ -36,17 +36,10 @@
       <pubDate>Sun, 13 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>/teaching/econ401_f2018/</guid>
-      <description>
+      <description>&lt;p&gt;Materials for Intermediate Microeconomic Theory, ECON 401, with Dr. &lt;a href=&#34;https://lsa.umich.edu/econ/people/faculty/rabbit.html&#34; target=&#34;_blank&#34;&gt;Chris Proulx&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;The course website is &lt;a href=&#34;https://richryan.github.io/econ401/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.
+These notes improve upon the notes from the Winter 2015 semester.&lt;/p&gt;
 </description>
     </item>
     
@@ -58,15 +51,49 @@
       <guid>/teaching/econ401_w2015/</guid>
       <description>
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;p&gt;Section notes for Intermediate Microeconomic Theory, ECON 401, with Dr. &lt;a href=&#34;https://lsa.umich.edu/econ/people/faculty/rabbit.html&#34; target=&#34;_blank&#34;&gt;Chris Proulx&lt;/a&gt;.
+An improved version of these notes is available &lt;a href=&#34;https://richryan.github.io/econ401/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Introduction, review of &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class1.pdf&#34; target=&#34;_blank&#34;&gt;mathematics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Budget sets, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class2.pdf&#34; target=&#34;_blank&#34;&gt;preferences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Where we are: constraints, preferences, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class3.pdf&#34; target=&#34;_blank&#34;&gt;utility functions&lt;/a&gt;
+&lt;!-- 4. [Utility functions]({{ site.url }}/pdfs/econ401_proulx/w2015_class4.pdf) --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/48hdke2bo2si7c32yba8x6ickv89tt3f&#34; target=&#34;_blank&#34;&gt;Utility functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class5.pdf&#34; target=&#34;_blank&#34;&gt;Choice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class6.pdf&#34; target=&#34;_blank&#34;&gt;Problems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comparative statics and the &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class7.pdf&#34; target=&#34;_blank&#34;&gt;WARP police&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WARP/SARP, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class8.pdf&#34; target=&#34;_blank&#34;&gt;Slutsky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class9.pdf&#34; target=&#34;_blank&#34;&gt;Slutsky equation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class10.pdf&#34; target=&#34;_blank&#34;&gt;Endowments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class11.pdf&#34; target=&#34;_blank&#34;&gt;Intertemporal choice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Consumer&amp;rsquo;s surplus, EV, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class12.pdf&#34; target=&#34;_blank&#34;&gt;CV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class13.pdf&#34; target=&#34;_blank&#34;&gt;Market demand&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A notion of &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class14.pdf&#34; target=&#34;_blank&#34;&gt;equilibrium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Technology and &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class15.pdf&#34; target=&#34;_blank&#34;&gt;profit maximization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class16.pdf&#34; target=&#34;_blank&#34;&gt;Cost minimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class17.pdf&#34; target=&#34;_blank&#34;&gt;Cost curves&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class18.pdf&#34; target=&#34;_blank&#34;&gt;Firm supply&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Industry supply and brief review for the &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class19.pdf&#34; target=&#34;_blank&#34;&gt;exam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class20.pdf&#34; target=&#34;_blank&#34;&gt;Monopoly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Getting to know the customer: &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class21.pdf&#34; target=&#34;_blank&#34;&gt;Monopoly behavior&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A too brief introduction to &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class22.pdf&#34; target=&#34;_blank&#34;&gt;game theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Applications of game theory: &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class23.pdf&#34; target=&#34;_blank&#34;&gt;Oligopoly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Edgeworth box: Exchange and &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class24.pdf&#34; target=&#34;_blank&#34;&gt;general equilibrium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class25.pdf&#34; target=&#34;_blank&#34;&gt;Exchange continued&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More Edgeworth box and &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class26.pdf&#34; target=&#34;_blank&#34;&gt;auctions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class27.pdf&#34; target=&#34;_blank&#34;&gt;Externalities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class28.pdf&#34; target=&#34;_blank&#34;&gt;Asymmetric information&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;h2 id=&#34;yet-more-edgeworth-box&#34;&gt;Yet more Edgeworth box&lt;/h2&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/Edgeworth_box_Leontief.pdf&#34; target=&#34;_blank&#34;&gt;Leontief&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/Edgeworth_box_quasilinear.pdf&#34; target=&#34;_blank&#34;&gt;Quasilinear&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -193,17 +220,9 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
       <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>/teaching/econ402_w2018/</guid>
-      <description>
+      <description>&lt;p&gt;Materials for Intermediate Macroeconomics, ECON 402, with Professor &lt;a href=&#34;http://www-personal.umich.edu/~chouse/&#34; target=&#34;_blank&#34;&gt;Chris House&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;The course website is &lt;a href=&#34;https://richryan.github.io/econ402/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
