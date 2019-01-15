@@ -118,15 +118,52 @@
       <guid>/teaching/econ435_w2016/</guid>
       <description>
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;p&gt;Materials for Financial Economics, ECON 435, with Professor &lt;a href=&#34;https://sites.google.com/site/ottonellopablo/home&#34; target=&#34;_blank&#34;&gt;Pablo Ottonello&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;What an interest rate is, the value of money over time, annuities, perpetuities, &lt;a href=&#34;https://umich.box.com/s/4zstahib6qrpy5ip0c6ey0qg4fk8gxb1&#34; target=&#34;_blank&#34;&gt;bonds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Present value,
+future value,
+internal rate of return,
+effective annual rate,
+annual percentage rate,
+coupon rate,
+zero-coupon bond,
+&lt;a href=&#34;https://umich.box.com/s/930tmo315l0j1526mtkiz5whbzh1smhu&#34; target=&#34;_blank&#34;&gt;yield to maturity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bonds continued, &lt;a href=&#34;https://umich.box.com/s/4ov457u3ic8ltaaj6b00qaodyo7u3594&#34; target=&#34;_blank&#34;&gt;stocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/ciaz47f1vozfkdkapxghkr565n1lfwhz&#34; target=&#34;_blank&#34;&gt;Valuing stocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Happy Labor Market Friday, Exam 1 &lt;a href=&#34;https://umich.box.com/s/bbt48cnkfllqolr2k2gbx8kfmix02qne&#34; target=&#34;_blank&#34;&gt;solutions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Random variables, variance, standard deviation, &lt;a href=&#34;https://umich.box.com/s/slzq9q68nuusdk27siamkz3b98j6ocb7&#34; target=&#34;_blank&#34;&gt;diversification in stock portfolios&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The volatility of a large portfolio, &lt;a href=&#34;https://umich.box.com/s/d2hefa4vc0izf9p4auj0wq9ihn869dcg&#34; target=&#34;_blank&#34;&gt;risk-free saving and borrowing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The efficient portfolio, &lt;a href=&#34;https://umich.box.com/s/4oyfe4790105iwo547fuf6ghetka668d&#34; target=&#34;_blank&#34;&gt;CAPM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Identifying a stock&amp;rsquo;s \(\alpha\), &lt;a href=&#34;https://umich.box.com/s/nqa0q7p6oy5gbc6tfrhd6rzu93oezquu&#34; target=&#34;_blank&#34;&gt;Fama&amp;ndash;French&amp;ndash;Carhart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Capital structure, unlevered equity, levered equity, &lt;a href=&#34;https://umich.box.com/s/ry2marceqsf5i4lbbpds6rgarx4pk0ip&#34; target=&#34;_blank&#34;&gt;Modigliani&amp;ndash;Miler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MM continued, Vandelay Industries, &lt;a href=&#34;https://umich.box.com/s/f67kqkzfi3d3878w740hawbznahi4815&#34; target=&#34;_blank&#34;&gt;interest tax shield&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Happy Labor Market Friday, \(V^{\text{L}} = V^{\text{U}} + \text{PV}(\text{interest tax shield})\), financial options,
+call option, put option, option writer, strike or exercise price, American option, European option, long and short positions,
+option premium, open interest, at-the-money, in-the-money, out-of-the-money,
+&lt;a href=&#34;https://umich.box.com/s/bm1nli6f2j2ado564itf38kznm273t1i&#34; target=&#34;_blank&#34;&gt;deep in-the-money or out-of-the-money&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Put&amp;ndash;call parity, \(S + P = \text{PV}(K) + C\), &lt;a href=&#34;https://umich.box.com/s/dyfjf5gfeaq3oggb15exobmw4ve7xv04&#34; target=&#34;_blank&#34;&gt;\(\text{PV}(K) = K - D(K)\)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A call option graphically, more put-call parity, &lt;a href=&#34;https://umich.box.com/s/blfy8hhb2ixkgitkc41rjt7gvjs5j4jn&#34; target=&#34;_blank&#34;&gt;thanks&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;h2 id=&#34;problem-sets-and-proposed-solutions&#34;&gt;Problem sets and proposed solutions&lt;/h2&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/1dyrmdw2pk37ulq3pzt68giv4kbyitqp&#34; target=&#34;_blank&#34;&gt;Problem set 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/fzo75hlipabci06c7ad7h3rfwuhn5f3m&#34; target=&#34;_blank&#34;&gt;Problem set 2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/n89axls4ohqxnzp60ldv27zdgl8rjgcg&#34; target=&#34;_blank&#34;&gt;Problem set 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/wnz87pb5kg4yw7u8qv1ygtg7luwk768m&#34; target=&#34;_blank&#34;&gt;Problem set 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/tovx464ewqphzxku9zi1fgk2dvqlyr88&#34; target=&#34;_blank&#34;&gt;Problem set 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/qbemscg39cts60eb8fbye6eccryzyzop&#34; target=&#34;_blank&#34;&gt;Problem set 6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/dvnu4x0tphnaykfd0k8gcmnofdzka3xf&#34; target=&#34;_blank&#34;&gt;Problem set 7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/j9zmpx8kwo7cx4log56tcaz3w9ii2stf&#34; target=&#34;_blank&#34;&gt;Problem set 8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/gzk0aaxefytpvltid8ffng10d75yuyrv&#34; target=&#34;_blank&#34;&gt;Problem set 9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/bei4b6x0uiwl9fbjm8ysa8mb3ebg3t4c&#34; target=&#34;_blank&#34;&gt;Problem set 10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/25igqg7f1tjrws2rxfuuh7xweyhrksr7&#34; target=&#34;_blank&#34;&gt;Proposed solutions to the Second Midterm Exam&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
