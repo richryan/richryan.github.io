@@ -2,7 +2,75 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+    <url>
+    
+      <loc>/teaching/econ401_f2014/</loc>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
+    
   
+    
+    <url>
+    
+      <loc>/teaching/econ401_f2018/</loc>
+      <lastmod>2019-01-13T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/teaching/econ401_w2015/</loc>
+      <lastmod>2019-01-01T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/teaching/econ605_f2016/</loc>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/teaching/econ605_f2017/</loc>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/teaching/</loc>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/teaching/econ435_w2016/</loc>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/teaching/econ607_w2017/</loc>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/teaching/econ402_w2018/</loc>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
     
   
     
@@ -49,6 +117,14 @@
     <url>
     
       <loc>/publication/</loc>
+      <lastmod>2017-01-01T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/research/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
     
@@ -225,17 +301,8 @@
     
     <url>
     
-      <loc>/research/</loc>
-      <lastmod>2019-01-14T00:00:00-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00-04:00</lastmod>
+      <lastmod>2019-01-15T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -260,15 +327,6 @@
     
       <loc>/tags/</loc>
       <lastmod>2018-01-13T00:00:00-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>/teaching/</loc>
-      <lastmod>2016-04-20T00:00:00-04:00</lastmod>
       <priority>0</priority>
     </url>
     

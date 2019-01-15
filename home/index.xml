@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homes on Rich Ryan</title>
+    <title>Homes on RICH RYAN</title>
     <link>/home/</link>
-    <description>Recent content in Homes on Rich Ryan</description>
+    <description>Recent content in Homes on RICH RYAN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
@@ -126,13 +126,14 @@ Interests  Macroeconomics Labor economics Environmental and natural resource eco
     
     <item>
       <title>Teaching</title>
-      <link>/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      <link>/home/teaching_old/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
       
-      <guid>/home/teaching/</guid>
-      <description>This is an example of using the custom widget to create your own homepage section.
-I am a teaching instructor for the following courses at University X:
- CS101: An intro to computer science CS102: An intro to computer science CS103: An intro to computer science CS104: An intro to computer science CS105: An intro to computer science CS106: An intro to computer science CS107: An intro to computer science  </description>
+      <guid>/home/teaching_old/</guid>
+      <description>Intermediate Microeconomic Theory, ECON 401 Fall 2018 Materials for Intermediate Microeconomic Theory, ECON 401, with Dr. Chris Proulx.
+The course website is here.
+Winter 2015 Section notes for Intermediate Microeconomic Theory, ECON 401, with Dr. Chris Proulx
+ Introduction, review of mathematics Budget sets, preferences Where we are: constraints, preferences, utility functions  Utility functions Choice Problems Comparative statics and the WARP police WARP/SARP, Slutsky The Slutsky equation Endowments Intertemporal choice Consumer&amp;rsquo;s surplus, EV, CV Market demand A notion of equilibrium Technology and profit maximization Cost minimization Cost curves Firm supply Industry supply and brief review for the exam Monopoly Getting to know the customer: Monopoly behavior A too brief introduction to game theory Applications of game theory: Oligopoly The Edgeworth box: Exchange and general equilibrium Exchange continued More Edgeworth box and auctions Externalities Asymmetric information  Yet more Edgeworth box * Leontief * Quasilinear</description>
     </item>
     
     <item>
