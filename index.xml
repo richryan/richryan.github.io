@@ -16,17 +16,68 @@
       <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>/teaching/econ401_f2014/</guid>
-      <description>
+      <description>&lt;p&gt;Section notes for Intermediate Microeconomic Theory, ECON 401, with Professor
+&lt;a href=&#34;http://www-personal.umich.edu/~tborgers/&#34; target=&#34;_blank&#34;&gt;Tilman B&amp;ouml;rgers&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Happy Labor Market Friday, valuing time, the rationality hypothesis, the transitive property,
+&lt;a href=&#34;https://umich.box.com/s/rnu6l1hp7dp2uodj05uc6zwwyzdaa0kt&#34; target=&#34;_blank&#34;&gt;choices and consistent rankings&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;CES utility functions, convex preferences,
+&lt;a href=&#34;https://umich.box.com/s/4sjc51tgv2yav6dma5offvxdk5xozsud&#34; target=&#34;_blank&#34;&gt;depicting indifference curves&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Checking rationality continued, demand functions, Cobb&amp;ndash;Douglas preferences,
+monotonic transformations, more &lt;a href=&#34;https://umich.box.com/s/vu1iirgdf8bt4slmyxszi102vkj8v9ct&#34; target=&#34;_blank&#34;&gt;CES preferences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Income and substitution effects, in pictures,
+numerically calculating the income and substitution effects,
+&lt;a href=&#34;https://umich.box.com/s/jnpmyogu4lchpt2i4dm9ummryhkgiyd0&#34; target=&#34;_blank&#34;&gt;the sign of the substitution effect&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Marshalian demand, elasticities, Hicksian (compensated) demand,
+&lt;a href=&#34;https://umich.box.com/s/7yze5dyz31m6i5ml94rcv3njd4uyyg8k&#34; target=&#34;_blank&#34;&gt;verifying that the Slutsky equation holds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comparative statics: prices, complements and substitutes,
+perfect complements, perfect complements, slightly imperfect substitutes,
+&lt;a href=&#34;https://umich.box.com/s/e07od8p8wxc1nti880qkh9ydr87xxfxf&#34; target=&#34;_blank&#34;&gt;slightly imperfect complements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Hicksian demand with perfect substitutes,
+labor supply, labor supply with perfect substitutes,
+&lt;a href=&#34;https://umich.box.com/s/sjxwasjnziq549lsjfvl04c7ka6k9pow&#34; target=&#34;_blank&#34;&gt;labor-supply elasticity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Firms&amp;rsquo; profit maximization, isoquants, cost minimization,
+cost minimization with Cobb&amp;ndash;Douglas technology,
+&lt;a href=&#34;https://umich.box.com/s/rn7n6i65fkcj0381mxv8cmlw4d787rcg&#34; target=&#34;_blank&#34;&gt;conditional factor demand functions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cost functions and returns to scale, \(p \geq \min \text{AC}(q) \),
+&lt;a href=&#34;https://umich.box.com/s/bhrrbh8o16fr3e9sh7m7zumg6fcebwn0&#34; target=&#34;_blank&#34;&gt;returns to scale and Cobb&amp;ndash;Douglas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Exam review, quadratic marginal cost, &lt;a href=&#34;https://umich.box.com/s/vrceyrux3cvvu0mi3u8zhvf1g6g2fvy3&#34; target=&#34;_blank&#34;&gt;circle isoquants&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Equilibrium supply and demand, taxes, it doesn&amp;rsquo;t matter who pays the tax,
+taxation with linear demand and supply,
+&lt;a href=&#34;https://umich.box.com/s/fyxnf946c75g2t665oa5u7omqqw6e6db&#34; target=&#34;_blank&#34;&gt;nonlinear demand and elasticities&lt;/a&gt;:
+\[ \frac{d p}{d \tau} = \frac{\eta}{\eta + \varepsilon}\]&lt;/li&gt;
+&lt;li&gt;Equilibrium in several interacting markets,
+&lt;a href=&#34;https://umich.box.com/s/75stjujog1iyygapz5gp5a9544kdpgf5&#34; target=&#34;_blank&#34;&gt;partial equilibrium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Equilibrium in several markets continued,
+&lt;a href=&#34;https://umich.box.com/s/m3ygrxfb48xia23myqmbn7874tuuwqf1&#34; target=&#34;_blank&#34;&gt;short- vs long-run cost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;change&lt;/em&gt; in consumer surplus, the slope of the demand curve,
+compensating variation, equivalent variation, for normal goods:
+\[ \text{EV} &amp;lt; \text{CS loss} &amp;lt; \text{CV}, \]
+&lt;a href=&#34;https://umich.box.com/s/urqxo36kh4258psq3ack10ztv6p6c2og&#34; target=&#34;_blank&#34;&gt;for quasilinear utility: EV = CV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Markets and efficiency; EV = old prices, new utility; CV = new prices, old utility;
+with transfers, all agents prefer equilibrium to all other allocations;
+equivalent and compensating variation with perfect complements and
+&lt;a href=&#34;https://umich.box.com/s/v8h2ga4zxzg94wmaitmr8x3vianm1pqi&#34; target=&#34;_blank&#34;&gt;linear utility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tax incidence analysis: deadweight loss, Professor B&amp;ouml;rgers&amp;rsquo;s milk farm,
+Arrow&amp;rsquo;s Impossibility theorem, the &lt;a href=&#34;https://umich.box.com/s/bh98btbd4989x1sn2gp68d2njbrnm6du&#34; target=&#34;_blank&#34;&gt;Condorcet cycle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Monopoly, the markup:
+\[\frac{P(Q)}{\text{MC}(Q)} = \frac{1}{1- 1/ |\varepsilon|}, \]
+&lt;a href=&#34;https://umich.box.com/s/k7pdndr372wf0qx8wjl95zvctti2neog&#34; target=&#34;_blank&#34;&gt;first-degree price discrimination&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Price discrimination: first-, second-, and third-degree price discrimination,
+sale in different markets,
+\[p_1 &amp;gt; p_2 \iff |\varepsilon_1| &amp;lt; |\varepsilon_2|, \]
+&lt;a href=&#34;https://umich.box.com/s/e7hyaxqtox3e1yyjz3egrl5tc0mx8bft&#34; target=&#34;_blank&#34;&gt;Professor B&amp;ouml;rgers&amp;rsquo;s cat farm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A very brief introduction to game theory, Nash equilibrium, chicken, modified picnic,
+modified traffic, &lt;a href=&#34;https://umich.box.com/s/7cchep8mycb6fqdwkysrrv11fqrrgxgn&#34; target=&#34;_blank&#34;&gt;beauty contest&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Game theory continued: Bertrand and Cournot, Braess&amp;rsquo;s paradox,
+&lt;a href=&#34;https://umich.box.com/s/phwga4oejaqzo9fzl5vpvj64zjgu5j03&#34; target=&#34;_blank&#34;&gt;Bertrand with differentiated products&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Risk and uncertainty, lotteries, St. Petersburg paradox, concavity and risk aversion,
+&lt;a href=&#34;https://umich.box.com/s/you0i80i649evl1qjtwotjrly3d37wi2&#34; target=&#34;_blank&#34;&gt;von Neumann Morgenstern utility function&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Externalities, a negative externality in consumption,
+&lt;a href=&#34;https://umich.box.com/s/r1onkqddz7ntgqsv2imhc8735dypaewl&#34; target=&#34;_blank&#34;&gt;strategic interaction and externalities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The picnic example continued, moral hazard, &lt;a href=&#34;https://umich.box.com/s/gmkfke9x5b1kqyv8fw8lcb132k3wmqir&#34; target=&#34;_blank&#34;&gt;thanks&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
@@ -57,42 +108,42 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
 &lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Introduction, review of &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class1.pdf&#34; target=&#34;_blank&#34;&gt;mathematics&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Budget sets, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class2.pdf&#34; target=&#34;_blank&#34;&gt;preferences&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Where we are: constraints, preferences, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class3.pdf&#34; target=&#34;_blank&#34;&gt;utility functions&lt;/a&gt;
+&lt;li&gt;Introduction, review of &lt;a href=&#34;https://umich.box.com/s/piz6s5vw29ffy6sbu8rw077rfd2np1kn&#34; target=&#34;_blank&#34;&gt;mathematics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Budget sets, &lt;a href=&#34;https://umich.box.com/s/v0e80sxyk3qo56hssq2vbi8t35a0rsv4&#34; target=&#34;_blank&#34;&gt;preferences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Where we are: constraints, preferences, &lt;a href=&#34;https://umich.box.com/s/bqu9r6f5zfj0gyvjru4tyabo75xhbgqt&#34; target=&#34;_blank&#34;&gt;utility functions&lt;/a&gt;
 &lt;!-- 4. [Utility functions]({{ site.url }}/pdfs/econ401_proulx/w2015_class4.pdf) --&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/48hdke2bo2si7c32yba8x6ickv89tt3f&#34; target=&#34;_blank&#34;&gt;Utility functions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class5.pdf&#34; target=&#34;_blank&#34;&gt;Choice&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class6.pdf&#34; target=&#34;_blank&#34;&gt;Problems&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Comparative statics and the &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class7.pdf&#34; target=&#34;_blank&#34;&gt;WARP police&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;WARP/SARP, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class8.pdf&#34; target=&#34;_blank&#34;&gt;Slutsky&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class9.pdf&#34; target=&#34;_blank&#34;&gt;Slutsky equation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class10.pdf&#34; target=&#34;_blank&#34;&gt;Endowments&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class11.pdf&#34; target=&#34;_blank&#34;&gt;Intertemporal choice&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Consumer&amp;rsquo;s surplus, EV, &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class12.pdf&#34; target=&#34;_blank&#34;&gt;CV&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class13.pdf&#34; target=&#34;_blank&#34;&gt;Market demand&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A notion of &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class14.pdf&#34; target=&#34;_blank&#34;&gt;equilibrium&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Technology and &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class15.pdf&#34; target=&#34;_blank&#34;&gt;profit maximization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class16.pdf&#34; target=&#34;_blank&#34;&gt;Cost minimization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class17.pdf&#34; target=&#34;_blank&#34;&gt;Cost curves&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class18.pdf&#34; target=&#34;_blank&#34;&gt;Firm supply&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Industry supply and brief review for the &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class19.pdf&#34; target=&#34;_blank&#34;&gt;exam&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class20.pdf&#34; target=&#34;_blank&#34;&gt;Monopoly&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Getting to know the customer: &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class21.pdf&#34; target=&#34;_blank&#34;&gt;Monopoly behavior&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A too brief introduction to &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class22.pdf&#34; target=&#34;_blank&#34;&gt;game theory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Applications of game theory: &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class23.pdf&#34; target=&#34;_blank&#34;&gt;Oligopoly&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The Edgeworth box: Exchange and &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class24.pdf&#34; target=&#34;_blank&#34;&gt;general equilibrium&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class25.pdf&#34; target=&#34;_blank&#34;&gt;Exchange continued&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;More Edgeworth box and &lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class26.pdf&#34; target=&#34;_blank&#34;&gt;auctions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class27.pdf&#34; target=&#34;_blank&#34;&gt;Externalities&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/w2015_class28.pdf&#34; target=&#34;_blank&#34;&gt;Asymmetric information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/rbyvg5f42s9nve8w69xsraw6yx5yvqfj&#34; target=&#34;_blank&#34;&gt;Choice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/4hjcs6x5mpl1w970ps78gs8bvfgppzci&#34; target=&#34;_blank&#34;&gt;Problems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comparative statics and the &lt;a href=&#34;https://umich.box.com/s/7crt1rb6aedz12rx2kpe2w4dhd9evcpz&#34; target=&#34;_blank&#34;&gt;WARP police&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WARP/SARP, &lt;a href=&#34;https://umich.box.com/s/agfeza9qwldg7g4wevywm9prqeuamafe&#34; target=&#34;_blank&#34;&gt;Slutsky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;https://umich.box.com/s/tkl7cbkz8osmnezoxbbr8dcpa3epkk50&#34; target=&#34;_blank&#34;&gt;Slutsky equation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/qog9pj84ot6uf5lq9mv2loojfvsd6whh&#34; target=&#34;_blank&#34;&gt;Endowments&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Intertemporal choice]()&lt;a href=&#34;https://umich.box.com/s/kczbe6qrvovmwgy8r0gw2l0nnas3f7h7&#34; target=&#34;_blank&#34;&gt;https://umich.box.com/s/kczbe6qrvovmwgy8r0gw2l0nnas3f7h7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Consumer&amp;rsquo;s surplus, EV, &lt;a href=&#34;https://umich.box.com/s/2n9o2skwtq6qkezbs0lo0xuzxd9czzd9&#34; target=&#34;_blank&#34;&gt;CV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/s3hg2f3nl0r6rxoaoyeqmq2wnc1py9lj&#34; target=&#34;_blank&#34;&gt;Market demand&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A notion of &lt;a href=&#34;https://umich.box.com/s/nwoq1glue62uo3169qt77rv2l25r02gv&#34; target=&#34;_blank&#34;&gt;equilibrium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Technology and &lt;a href=&#34;https://umich.box.com/s/o1unsqqdhfml60nsmhn1gv9a4icms8q3&#34; target=&#34;_blank&#34;&gt;profit maximization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/fn0m60rdzuoqvzr950vtr23vb35elgpq&#34; target=&#34;_blank&#34;&gt;Cost minimization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/95oqw0qftyzalby2913o2hgdntweat02&#34; target=&#34;_blank&#34;&gt;Cost curves&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/dcyecztqqz8enfy31eokwlglurxwdptc&#34; target=&#34;_blank&#34;&gt;Firm supply&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Industry supply and brief review for the &lt;a href=&#34;https://umich.box.com/s/4ubb8sg00pikk3cgn4c35ecomr956lhg&#34; target=&#34;_blank&#34;&gt;exam&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/5odmi993cqjt747ngno4ql7tfn7pw59m&#34; target=&#34;_blank&#34;&gt;Monopoly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Getting to know the customer: &lt;a href=&#34;https://umich.box.com/s/0yedb1mkluod6f8f0mw1ic19nn15aps4&#34; target=&#34;_blank&#34;&gt;Monopoly behavior&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A too brief introduction to &lt;a href=&#34;https://umich.box.com/s/xip45c7x1ied7u7f5eoh40si1fxdtcmz&#34; target=&#34;_blank&#34;&gt;game theory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Applications of game theory: &lt;a href=&#34;https://umich.box.com/s/x88e7xagf1iix1tlgq777ejcyyxd7ryp&#34; target=&#34;_blank&#34;&gt;Oligopoly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The Edgeworth box: Exchange and &lt;a href=&#34;https://umich.box.com/s/7vjecdb83gwshlugn2mj34pgcgiovjzs&#34; target=&#34;_blank&#34;&gt;general equilibrium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/hk2f4l15zkajbdy5xd6atwegcrw8plr9&#34; target=&#34;_blank&#34;&gt;Exchange continued&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More Edgeworth box and &lt;a href=&#34;https://umich.box.com/s/3zjdj02sjivox3ze8gvwv13r9zx0jzdv&#34; target=&#34;_blank&#34;&gt;auctions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/5a0fclzhcqei9wq6u7fd3yzmnj8ubptr&#34; target=&#34;_blank&#34;&gt;Externalities&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/idl7frocb8g7mr8yc89ptp3xe6mk11e6&#34; target=&#34;_blank&#34;&gt;Asymmetric information&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;yet-more-edgeworth-box&#34;&gt;Yet more Edgeworth box&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/Edgeworth_box_Leontief.pdf&#34; target=&#34;_blank&#34;&gt;Leontief&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;{{ site.url }}/pdfs/econ401_proulx/Edgeworth_box_quasilinear.pdf&#34; target=&#34;_blank&#34;&gt;Quasilinear&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/ww7m4lcrgsgk2jjona8ltjepj4y6kq82&#34; target=&#34;_blank&#34;&gt;Leontief&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/967l7txueslmqe84rer6jnn3wryx63fa&#34; target=&#34;_blank&#34;&gt;Quasilinear&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -105,15 +156,25 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
       <guid>/teaching/econ605_f2016/</guid>
       <description>
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;p&gt;Materials for Macroeconomic Theory I, ECON 605, with Professors &lt;a href=&#34;https://sites.lsa.umich.edu/stolyar/&#34; target=&#34;_blank&#34;&gt;Dmitriy Stolyarov&lt;/a&gt; and
+&lt;a href=&#34;https://sites.google.com/umich.edu/johnleahy/home&#34; target=&#34;_blank&#34;&gt;John Leahy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;p&gt;The improved &lt;a href=&#34;https://richryan.github.io/teaching/econ605_f2017/&#34; target=&#34;_blank&#34;&gt;Fall 2017 notes&lt;/a&gt; represent meaningful learning on my part&amp;mdash;many of the details are smoothed out in the updated notes.
+I preserve the Fall 2016 notes as a reference to those who used them.
+The preservation also represents a desire not to obliterate the hard work that went into them.&lt;/p&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;stolyarov&#34;&gt;Stolyarov&lt;/h2&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g&#34; target=&#34;_blank&#34;&gt;ECON 605 Stolyarov notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/14r5lvjjoq9wwz0d6mor8jn49v6vig5g&#34; target=&#34;_blank&#34;&gt;ECON 605 Stolyarov review&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;leahy&#34;&gt;Leahy&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/wzd5zsbxmjxukkriwemd516foxpui7e6&#34; target=&#34;_blank&#34;&gt;ECON 605 Leahy notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -125,15 +186,30 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
       <guid>/teaching/econ605_f2017/</guid>
       <description>
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+&lt;p&gt;Materials for Macroeconomic Theory I, ECON 605, with Professors &lt;a href=&#34;https://sites.lsa.umich.edu/stolyar/&#34; target=&#34;_blank&#34;&gt;Dmitriy Stolyarov&lt;/a&gt; and
+&lt;a href=&#34;https://sites.google.com/umich.edu/johnleahy/home&#34; target=&#34;_blank&#34;&gt;John Leahy&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+&lt;p&gt;The improved Fall 2017 notes represent meaningful learning on my part&amp;mdash;many of the details are smoothed out in the updated notes.
+I preserve the &lt;a href=&#34;https://richryan.github.io/teaching/econ605_f2016/&#34; target=&#34;_blank&#34;&gt;Fall 2016 notes&lt;/a&gt; as a reference to those who used them.
+The preservation also represents a desire not to obliterate the hard work that went into them.&lt;/p&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;stolyarov&#34;&gt;Stolyarov&lt;/h2&gt;
 
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/o9cx04ju9hu2q0s5xz8f6sqgidivrkyx&#34; target=&#34;_blank&#34;&gt;ECON 605 Stolyarov notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/5qpfey58m9jdblyjpt3h2ljbvt8hnqfc&#34; target=&#34;_blank&#34;&gt;Notes on an alternative asset-market structure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/lbqucbsg1ujf5or6xzjoj3sh775x9cfd&#34; target=&#34;_blank&#34;&gt;The effect of corporate taxation on wages in the neoclassical growth model without labor choice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/pix8fxpyaep39aegyqb0gxmo3x7p6tsl&#34; target=&#34;_blank&#34;&gt;Slide deck for review session&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;h2 id=&#34;leahy&#34;&gt;Leahy&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/qdjzbsqttnjp9be6alvkmlrulclky14m&#34; target=&#34;_blank&#34;&gt;An example of discrete dynamic programming using McCall&amp;rsquo;s search model&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/co1iwp07m8fn5wo00h7gormlt84rzax4&#34; target=&#34;_blank&#34;&gt;Slide deck for review session&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/xkm9tnama1w61lcx7r3gy0l2jno9xayb&#34; target=&#34;_blank&#34;&gt;Worked examples of dynamic programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/fy41pfiibebos1cuod48xo1etowjkc66&#34; target=&#34;_blank&#34;&gt;ECON 605 Leahy notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -200,17 +276,13 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
       <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>/teaching/econ607_w2017/</guid>
-      <description>
+      <description>&lt;p&gt;Materials for Macroeconomic Theory I, ECON 605, with Professors &lt;a href=&#34;https://sites.google.com/umich.edu/johnleahy/home&#34; target=&#34;_blank&#34;&gt;John Leahy&lt;/a&gt; and
+&lt;a href=&#34;https://sites.google.com/site/ottonellopablo/&#34; target=&#34;_blank&#34;&gt;Pablo Ottonello&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/eavv25aglyxfnsewbl5fq1vhjtwg0svq&#34; target=&#34;_blank&#34;&gt;ECON 607 Leahy notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/asenqn5dn9d0pv9yyexigt5wk7uu201r&#34; target=&#34;_blank&#34;&gt;ECON 607 Ottonello notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
