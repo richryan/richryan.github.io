@@ -149,6 +149,83 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Converting the Jekyll website to Hugo and Blogdown</title>
+      <link>/2019/01/19/converting-the-jekyll-website-to-hugo/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/19/converting-the-jekyll-website-to-hugo/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#some-neat-features&#34;&gt;Some neat features&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#footnotes&#34;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#latex&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\LaTeX{}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#emojis&#34;&gt;Emojis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#alerts-and-helpful-hints&#34;&gt;Alerts and helpful hints&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#table-of-contents&#34;&gt;Table of contents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } }
+});
+&lt;/script&gt;
+&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Using Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a &lt;code&gt;jekyll serve&lt;/code&gt; command. Doing so became annoying. Another big selling point was the inclusion of &lt;strong&gt;R&lt;/strong&gt; code in posts, a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-neat-features&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some neat features&lt;/h1&gt;
+&lt;div id=&#34;footnotes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Footnotes&lt;/h2&gt;
+&lt;p&gt;Footnotes are easy to include—just like this.&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Footnotes are easy to include---just like this.[^fn:fn-example]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;latex&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;math inline&#34;&gt;\(\LaTeX{}\)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;Including inline &lt;span class=&#34;math inline&#34;&gt;\(\LaTeX\)&lt;/span&gt; math is done by wrapping expressions in a single &lt;code&gt;$&lt;/code&gt;. Multiline expressions are wrapped in &lt;code&gt;$$&lt;/code&gt;. For example, &lt;span class=&#34;math display&#34;&gt;\[
+\begin{equation}
+\label{eq:some-eq}
+\mathbf{y} = \mathbf{X} \beta + \varepsilon,
+\end{equation}
+\]&lt;/span&gt; which can be referred to as &lt;span class=&#34;math inline&#34;&gt;\(\eqref{eq:some-eq}\)&lt;/span&gt;. Automatic equation numbering is accomplished by including the HTML code&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; } }
+});
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;in a post. See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&#34; class=&#34;uri&#34;&gt;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;emojis&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Emojis&lt;/h2&gt;
+&lt;p&gt;An emoji can be included&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;alerts-and-helpful-hints&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Alerts and helpful hints&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;table-of-contents&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Table of contents&lt;/h2&gt;
+&lt;p&gt;A table of contents can be added to R Mardown posts by adding the following options to YAML:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;output: 
+  blogdown::html_page:
+    toc: true&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See, for example, some notes for &lt;a href=&#34;https://richryan.github.io/econ402/&#34;&gt;Intermediate Macroeconomic Theory&lt;/a&gt; or &lt;a href=&#34;https://richryan.github.io/econ401/&#34;&gt;Intermediate Microeconomic Theory&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A footnote.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Macroeconomic Theory I, Fall 2016</title>
       <link>/teaching/econ605_f2016/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
@@ -363,10 +440,10 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     
     <item>
       <title>A Plain Markdown Post</title>
-      <link>/post/2016-12-30-hello-markdown/</link>
+      <link>/2016/12/30/a-plain-markdown-post/</link>
       <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
       
-      <guid>/post/2016-12-30-hello-markdown/</guid>
+      <guid>/2016/12/30/a-plain-markdown-post/</guid>
       <description>&lt;p&gt;This is a post written in plain Markdown (&lt;code&gt;*.md&lt;/code&gt;) instead of R Markdown (&lt;code&gt;*.Rmd&lt;/code&gt;). The major differences are:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -417,24 +494,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
       
       <guid>/project/external-project/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Internal Project</title>
-      <link>/project/internal-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/project/internal-project/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
     </item>
     
   </channel>
