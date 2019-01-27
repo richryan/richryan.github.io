@@ -27,3 +27,21 @@ Directions for updating the website.
 - Run > bundle exec jekyll serve
 
 Using Jekyll, pages can be hid by removing the title element (and maybe the order element).
+
+## Useful `git` commands
+### Deleting large files
+To reduce the repository size, 
+I used the "BFG Repo-Cleaner," 
+documentation for which can be found [here](https://rtyley.github.io/bfg-repo-cleaner/).
+(This, slightly unfortunately, required installing Java.
+Nevertheless, see this [link](https://confluence.atlassian.com/bitbucket/reduce-repository-size-321848262.html).
+To see that the computer recognizes java,
+you could run `>java -version`.)
+
+First, to see the size of the Git repository,
+you can run `git count-objects -v`.
+The size-pack value is the size of your repository when it is pushed to a remote server like GitHub. 
+The size-pack value is in kilobytes.  
+After using BFG, 
+you need to remove `reflog` entries that point to old history and
+run the garbage collector to purge the old data.
