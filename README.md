@@ -55,5 +55,14 @@ Removing files is done, in the same directory that contains `.git`, along the li
 java -jar bfg-1.13.0.jar --delete-files f2014_*.pdf
 ```
 
+To push all the changes back to the GitHub repository, run:
+```
+git push --all --force
+```
+and make sure tags are current as well:
+```
+git push --tags --force
+```
+
 You can determine the largest files in the repository by running `bash git_find_big.sh` 
 (see [here](https://stubbisms.wordpress.com/2009/07/10/git-script-to-show-largest-pack-objects-and-trim-your-waist-line/)).
