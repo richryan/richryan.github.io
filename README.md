@@ -40,11 +40,20 @@ you could run `>java -version`.)
 
 First, to see the size of the Git repository,
 you can run `git count-objects -v`.
-The size-pack value is the size of your repository when it is pushed to a remote server like GitHub. 
-The size-pack value is in kilobytes.  
+The *size-pack* value is the size of your repository when it is pushed to a remote server like GitHub. 
+The *size-pack* value is in kilobytes.  
 After using BFG, 
 you need to remove `reflog` entries that point to old history and
 run the garbage collector to purge the old data.
+The BFG program recommends running
+```
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
+
+Removing files is done, in the same directory that contains `.git`, along the lines of:
+```
+java -jar bfg-1.13.0.jar --delete-files f2014_*.pdf
+```
 
 You can determine the largest files in the repository by running `bash git_find_big.sh` 
 (see [here](https://stubbisms.wordpress.com/2009/07/10/git-script-to-show-largest-pack-objects-and-trim-your-waist-line/)).
