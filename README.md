@@ -45,3 +45,6 @@ The size-pack value is in kilobytes.
 After using BFG, 
 you need to remove `reflog` entries that point to old history and
 run the garbage collector to purge the old data.
+
+You can determine the largest files in the repository by running `bash git_find_big.sh` 
+(see [here](https://stubbisms.wordpress.com/2009/07/10/git-script-to-show-largest-pack-objects-and-trim-your-waist-line/)).
