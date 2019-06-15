@@ -28,7 +28,7 @@
     
     <url>
     
-      <loc>/post/</loc>
+      <loc>/posts/</loc>
       <lastmod>2019-06-15T00:00:00-04:00</lastmod>
     </url>
     
@@ -36,7 +36,15 @@
     
     <url>
     
-      <loc>/2019/01/19/converting-the-jekyll-website-to-hugo/</loc>
+      <loc>/2019/06/15/hello-world/</loc>
+      <lastmod>2019-06-15T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/posts/converting-the-jekyll-website-to-hugo/</loc>
       <lastmod>2019-01-19T00:00:00+00:00</lastmod>
     </url>
     
@@ -86,6 +94,14 @@
     
       <loc>/teaching/econ402_w2018/</loc>
       <lastmod>2019-01-15T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/posts/</loc>
+      <lastmod>2019-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -148,7 +164,7 @@
     
     <url>
     
-      <loc>/2016/12/30/a-plain-markdown-post/</loc>
+      <loc>/posts/2016-12-30-hello-markdown/</loc>
       <lastmod>2016-12-30T21:49:57-07:00</lastmod>
     </url>
     
@@ -180,7 +196,7 @@
     
     <url>
     
-      <loc>/2016/04/20/academic-the-website-designer-for-hugo/</loc>
+      <loc>/posts/getting-started/</loc>
       <lastmod>2018-01-13T00:00:00-05:00</lastmod>
     </url>
     
@@ -196,7 +212,7 @@
     
     <url>
     
-      <loc>/2015/07/23/hello-r-markdown/</loc>
+      <loc>/posts/2015-07-23-r-rmarkdown/</loc>
       <lastmod>2015-07-23T21:13:14-05:00</lastmod>
     </url>
     
@@ -204,7 +220,7 @@
     
     <url>
     
-      <loc>/2015/01/01/lorem-ipsum/</loc>
+      <loc>/posts/2015-01-01-lorem-ipsum/</loc>
       <lastmod>2015-01-01T13:09:13-06:00</lastmod>
     </url>
     
@@ -273,6 +289,15 @@
     
     <url>
     
+      <loc>/post/</loc>
+      <lastmod>2019-06-15T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/project/</loc>
       <lastmod>2016-04-27T00:00:00-04:00</lastmod>
       <priority>0</priority>
@@ -284,6 +309,15 @@
     
       <loc>/publication_types/</loc>
       <lastmod>2013-07-01T00:00:00-04:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/r/</loc>
+      <lastmod>2019-06-15T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

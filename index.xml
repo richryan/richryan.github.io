@@ -152,11 +152,47 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Hello World</title>
+      <link>/2019/06/15/hello-world/</link>
+      <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/15/hello-world/</guid>
+      <description>
+
+&lt;h2 id=&#34;r-markdown&#34;&gt;R Markdown&lt;/h2&gt;
+
+&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; target=&#34;_blank&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When you click the &lt;strong&gt;Knit&lt;/strong&gt; button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(cars)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;including-plots&#34;&gt;Including Plots&lt;/h2&gt;
+
+&lt;p&gt;You can also embed plots, for example:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/first-post_files/figure-html/pressure-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that the &lt;code&gt;echo = FALSE&lt;/code&gt; parameter was added to the code chunk to prevent printing of the R code that generated the plot.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Converting the Jekyll website to Hugo and Blogdown</title>
-      <link>/2019/01/19/converting-the-jekyll-website-to-hugo/</link>
+      <link>/posts/converting-the-jekyll-website-to-hugo/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/01/19/converting-the-jekyll-website-to-hugo/</guid>
+      <guid>/posts/converting-the-jekyll-website-to-hugo/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -388,6 +424,16 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     </item>
     
     <item>
+      <title>Landing Page</title>
+      <link>/posts/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/</guid>
+      <description>&lt;p&gt;Something&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Example Page</title>
       <link>/tutorial/example/</link>
       <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
@@ -443,10 +489,10 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     
     <item>
       <title>A Plain Markdown Post</title>
-      <link>/2016/12/30/a-plain-markdown-post/</link>
+      <link>/posts/2016-12-30-hello-markdown/</link>
       <pubDate>Fri, 30 Dec 2016 21:49:57 -0700</pubDate>
       
-      <guid>/2016/12/30/a-plain-markdown-post/</guid>
+      <guid>/posts/2016-12-30-hello-markdown/</guid>
       <description>&lt;p&gt;This is a post written in plain Markdown (&lt;code&gt;*.md&lt;/code&gt;) instead of R Markdown (&lt;code&gt;*.Rmd&lt;/code&gt;). The major differences are:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -478,25 +524,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
-      
-      <guid>/about/</guid>
-      <description>&lt;p&gt;This is a &amp;ldquo;hello world&amp;rdquo; example website for the &lt;a href=&#34;https://github.com/rstudio/blogdown&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; package. The theme was forked from &lt;a href=&#34;https://github.com/jrutheiser/hugo-lithium-theme&#34; target=&#34;_blank&#34;&gt;@jrutheiser/hugo-lithium-theme&lt;/a&gt; and modified by &lt;a href=&#34;https://github.com/yihui/hugo-lithium&#34; target=&#34;_blank&#34;&gt;Yihui Xie&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>/project/external-project/</guid>
-      <description></description>
     </item>
     
   </channel>

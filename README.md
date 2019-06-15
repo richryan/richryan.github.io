@@ -3,21 +3,30 @@ Starting 1/3/2019, I am moving the website to `blogdown`.
 
 ## Running the website
 
-The content of the site is located in `richryan.blogdown\public`.
+The content of the site is located in `richryan.blogdown/public`.
 This directory is where the Git repository is located, which includes this `README.md` file.
 The content of the website, however, is included in the `content` directory.
 
 For example, if you wanted to edit the Research tab, then
-this should be done in the `content\research.md` file.
+this should be done in the `content/research.md` file.
 
 - Requires `blogdown` package
 - You can preview the site by running `blogdown::serve_site()`,
 which I was able to do in the directory `richryan.blogdown`
 - Manage content in the `content` directory in `richryan.blogdown`
 - Tabs under the homepage can be configured in `config.toml`
-- Adding the "Posts" tab required
+- For *sections* on the main page,
+edit *sections* in `richryan.blogdown\content\home`.
+These are different Markdown files (`.md` files).
+Turn the `active` frontmattter to true in the Markdown file.
 
 ## Building the `Posts` tab ##
+
+This describes the process of creating a page
+(see the documentation in the [Hugo Academic documentation](https://sourcethemes.com/academic/docs/managing-content/)).
+
+- Add `index.md` to the directory `content/posts` directory.
+- The `posts` directory should
 
 ## General Resources
 Here are a few resources for using `blogdown`:
