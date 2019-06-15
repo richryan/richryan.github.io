@@ -20,6 +20,9 @@ edit *sections* in `richryan.blogdown\content\home`.
 These are different Markdown files (`.md` files).
 Turn the `active` frontmattter to true in the Markdown file.
 - *All* of the content in the `public` directory must be added.
+Blog posts, for example, are contained by year.
+For example a blog post dated 2019-06-15 is contained in `2019/06/15/hello-world/index.html`.
+That HTML file must be included in the GitHub directory.
 
 ## Building the `Posts` tab ##
 
