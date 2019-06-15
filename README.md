@@ -2,6 +2,14 @@
 Starting 1/3/2019, I am moving the website to `blogdown`.
 
 ## Running the website
+
+The content of the site is located in `richryan.blogdown\public`.
+This directory is where the Git repository is located, which includes this `README.md` file.
+The content of the website, however, is included in the `content` directory.
+
+For example, if you wanted to edit the Research tab, then
+this should be done in the `content\research.md` file.
+
 - Requires `blogdown` package
 - You can preview the site by running `blogdown::serve_site()`,
 which I was able to do in the directory `richryan.blogdown`
