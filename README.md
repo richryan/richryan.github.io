@@ -3,9 +3,11 @@ Starting 1/3/2019, I am moving the website to `blogdown`.
 
 ## Running the website
 - Requires `blogdown` package
-- You can preview the site by running `blogdown::serve_site()`
+- You can preview the site by running `blogdown::serve_site()`,
+which I was able to do in the directory `richryan.blogdown`
 - Manage content in the `content` directory in `richryan.blogdown`
 - Tabs under the homepage can be configured in `config.toml`
+- Adding the "Posts" tab required
 
 ## General Resources
 Here are a few resources for using `blogdown`:
