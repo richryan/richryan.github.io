@@ -19,6 +19,7 @@ which I was able to do in the directory `richryan.blogdown`
 edit *sections* in `richryan.blogdown\content\home`.
 These are different Markdown files (`.md` files).
 Turn the `active` frontmattter to true in the Markdown file.
+- *All* of the content in the `public` directory must be added.
 
 ## Building the `Posts` tab ##
 
