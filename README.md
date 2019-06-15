@@ -17,6 +17,8 @@ which I was able to do in the directory `richryan.blogdown`
 - Tabs under the homepage can be configured in `config.toml`
 - Adding the "Posts" tab required
 
+## Building the `Posts` tab ##
+
 ## General Resources
 Here are a few resources for using `blogdown`:
 - https://blogdown-demo.rbind.io/
