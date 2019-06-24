@@ -3,9 +3,9 @@ Starting 1/3/2019, I am moving the website to `blogdown`.
 
 ## Running the website
 
-The content of the site is located in `richryan.blogdown/public`.
+The content of the site is located in `richryan.blogdown\public`.
 This directory is where the Git repository is located, which includes this `README.md` file.
-The content of the website, however, is included in the `content` directory.
+The content of the website, however, is included in the `content\home` directory.
 
 For example, if you wanted to edit the Research tab, then
 this should be done in the `content/research.md` file.
