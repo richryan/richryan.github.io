@@ -18,7 +18,7 @@
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/converting-the-jekyll-website-to-hugo/</guid>
-      <description>IntroductionSome neat featuresFootnotes\(\LaTeX{}\)EmojisAlerts and helpful hintsTable of contentsMathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } }});IntroductionUsing Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a jekyll serve command. Doing so became annoying. Another big selling point was the inclusion of R code in posts, a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.</description>
+      <description>IntroductionSome neat featuresFootnotes\(\LaTeX{}\)EmojisAlerts and helpful hintsTable of contentsMathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } }});IntroductionUsing Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a jekyll serve command.Doing so became annoying.Another big selling point was the inclusion of R code in posts,a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.</description>
     </item>
     
     <item>

@@ -152,38 +152,187 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
-      <title>Hello World</title>
-      <link>/2019/06/15/hello-world/</link>
+      <title>Many models in R</title>
+      <link>/2019/06/15/many-models-in-r/</link>
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/15/hello-world/</guid>
+      <guid>/2019/06/15/many-models-in-r/</guid>
       <description>
 
-&lt;h2 id=&#34;r-markdown&#34;&gt;R Markdown&lt;/h2&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; target=&#34;_blank&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is an example of using R to run many regressions and collect a single regression coefficient from each model.&lt;/p&gt;
 
-&lt;p&gt;When you click the &lt;strong&gt;Knit&lt;/strong&gt; button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:&lt;/p&gt;
+&lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(cars)
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(forcats)
+library(tidyquant)
+
+date_start &amp;lt;- &amp;quot;1960-01-01&amp;quot;
+dat &amp;lt;- tq_get(c(&amp;quot;UNRATE&amp;quot;, &amp;quot;CPIAUCSL&amp;quot;, &amp;quot;CPILFESL&amp;quot;), get = &amp;quot;economic.data&amp;quot;,
+             from = date_start)
+ur &amp;lt;- dat %&amp;gt;% 
+  filter(symbol == &amp;quot;UNRATE&amp;quot;) %&amp;gt;% 
+  rename(ur = price) %&amp;gt;% 
+  select(-symbol)
+dat &amp;lt;- filter(dat, symbol != &amp;quot;UNRATE&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;pre&gt;&lt;code&gt;##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
+&lt;p&gt;Check that the unemployment-rate data are read in correctly:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;head(ur)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;h2 id=&#34;including-plots&#34;&gt;Including Plots&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 2
+##   date          ur
+##   &amp;lt;date&amp;gt;     &amp;lt;dbl&amp;gt;
+## 1 1960-01-01   5.2
+## 2 1960-02-01   4.8
+## 3 1960-03-01   5.4
+## 4 1960-04-01   5.2
+## 5 1960-05-01   5.1
+## 6 1960-06-01   5.4
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;You can also embed plots, for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tail(ur)
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;img src=&#34;/post/first-post_files/figure-html/pressure-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 2
+##   date          ur
+##   &amp;lt;date&amp;gt;     &amp;lt;dbl&amp;gt;
+## 1 2018-12-01   3.9
+## 2 2019-01-01   4  
+## 3 2019-02-01   3.8
+## 4 2019-03-01   3.8
+## 5 2019-04-01   3.6
+## 6 2019-05-01   3.6
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Note that the &lt;code&gt;echo = FALSE&lt;/code&gt; parameter was added to the code chunk to prevent printing of the R code that generated the plot.&lt;/p&gt;
+&lt;p&gt;Generate inflation data as percent change from one year ago:&lt;/p&gt;
+
+&lt;p&gt;$$ \text{percent change from year ago} = \left( \frac{ x_t }{ x_{t-12} } - 1 \right) \times 100. $$&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- dat %&amp;gt;% 
+  group_by(symbol) %&amp;gt;% 
+  mutate(infl = (price/lag(price, n = 12) - 1)*100) %&amp;gt;% 
+  drop_na()
+
+# Rename series
+dat &amp;lt;- dat %&amp;gt;% 
+  mutate(series_name = case_when(symbol == &amp;quot;CPILFESL&amp;quot; ~ &amp;quot;Less food and energy&amp;quot;,
+                                 symbol == &amp;quot;CPIAUCSL&amp;quot; ~ &amp;quot;All items&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Plot the data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(data = dat) +
+  geom_line(mapping = aes(x = date, y = infl, color = series_name)) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Percent&amp;quot;, color = &amp;quot;&amp;quot;) + theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/first-post_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;regressions&#34;&gt;Regressions&lt;/h2&gt;
+
+&lt;p&gt;The goal now is seeing the relationship between the unemployment rate and inflation. Specifically, we&amp;rsquo;re interested in the regressions
+$$ \text{inflation}_t = \alpha + \beta \; \text{unemployment rate}_t + \varepsilon_t $$
+for each of the inflation series. We&amp;rsquo;re interested in reporting the $ \beta $s.&lt;/p&gt;
+
+&lt;p&gt;To do so, we need to get the data in this form:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- dat %&amp;gt;% 
+  left_join(ur, by = &amp;quot;date&amp;quot;)
+head(dat)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+## # Groups:   symbol [1]
+##   symbol   date       price  infl series_name    ur
+##   &amp;lt;chr&amp;gt;    &amp;lt;date&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;
+## 1 CPIAUCSL 1961-01-01  29.8 1.60  All items     6.6
+## 2 CPIAUCSL 1961-02-01  29.8 1.46  All items     6.9
+## 3 CPIAUCSL 1961-03-01  29.8 1.46  All items     6.9
+## 4 CPIAUCSL 1961-04-01  29.8 0.914 All items     7  
+## 5 CPIAUCSL 1961-05-01  29.8 0.913 All items     7.1
+## 6 CPIAUCSL 1961-06-01  29.8 0.777 All items     6.9
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tail(dat)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 6
+## # Groups:   symbol [1]
+##   symbol   date       price  infl series_name             ur
+##   &amp;lt;chr&amp;gt;    &amp;lt;date&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;                &amp;lt;dbl&amp;gt;
+## 1 CPILFESL 2018-12-01  260.  2.21 Less food and energy   3.9
+## 2 CPILFESL 2019-01-01  261.  2.15 Less food and energy   4  
+## 3 CPILFESL 2019-02-01  261.  2.08 Less food and energy   3.8
+## 4 CPILFESL 2019-03-01  261.  2.04 Less food and energy   3.8
+## 5 CPILFESL 2019-04-01  262.  2.07 Less food and energy   3.6
+## 6 CPILFESL 2019-05-01  262.  2.00 Less food and energy   3.6
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we&amp;rsquo;re interested in a &lt;em&gt;function&lt;/em&gt; that regresses &lt;code&gt;infl&lt;/code&gt; on &lt;code&gt;ur&lt;/code&gt; and returns the coefficient on &lt;code&gt;ur&lt;/code&gt;. The input of the function will be data frame. We&amp;rsquo;re interested in data frames because there are essentially two datasets, one for each of the inflation series. This is done using R&amp;rsquo;s &lt;code&gt;nest&lt;/code&gt;, which creates a new data structure:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- dat %&amp;gt;% 
+  group_by(series_name) %&amp;gt;% 
+  nest()
+dat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 2
+##   series_name          data              
+##   &amp;lt;chr&amp;gt;                &amp;lt;list&amp;gt;            
+## 1 All items            &amp;lt;tibble [701 x 5]&amp;gt;
+## 2 Less food and energy &amp;lt;tibble [701 x 5]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Each row of the &lt;code&gt;data&lt;/code&gt; column is data frame:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat$data[[1]]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 701 x 5
+##    symbol   date       price  infl    ur
+##    &amp;lt;chr&amp;gt;    &amp;lt;date&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+##  1 CPIAUCSL 1961-01-01  29.8 1.60    6.6
+##  2 CPIAUCSL 1961-02-01  29.8 1.46    6.9
+##  3 CPIAUCSL 1961-03-01  29.8 1.46    6.9
+##  4 CPIAUCSL 1961-04-01  29.8 0.914   7  
+##  5 CPIAUCSL 1961-05-01  29.8 0.913   7.1
+##  6 CPIAUCSL 1961-06-01  29.8 0.777   6.9
+##  7 CPIAUCSL 1961-07-01  29.9 1.25    7  
+##  8 CPIAUCSL 1961-08-01  29.9 1.11    6.6
+##  9 CPIAUCSL 1961-09-01  30.0 1.25    6.7
+## 10 CPIAUCSL 1961-10-01  30.0 0.773   6.5
+## # ... with 691 more rows
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we&amp;rsquo;re interested in a function that takes one of these data frames as inputs.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;my_reg &amp;lt;- function(df) {
+  fit &amp;lt;- lm(infl ~ ur, data = df)
+  # Return the unemployment-rate coefficient
+  return(fit$coefficients[[&amp;quot;ur&amp;quot;]])
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And we want to use R&amp;rsquo;s map function to return the coefficients:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- dat %&amp;gt;% 
+  mutate(coefficient = map(data, my_reg)) %&amp;gt;% 
+  unnest(coefficient)
+dat
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 2 x 3
+##   series_name          data               coefficient
+##   &amp;lt;chr&amp;gt;                &amp;lt;list&amp;gt;                   &amp;lt;dbl&amp;gt;
+## 1 All items            &amp;lt;tibble [701 x 5]&amp;gt;       0.230
+## 2 Less food and energy &amp;lt;tibble [701 x 5]&amp;gt;       0.371
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The dataset now contains the coefficients from the two regressions.&lt;/p&gt;
 </description>
     </item>
     
@@ -215,29 +364,38 @@ MathJax.Hub.Config({
 &lt;/script&gt;
 &lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Using Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a &lt;code&gt;jekyll serve&lt;/code&gt; command. Doing so became annoying. Another big selling point was the inclusion of &lt;strong&gt;R&lt;/strong&gt; code in posts, a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.&lt;a href=&#34;#fn1&#34; class=&#34;footnoteRef&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Using Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a &lt;code&gt;jekyll serve&lt;/code&gt; command.
+Doing so became annoying.
+Another big selling point was the inclusion of &lt;strong&gt;R&lt;/strong&gt; code in posts,
+a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;some-neat-features&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Some neat features&lt;/h1&gt;
 &lt;div id=&#34;footnotes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Footnotes&lt;/h2&gt;
-&lt;p&gt;Footnotes are easy to include—just like this.&lt;a href=&#34;#fn2&#34; class=&#34;footnoteRef&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Footnotes are easy to include—just like this.&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Footnotes are easy to include---just like this.[^fn:fn-example]&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;latex&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;math inline&#34;&gt;\(\LaTeX{}\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;Including inline &lt;span class=&#34;math inline&#34;&gt;\(\LaTeX\)&lt;/span&gt; math is done by wrapping expressions in a single &lt;code&gt;$&lt;/code&gt;. Multiline expressions are wrapped in &lt;code&gt;$$&lt;/code&gt;. For example, &lt;span class=&#34;math display&#34;&gt;\[
+&lt;p&gt;Including inline &lt;span class=&#34;math inline&#34;&gt;\(\LaTeX\)&lt;/span&gt; math is done by wrapping expressions in a single &lt;code&gt;$&lt;/code&gt;.
+Multiline expressions are wrapped in &lt;code&gt;$$&lt;/code&gt;.
+For example,
+&lt;span class=&#34;math display&#34;&gt;\[
 \begin{equation}
 \label{eq:some-eq}
 \mathbf{y} = \mathbf{X} \beta + \varepsilon,
 \end{equation}
-\]&lt;/span&gt; which can be referred to as &lt;span class=&#34;math inline&#34;&gt;\(\eqref{eq:some-eq}\)&lt;/span&gt;. Automatic equation numbering is accomplished by including the HTML code&lt;/p&gt;
+\]&lt;/span&gt;
+which can be referred to as &lt;span class=&#34;math inline&#34;&gt;\(\eqref{eq:some-eq}\)&lt;/span&gt;.
+Automatic equation numbering is accomplished by including the HTML code&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;
 MathJax.Hub.Config({
   TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; } }
 });
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;in a post. See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&#34; class=&#34;uri&#34;&gt;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;in a post.
+See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&#34;&gt;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;emojis&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Emojis&lt;/h2&gt;
@@ -257,8 +415,10 @@ MathJax.Hub.Config({
 &lt;div class=&#34;footnotes&#34;&gt;
 &lt;hr /&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See, for example, some notes for &lt;a href=&#34;https://richryan.github.io/econ402/&#34;&gt;Intermediate Macroeconomic Theory&lt;/a&gt; or &lt;a href=&#34;https://richryan.github.io/econ401/&#34;&gt;Intermediate Microeconomic Theory&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A footnote.&lt;a href=&#34;#fnref2&#34;&gt;↩&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See, for example, some notes for
+&lt;a href=&#34;https://richryan.github.io/econ402/&#34;&gt;Intermediate Macroeconomic Theory&lt;/a&gt; or
+&lt;a href=&#34;https://richryan.github.io/econ401/&#34;&gt;Intermediate Microeconomic Theory&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A footnote.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
 </description>

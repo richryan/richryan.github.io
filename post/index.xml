@@ -13,13 +13,14 @@
     
     
     <item>
-      <title>Hello World</title>
-      <link>/2019/06/15/hello-world/</link>
+      <title>Many models in R</title>
+      <link>/2019/06/15/many-models-in-r/</link>
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/15/hello-world/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
+      <guid>/2019/06/15/many-models-in-r/</guid>
+      <description>Introduction This is an example of using R to run many regressions and collect a single regression coefficient from each model.
+Data library(forcats) library(tidyquant) date_start &amp;lt;- &amp;quot;1960-01-01&amp;quot; dat &amp;lt;- tq_get(c(&amp;quot;UNRATE&amp;quot;, &amp;quot;CPIAUCSL&amp;quot;, &amp;quot;CPILFESL&amp;quot;), get = &amp;quot;economic.data&amp;quot;, from = date_start) ur &amp;lt;- dat %&amp;gt;% filter(symbol == &amp;quot;UNRATE&amp;quot;) %&amp;gt;% rename(ur = price) %&amp;gt;% select(-symbol) dat &amp;lt;- filter(dat, symbol != &amp;quot;UNRATE&amp;quot;)  Check that the unemployment-rate data are read in correctly:
+head(ur)  ## # A tibble: 6 x 2 ## date ur ## &amp;lt;date&amp;gt; &amp;lt;dbl&amp;gt; ## 1 1960-01-01 5.</description>
     </item>
     
   </channel>
