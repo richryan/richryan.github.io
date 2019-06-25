@@ -18,9 +18,8 @@
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>/2019/06/15/many-models-in-r/</guid>
-      <description>Introduction This is an example of using R to run many regressions and collect a single regression coefficient from each model.
-Data library(forcats) library(tidyquant) date_start &amp;lt;- &amp;quot;1960-01-01&amp;quot; dat &amp;lt;- tq_get(c(&amp;quot;UNRATE&amp;quot;, &amp;quot;CPIAUCSL&amp;quot;, &amp;quot;CPILFESL&amp;quot;), get = &amp;quot;economic.data&amp;quot;, from = date_start) ur &amp;lt;- dat %&amp;gt;% filter(symbol == &amp;quot;UNRATE&amp;quot;) %&amp;gt;% rename(ur = price) %&amp;gt;% select(-symbol) dat &amp;lt;- filter(dat, symbol != &amp;quot;UNRATE&amp;quot;)  Check that the unemployment-rate data are read in correctly:
-head(ur)  ## # A tibble: 6 x 2 ## date ur ## &amp;lt;date&amp;gt; &amp;lt;dbl&amp;gt; ## 1 1960-01-01 5.</description>
+      <description>Introduction This is an example of using R to run many regressions and collect a single regression coefficient from each model. The code uses R&amp;rsquo;s list-columns feature.
+Data library(forcats) library(tidyquant) date_start &amp;lt;- &amp;quot;1960-01-01&amp;quot; dat &amp;lt;- tq_get(c(&amp;quot;UNRATE&amp;quot;, &amp;quot;CPIAUCSL&amp;quot;, &amp;quot;CPILFESL&amp;quot;), get = &amp;quot;economic.data&amp;quot;, from = date_start) ur &amp;lt;- dat %&amp;gt;% filter(symbol == &amp;quot;UNRATE&amp;quot;) %&amp;gt;% rename(ur = price) %&amp;gt;% select(-symbol) dat &amp;lt;- filter(dat, symbol != &amp;quot;UNRATE&amp;quot;)  Check that the unemployment-rate data are read in correctly:</description>
     </item>
     
   </channel>

@@ -161,7 +161,7 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
 
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;This is an example of using R to run many regressions and collect a single regression coefficient from each model.&lt;/p&gt;
+&lt;p&gt;This is an example of using R to run many regressions and collect a single regression coefficient from each model. The code uses R&amp;rsquo;s list-columns feature.&lt;/p&gt;
 
 &lt;h2 id=&#34;data&#34;&gt;Data&lt;/h2&gt;
 

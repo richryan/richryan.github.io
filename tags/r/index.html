@@ -312,9 +312,8 @@
     <h2><a href="/2019/06/15/many-models-in-r/">Many models in R</a></h2>
     <div class="article-style">
       
-      Introduction This is an example of using R to run many regressions and collect a single regression coefficient from each model.
+      Introduction This is an example of using R to run many regressions and collect a single regression coefficient from each model. The code uses R&rsquo;s list-columns feature.
 Data library(forcats) library(tidyquant) date_start &lt;- &quot;1960-01-01&quot; dat &lt;- tq_get(c(&quot;UNRATE&quot;, &quot;CPIAUCSL&quot;, &quot;CPILFESL&quot;), get = &quot;economic.data&quot;, from = date_start) ur &lt;- dat %&gt;% filter(symbol == &quot;UNRATE&quot;) %&gt;% rename(ur = price) %&gt;% select(-symbol) dat &lt;- filter(dat, symbol != &quot;UNRATE&quot;)  Check that the unemployment-rate data are read in correctly:
-head(ur)  ## # A tibble: 6 x 2 ## date ur ## &lt;date&gt; &lt;dbl&gt; ## 1 1960-01-01 5.
       
     </div>
   </div>
