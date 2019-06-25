@@ -227,7 +227,9 @@ dat &amp;lt;- dat %&amp;gt;%
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(data = dat) +
   geom_line(mapping = aes(x = date, y = infl, color = series_name)) +
-  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Percent&amp;quot;, color = &amp;quot;&amp;quot;) + theme_bw()
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Percent&amp;quot;, color = &amp;quot;&amp;quot;) + 
+  ggtitle(&amp;quot;Inflation&amp;quot;) +
+  theme_bw()
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;/post/first-post_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;

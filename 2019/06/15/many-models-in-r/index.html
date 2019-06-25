@@ -431,7 +431,9 @@ dat &lt;- dat %&gt;%
 
 <pre><code class="language-r">ggplot(data = dat) +
   geom_line(mapping = aes(x = date, y = infl, color = series_name)) +
-  labs(x = &quot;&quot;, y = &quot;Percent&quot;, color = &quot;&quot;) + theme_bw()
+  labs(x = &quot;&quot;, y = &quot;Percent&quot;, color = &quot;&quot;) + 
+  ggtitle(&quot;Inflation&quot;) +
+  theme_bw()
 </code></pre>
 
 <p><img src="/post/first-post_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
