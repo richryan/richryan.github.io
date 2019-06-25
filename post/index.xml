@@ -22,5 +22,15 @@
 Data library(forcats) library(tidyquant) date_start &amp;lt;- &amp;quot;1960-01-01&amp;quot; dat &amp;lt;- tq_get(c(&amp;quot;UNRATE&amp;quot;, &amp;quot;CPIAUCSL&amp;quot;, &amp;quot;CPILFESL&amp;quot;), get = &amp;quot;economic.data&amp;quot;, from = date_start) ur &amp;lt;- dat %&amp;gt;% filter(symbol == &amp;quot;UNRATE&amp;quot;) %&amp;gt;% rename(ur = price) %&amp;gt;% select(-symbol) dat &amp;lt;- filter(dat, symbol != &amp;quot;UNRATE&amp;quot;)  Check that the unemployment-rate data are read in correctly:</description>
     </item>
     
+    <item>
+      <title>Welcome to ECON 401</title>
+      <link>/2018/10/21/welcome-to-econ-401/</link>
+      <pubDate>Sun, 21 Oct 2018 18:56:00 -0400</pubDate>
+      
+      <guid>/2018/10/21/welcome-to-econ-401/</guid>
+      <description>Welcome to Intermediate Microeconomics, ECON 401.
+🔥 🔥 🔥 The course website is here 🔥 🔥 🔥</description>
+    </item>
+    
   </channel>
 </rss>
