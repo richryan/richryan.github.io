@@ -499,94 +499,6 @@ See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equatio
     </item>
     
     <item>
-      <title>Converting the Jekyll website to Hugo and Blogdown</title>
-      <link>/posts/converting-the-jekyll-website-to-hugo/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/converting-the-jekyll-website-to-hugo/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#some-neat-features&#34;&gt;Some neat features&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#footnotes&#34;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#latex&#34;&gt;&lt;span class=&#34;math inline&#34;&gt;\(\LaTeX{}\)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#emojis&#34;&gt;Emojis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#alerts-and-helpful-hints&#34;&gt;Alerts and helpful hints&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#table-of-contents&#34;&gt;Table of contents&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } }
-});
-&lt;/script&gt;
-&lt;div id=&#34;introduction&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Using Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a &lt;code&gt;jekyll serve&lt;/code&gt; command.
-Doing so became annoying.
-Another big selling point was the inclusion of &lt;strong&gt;R&lt;/strong&gt; code in posts,
-a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.&lt;a href=&#34;#fn1&#34; class=&#34;footnote-ref&#34; id=&#34;fnref1&#34;&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;some-neat-features&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Some neat features&lt;/h1&gt;
-&lt;div id=&#34;footnotes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Footnotes&lt;/h2&gt;
-&lt;p&gt;Footnotes are easy to include—just like this.&lt;a href=&#34;#fn2&#34; class=&#34;footnote-ref&#34; id=&#34;fnref2&#34;&gt;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Footnotes are easy to include---just like this.[^fn:fn-example]&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;latex&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;math inline&#34;&gt;\(\LaTeX{}\)&lt;/span&gt;&lt;/h2&gt;
-&lt;p&gt;Including inline &lt;span class=&#34;math inline&#34;&gt;\(\LaTeX\)&lt;/span&gt; math is done by wrapping expressions in a single &lt;code&gt;$&lt;/code&gt;.
-Multiline expressions are wrapped in &lt;code&gt;$$&lt;/code&gt;.
-For example,
-&lt;span class=&#34;math display&#34;&gt;\[
-\begin{equation}
-\label{eq:some-eq}
-\mathbf{y} = \mathbf{X} \beta + \varepsilon,
-\end{equation}
-\]&lt;/span&gt;
-which can be referred to as &lt;span class=&#34;math inline&#34;&gt;\(\eqref{eq:some-eq}\)&lt;/span&gt;.
-Automatic equation numbering is accomplished by including the HTML code&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;
-MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; } }
-});
-&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;in a post.
-See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&#34;&gt;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;emojis&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Emojis&lt;/h2&gt;
-&lt;p&gt;An emoji like 👋 can be included using &lt;code&gt;👋&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;alerts-and-helpful-hints&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Alerts and helpful hints&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;table-of-contents&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Table of contents&lt;/h2&gt;
-&lt;p&gt;A table of contents can be added to R Mardown posts by adding the following options to YAML:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;output: 
-  blogdown::html_page:
-    toc: true&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;footnotes&#34;&gt;
-&lt;hr /&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn1&#34;&gt;&lt;p&gt;See, for example, some notes for
-&lt;a href=&#34;https://richryan.github.io/econ402/&#34;&gt;Intermediate Macroeconomic Theory&lt;/a&gt; or
-&lt;a href=&#34;https://richryan.github.io/econ401/&#34;&gt;Intermediate Microeconomic Theory&lt;/a&gt;.&lt;a href=&#34;#fnref1&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li id=&#34;fn2&#34;&gt;&lt;p&gt;A footnote.&lt;a href=&#34;#fnref2&#34; class=&#34;footnote-back&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Macroeconomic Theory I, Fall 2016</title>
       <link>/teaching/econ605_f2016/</link>
       <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
@@ -746,16 +658,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     </item>
     
     <item>
-      <title>Landing Page</title>
-      <link>/posts/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/</guid>
-      <description>&lt;p&gt;Something&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Welcome to ECON 401</title>
       <link>/2018/10/21/welcome-to-econ-401/</link>
       <pubDate>Sun, 21 Oct 2018 18:56:00 -0400</pubDate>
@@ -785,6 +687,40 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 &lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
+      
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>/talk/example/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
+      
+      <guid>/talk/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;em&gt;Slides&lt;/em&gt; feature and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     

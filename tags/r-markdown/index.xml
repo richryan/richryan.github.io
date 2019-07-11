@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R Markdown on RICH RYAN</title>
+    <title>R markdown on RICH RYAN</title>
     <link>/tags/r-markdown/</link>
-    <description>Recent content in R Markdown on RICH RYAN</description>
+    <description>Recent content in R markdown on RICH RYAN</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
@@ -14,22 +14,11 @@
     
     <item>
       <title>Converting the Jekyll website to Hugo and Blogdown</title>
-      <link>/posts/converting-the-jekyll-website-to-hugo/</link>
+      <link>/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/converting-the-jekyll-website-to-hugo/</guid>
-      <description>IntroductionSome neat featuresFootnotes\(\LaTeX{}\)EmojisAlerts and helpful hintsTable of contentsMathJax.Hub.Config({TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } }});IntroductionUsing Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a jekyll serve command.Doing so became annoying.Another big selling point was the inclusion of R code in posts,a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/posts/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/posts/2015-07-23-r-rmarkdown/</guid>
-      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+      <guid>/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/</guid>
+      <description>MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } } });  Table of Contents  Introduction Footnotes $ \LaTeX{} $ Emojis Alerts and helpful hints Table of contents   Introduction Using Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a jekyll serve command. Doing so became annoying. Another big selling point was the inclusion of R code in posts, a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.</description>
     </item>
     
   </channel>
