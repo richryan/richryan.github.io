@@ -31,7 +31,8 @@ This describes the process of creating a page
 Content is currently drawn from the `content/post` directory.
 
 - Add `index.md` to the directory `content/posts` directory.
-- The `posts` directory should
+- The `post` directory contains new posts. 
+New posts written in `Rmarkdown` be in included as `myfile.Rmarkdown`.
 
 ## General Resources
 Here are a few resources for using `blogdown`:
