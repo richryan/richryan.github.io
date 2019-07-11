@@ -152,6 +152,53 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Copying over old content</title>
+      <link>/2019/06/25/copying-over-old-content/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/25/copying-over-old-content/</guid>
+      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import shutil, os, re
+myfiles = os.listdir(&#39;../../python_copy/old/&#39;)
+
+# myfiles.remove(&#39;*~&#39;)
+for filename in myfiles:
+  print(filename)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## 2017-05-03-welcome.md
+## 2017-05-04-add-notes.md
+## 2017-05-11-add-435-notes.md
+## 2017-05-21-add-tilman-notes.md
+## 2017-06-07-MacroSquad-schedule.md
+## 2017-06-14-MacroSquad-notes.md
+## 2017-06-19-kjump.md
+## 2017-06-19-olg-question.md
+## 2017-06-26-two-corrections.md
+## 2017-07-04-607-notes.md
+## 2017-07-13-lag-operator.md
+## 2017-07-18-classical-monetary-model.md
+## 2017-07-21-607-final.md
+## 2017-07-22-optimal-search.md
+## 2017-07-24-shimer-planner.md
+## 2017-07-24-shimer-planner.md~
+## 2017-07-26-balancing-materials.md
+## 2017-08-05-a-functional-mapping.md
+## 2017-08-14-a-gif.md
+## 2017-10-05-ipython.md
+## 2018-01-02-welcome-402.md
+## 2018-01-22-ex-ante-ex-post.md
+## 2018-01-22-ex-ante-ex-post.md~
+## 2018-01-24-units-gdp-deflator.md
+## 2018-02-04-establishment-survey.md
+## 2018-02-04-establishment-survey.md~
+## 2018-07-18-IIFET-seattle.md
+## 2018-09-11-U-M-econ.md
+## 2018-10-20-cv-added.md
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Many models in R</title>
       <link>/2019/06/15/many-models-in-r/</link>
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
@@ -340,6 +387,119 @@ dat
     
     <item>
       <title>Converting the Jekyll website to Hugo and Blogdown</title>
+      <link>/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/</guid>
+      <description>
+
+&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } }
+});
+&lt;/script&gt;
+
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#footnotes&#34;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#latex&#34;&gt;$ \LaTeX{} $&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#emojis&#34;&gt;Emojis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#alerts-and-helpful-hints&#34;&gt;Alerts and helpful hints&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#table-of-contents&#34;&gt;Table of contents&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;Using Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a &lt;code&gt;jekyll serve&lt;/code&gt; command.
+Doing so became annoying.
+Another big selling point was the inclusion of &lt;strong&gt;R&lt;/strong&gt; code in posts,
+a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-ex-website&#34;&gt;&lt;a href=&#34;#fn:fn-ex-website&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;The following sections cover some neat features.&lt;/p&gt;
+
+&lt;h1 id=&#34;footnotes&#34;&gt;Footnotes&lt;/h1&gt;
+
+&lt;p&gt;Footnotes are easy to include&amp;mdash;just like this.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:fn-fn-example&#34;&gt;&lt;a href=&#34;#fn:fn-fn-example&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Footnotes are easy to include---just like this.[^fn:fn-example]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;latex&#34;&gt;$ \LaTeX{} $&lt;/h1&gt;
+
+&lt;p&gt;Including inline $ \LaTeX{} $ math is done by wrapping expressions in a single &lt;code&gt;$&lt;/code&gt;.
+Multiline expressions are wrapped in &lt;code&gt;$$&lt;/code&gt;.
+For example,&lt;/p&gt;
+
+&lt;p&gt;$$ \begin{equation} \label{eq:some-eq} \mathbf{y} = \mathbf{X} \beta + \varepsilon, \end{equation} $$&lt;/p&gt;
+
+&lt;p&gt;which can be referred to as $ \eqref{eq:some-eq} $.
+Automatic equation numbering is accomplished by including the HTML code&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;script type=&amp;quot;text/x-mathjax-config&amp;quot;&amp;gt;
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: &amp;quot;AMS&amp;quot; } }
+});
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in a post.
+See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&#34; target=&#34;_blank&#34;&gt;http://docs.mathjax.org/en/latest/tex.html#automatic-equation-numbering&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve found including all of the math content on a single line the best way to&lt;/p&gt;
+
+&lt;h1 id=&#34;emojis&#34;&gt;Emojis&lt;/h1&gt;
+
+&lt;p&gt;An emoji like 🌊 can be included using:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;An emoji like : ocean : can be included
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;alerts-and-helpful-hints&#34;&gt;Alerts and helpful hints&lt;/h1&gt;
+
+&lt;p&gt;Alerts and hints can be included as&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;Here&amp;rsquo;s a tip or note&amp;hellip;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;Here&amp;rsquo;s some important information&amp;hellip;&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;table-of-contents&#34;&gt;Table of contents&lt;/h1&gt;
+
+&lt;p&gt;A table of contents can be added to R Mardown posts by adding the following options to YAML:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;output: 
+  blogdown::html_page:
+    toc: true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and using &lt;code&gt;{&lt;/code&gt;&lt;code&gt;{&lt;/code&gt;&lt;code&gt;% toc %&lt;/code&gt;&lt;code&gt;}&lt;/code&gt;&lt;code&gt;}&lt;/code&gt;  anywhere in the document.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:fn-ex-website&#34;&gt;See, for example, some notes for &lt;a href=&#34;https://richryan.github.io/econ402/&#34; target=&#34;_blank&#34;&gt;Intermediate Macroeconomic Theory&lt;/a&gt; or &lt;a href=&#34;https://richryan.github.io/econ401/&#34; target=&#34;_blank&#34;&gt;Intermediate Microeconomic Theory&lt;/a&gt;.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:fn-ex-website&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li id=&#34;fn:fn-fn-example&#34;&gt;A footnote.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:fn-fn-example&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Converting the Jekyll website to Hugo and Blogdown</title>
       <link>/posts/converting-the-jekyll-website-to-hugo/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
       
@@ -401,7 +561,7 @@ See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equatio
 &lt;/div&gt;
 &lt;div id=&#34;emojis&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Emojis&lt;/h2&gt;
-&lt;p&gt;An emoji can be included&lt;/p&gt;
+&lt;p&gt;An emoji like 👋 can be included using &lt;code&gt;👋&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;alerts-and-helpful-hints&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Alerts and helpful hints&lt;/h2&gt;
@@ -625,40 +785,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 &lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
 
 &lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 -0400</pubDate>
-      
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Example Talk</title>
-      <link>/talk/example/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 -0500</pubDate>
-      
-      <guid>/talk/example/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;p&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/p&gt;
-
-&lt;/div&gt;
-
-
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;em&gt;Slides&lt;/em&gt; feature and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     

@@ -28,6 +28,7 @@ That HTML file must be included in the GitHub directory.
 
 This describes the process of creating a page
 (see the documentation in the [Hugo Academic documentation](https://sourcethemes.com/academic/docs/managing-content/)).
+Content is currently drawn from the `content/post` directory.
 
 - Add `index.md` to the directory `content/posts` directory.
 - The `posts` directory should

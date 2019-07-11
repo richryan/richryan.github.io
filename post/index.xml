@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Copying over old content</title>
+      <link>/2019/06/25/copying-over-old-content/</link>
+      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/06/25/copying-over-old-content/</guid>
+      <description>import shutil, os, re myfiles = os.listdir(&#39;../../python_copy/old/&#39;) # myfiles.remove(&#39;*~&#39;) for filename in myfiles: print(filename)  ## 2017-05-03-welcome.md ## 2017-05-04-add-notes.md ## 2017-05-11-add-435-notes.md ## 2017-05-21-add-tilman-notes.md ## 2017-06-07-MacroSquad-schedule.md ## 2017-06-14-MacroSquad-notes.md ## 2017-06-19-kjump.md ## 2017-06-19-olg-question.md ## 2017-06-26-two-corrections.md ## 2017-07-04-607-notes.md ## 2017-07-13-lag-operator.md ## 2017-07-18-classical-monetary-model.md ## 2017-07-21-607-final.md ## 2017-07-22-optimal-search.md ## 2017-07-24-shimer-planner.md ## 2017-07-24-shimer-planner.md~ ## 2017-07-26-balancing-materials.md ## 2017-08-05-a-functional-mapping.md ## 2017-08-14-a-gif.md ## 2017-10-05-ipython.md ## 2018-01-02-welcome-402.md ## 2018-01-22-ex-ante-ex-post.md ## 2018-01-22-ex-ante-ex-post.md~ ## 2018-01-24-units-gdp-deflator.md ## 2018-02-04-establishment-survey.md ## 2018-02-04-establishment-survey.md~ ## 2018-07-18-IIFET-seattle.md ## 2018-09-11-U-M-econ.</description>
+    </item>
     
     <item>
       <title>Many models in R</title>
@@ -20,6 +29,15 @@
       <guid>/2019/06/15/many-models-in-r/</guid>
       <description>Introduction This is an example of using R to run many regressions and collect a single regression coefficient from each model. The code uses R&amp;rsquo;s list-columns feature.
 Data library(forcats) library(tidyquant) date_start &amp;lt;- &amp;quot;1960-01-01&amp;quot; dat &amp;lt;- tq_get(c(&amp;quot;UNRATE&amp;quot;, &amp;quot;CPIAUCSL&amp;quot;, &amp;quot;CPILFESL&amp;quot;), get = &amp;quot;economic.data&amp;quot;, from = date_start) ur &amp;lt;- dat %&amp;gt;% filter(symbol == &amp;quot;UNRATE&amp;quot;) %&amp;gt;% rename(ur = price) %&amp;gt;% select(-symbol) dat &amp;lt;- filter(dat, symbol != &amp;quot;UNRATE&amp;quot;)  Check that the unemployment-rate data are read in correctly:</description>
+    </item>
+    
+    <item>
+      <title>Converting the Jekyll website to Hugo and Blogdown</title>
+      <link>/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/</link>
+      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/</guid>
+      <description>MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; } } });  Table of Contents  Introduction Footnotes $ \LaTeX{} $ Emojis Alerts and helpful hints Table of contents   Introduction Using Jekyll as a static site generator with GitHug Pages on a Windows computer required setting up an Ubuntu environment to issue a jekyll serve command. Doing so became annoying. Another big selling point was the inclusion of R code in posts, a feature that I quickly became accostomed to after writing a couple of course websites in R Markdown and publishing them with GitHub Pages.</description>
     </item>
     
     <item>
