@@ -1028,7 +1028,8 @@ article .article-metadata {
   width: 60px;
   height: 60px;
   margin: 0 auto;
-  border-radius: 50%;
+  /* border-radius: 50%; */
+  border-radius: 0%;
   object-fit: cover;
 }
 
