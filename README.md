@@ -24,6 +24,11 @@ Blog posts, for example, are contained by year.
 For example a blog post dated 2019-06-15 is contained in `2019/06/15/hello-world/index.html`.
 That HTML file must be included in the GitHub directory.
 
+**NOTE**: I edited how the portrait looks in `themes/hugo-academic/layouts/partials/css/academic.css`,
+under `#profile .portrait`. 
+`border-radius` modifies how rounded corners are.
+
+
 ## Building the `Posts` tab ##
 
 This describes the process of creating a page

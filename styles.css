@@ -625,9 +625,10 @@ a[data-fancybox] img {
 
 #profile .portrait {
   width: 200px;
-  height: 200px;
+  /* height: 200px; */
+  height: 323.60679775px;	/* Golden ratio */
   margin: 0 auto;
-  border-radius: 50%;
+  border-radius: 0%; /* 50%; */
   object-fit: cover;
 }
 
