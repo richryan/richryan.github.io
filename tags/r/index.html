@@ -109,7 +109,7 @@
   <meta property="og:description" content=""><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2019-06-15T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2019-12-06T00:00:00&#43;00:00">
   
 
   
@@ -307,6 +307,17 @@
   
 
   
+  
+  <div>
+    <h2><a href="/2019/12/06/happy-labor-market-friday/">Happy Labor Market Friday!</a></h2>
+    <div class="article-style">
+      
+      Here are data from the latest Employment Situation. These graphs attempt to replicate those published by the NY Times.
+Unemployment rate or number of unemployed as a percentage of the labor force:
+# Load packages library(tidyquant) library(ggplot2) library(ggthemes) mygray &lt;- &quot;gray66&quot; ur &lt;- tq_get(&quot;UNRATE&quot;, get = &quot;economic.data&quot;, from = &quot;2010-01-01&quot;) ur &lt;- ur %&gt;% mutate(series = &quot;Unemployment rate&quot;) last_date &lt;- max(ur$date) last_lvl &lt;- ur$price[[which(ur$date == max(ur$date))]] ggplot(data = ur) + geom_line(mapping = aes(x = date, y = price), size = 1.
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/2019/06/15/many-models-in-r/">Many models in R</a></h2>

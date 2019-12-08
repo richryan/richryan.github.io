@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 25 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Happy Labor Market Friday!</title>
+      <link>/2019/12/06/happy-labor-market-friday/</link>
+      <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/12/06/happy-labor-market-friday/</guid>
+      <description>Here are data from the latest Employment Situation. These graphs attempt to replicate those published by the NY Times.
+Unemployment rate or number of unemployed as a percentage of the labor force:
+# Load packages library(tidyquant) library(ggplot2) library(ggthemes) mygray &amp;lt;- &amp;quot;gray66&amp;quot; ur &amp;lt;- tq_get(&amp;quot;UNRATE&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2010-01-01&amp;quot;) ur &amp;lt;- ur %&amp;gt;% mutate(series = &amp;quot;Unemployment rate&amp;quot;) last_date &amp;lt;- max(ur$date) last_lvl &amp;lt;- ur$price[[which(ur$date == max(ur$date))]] ggplot(data = ur) + geom_line(mapping = aes(x = date, y = price), size = 1.</description>
+    </item>
     
     <item>
       <title>Copying over old content</title>

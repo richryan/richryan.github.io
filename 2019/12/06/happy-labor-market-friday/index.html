@@ -15,10 +15,12 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Here are data from the latest Employment Situation. These graphs attempt to replicate those published by the NY Times.
+Unemployment rate or number of unemployed as a percentage of the labor force:
+# Load packages library(tidyquant) library(ggplot2) library(ggthemes) mygray &lt;- &quot;gray66&quot; ur &lt;- tq_get(&quot;UNRATE&quot;, get = &quot;economic.data&quot;, from = &quot;2010-01-01&quot;) ur &lt;- ur %&gt;% mutate(series = &quot;Unemployment rate&quot;) last_date &lt;- max(ur$date) last_lvl &lt;- ur$price[[which(ur$date == max(ur$date))]] ggplot(data = ur) &#43; geom_line(mapping = aes(x = date, y = price), size = 1.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/post/">
+  <link rel="alternate" hreflang="en-us" href="/2019/12/06/happy-labor-market-friday/">
 
   
 
@@ -82,15 +84,15 @@
   
 
   
-  <link rel="alternate" href="/post/index.xml" type="application/rss+xml" title="RICH RYAN">
-  <link rel="feed" href="/post/index.xml" type="application/rss+xml" title="RICH RYAN">
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="RICH RYAN">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="RICH RYAN">
   
 
   <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/post/">
+  <link rel="canonical" href="/2019/12/06/happy-labor-market-friday/">
 
   
   
@@ -102,19 +104,23 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="RICH RYAN">
-  <meta property="og:url" content="/post/">
-  <meta property="og:title" content="Posts | RICH RYAN">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/portrait.jpg">
+  <meta property="og:url" content="/2019/12/06/happy-labor-market-friday/">
+  <meta property="og:title" content="Happy Labor Market Friday! | RICH RYAN">
+  <meta property="og:description" content="Here are data from the latest Employment Situation. These graphs attempt to replicate those published by the NY Times.
+Unemployment rate or number of unemployed as a percentage of the labor force:
+# Load packages library(tidyquant) library(ggplot2) library(ggthemes) mygray &lt;- &quot;gray66&quot; ur &lt;- tq_get(&quot;UNRATE&quot;, get = &quot;economic.data&quot;, from = &quot;2010-01-01&quot;) ur &lt;- ur %&gt;% mutate(series = &quot;Unemployment rate&quot;) last_date &lt;- max(ur$date) last_lvl &lt;- ur$price[[which(ur$date == max(ur$date))]] ggplot(data = ur) &#43; geom_line(mapping = aes(x = date, y = price), size = 1."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2019-12-06T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-12-06T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-12-06T00:00:00&#43;00:00">
   
 
   
 
   
 
-  <title>Posts | RICH RYAN</title>
+  <title>Happy Labor Market Friday! | RICH RYAN</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -271,7 +277,9 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
+  
 
 
 
@@ -289,46 +297,12 @@
   
   
   
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1 itemprop="name">Posts</h1>
+<div class="article-container pt-3">
+  <h1 itemprop="name">Happy Labor Market Friday!</h1>
 
   
 
   
-</div>
-
-
-
-<div class="universal-wrapper">
-
-  
-
-  
-  
-    
-      
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2019/12/06/happy-labor-market-friday/" itemprop="url">Happy Labor Market Friday!</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      Here are data from the latest Employment Situation. These graphs attempt to replicate those published by the NY Times.
-Unemployment …
-    </div>
-    
-
-    <div class="stream-meta">
     
 
 <div class="article-metadata">
@@ -359,279 +333,148 @@ Unemployment …
   
 
   
-
-</div>
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
   
-    
-      
 
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
+  
 
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2019/06/25/copying-over-old-content/" itemprop="url">Copying over old content</a>
-    </h3>
+</div>
 
     
-    
-      
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
     <div class="article-style" itemprop="articleBody">
-      import shutil, os, re myfiles = os.listdir('../../python_copy/old/') # myfiles.remove('*~') for filename in myfiles: print(filename) …
-    </div>
-    
+      <p>Here are data from the latest Employment Situation.
+These graphs attempt to replicate those published by the <a href="https://nyti.ms/2DQDK5U" target="_blank"><em>NY Times</em></a>.</p>
 
-    <div class="stream-meta">
-    
+<p>Unemployment rate or number of unemployed as a percentage of the labor force:</p>
 
-<div class="article-metadata">
+<pre><code class="language-r"># Load packages
+library(tidyquant)
+library(ggplot2)
+library(ggthemes)
 
+mygray &lt;- &quot;gray66&quot;
+
+ur &lt;- tq_get(&quot;UNRATE&quot;, get = &quot;economic.data&quot;, from = &quot;2010-01-01&quot;)
+ur &lt;- ur %&gt;% 
+  mutate(series = &quot;Unemployment rate&quot;)
+last_date &lt;- max(ur$date)
+last_lvl &lt;- ur$price[[which(ur$date == max(ur$date))]]
+ggplot(data = ur) +
+  geom_line(mapping = aes(x = date, y = price), size = 1.1, color = mygray) + 
+  # Highlight last observation
+  geom_point(data = filter(ur, date == last_date), 
+             mapping = aes(x = date, y = price),
+             size = 5) +
+  xlab(&quot;&quot;) + ylab(&quot;Percent&quot;) + ggtitle(&quot;Unemployment rate&quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = c(4, 6, 8, 10),
+                     labels = c(&quot;4&quot;, &quot;6&quot;, &quot;8&quot;, &quot;10%&quot;)) +
+  # Label last observation 
+  annotate(&quot;text&quot;, x = last_date, y = last_lvl, label = paste0(last_lvl), 
+           color = &quot;black&quot;, vjust = -1.5) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &quot;sans&quot;, color = &quot;gray&quot;, title_family = &quot;sans&quot;, base_size = 12) 
+</code></pre>
+
+<p><img src="/post/2019-12-06-happy-labor-market-friday_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+
+<p>The unemployment rate was <code>last_lvl</code>.</p>
+
+<pre><code class="language-r">payems &lt;- tq_get(&quot;PAYEMS&quot;, get = &quot;economic.data&quot;, from = &quot;2016-11-01&quot;) 
+payems &lt;- payems %&gt;% 
+  mutate(change_jobs = price - lag(price),
+         mycat = date == max(date)) %&gt;% 
+  filter(!is.na(change_jobs))
   
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-  
+last_date &lt;- max(payems$date)
+last_lvl &lt;- payems$change_jobs[[which(payems$date == max(payems$date))]]
 
-  <span class="article-date">
-    
-    <meta content="2019-06-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-06-25 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      June 25, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
+segment_height &lt;- 100
+ggplot(data = payems) +
+  geom_col(mapping = aes(x = date, y = change_jobs, color = mycat, fill = mycat),
+           inherit.aes = FALSE) +
+  scale_y_continuous(breaks = c(100, 200, 300, 400),
+                     labels = c(&quot;100&quot;, &quot;200&quot;, &quot;300&quot;, &quot;400 thousand&quot;),
+                     limits = c(0, 400)) +
+  # Label last observation 
+  annotate(&quot;text&quot;, x = last_date, y = last_lvl + segment_height, 
+           label = paste0(&quot;+&quot;, last_lvl, &quot;\nNov 2019&quot;), 
+           color = &quot;black&quot;) +  
+  annotate(&quot;segment&quot;, x = last_date, xend = last_date, 
+           y = last_lvl, yend = last_lvl + segment_height - 25,
+           linetype = &quot;dashed&quot;) +
+  # Color the bars
+  scale_fill_manual(values = c(mygray, &quot;black&quot;)) +
+  scale_color_manual(values = c(mygray, &quot;black&quot;)) +
+  # Turn off legend
+  guides(color = FALSE, fill = FALSE) +
+  ggtitle(&quot;Monthly change in jobs&quot;) +
+  theme_wsj(base_family = &quot;sans&quot;, color = &quot;gray&quot;, title_family = &quot;sans&quot;, base_size = 12) +
+  # Put grid lines on top
+  theme(panel.background = element_rect(fill = NA),
+        panel.ontop = TRUE)
+</code></pre>
 
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2019/06/15/many-models-in-r/" itemprop="url">Many models in R</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      Introduction This is an example of using R to run many regressions and collect a single regression coefficient from each model. The …
-    </div>
-    
-
-    <div class="stream-meta">
-    
-
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-  
-
-  <span class="article-date">
-    
-    <meta content="2019-06-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-06-15 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      June 15, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-
-  
-
-  
-  
-
-  
-
-  
-
-</div>
+<p><img src="/post/2019-12-06-happy-labor-market-friday_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 
     </div>
 
-  </div>
-  <div class="ml-3">
     
-    
-  </div>
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
 </div>
 
-    
-  
-    
-      
 
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/" itemprop="url">Converting the Jekyll website to Hugo and Blogdown</a>
-    </h3>
+    
+
 
     
     
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } });  Table of Contents  Introduction Footnotes $ \LaTeX{} $ Emojis …
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/2019/06/15/many-models-in-r/">Many models in R</a></li>
+        
+      </ul>
     </div>
     
 
-    <div class="stream-meta">
     
 
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-  
-
-  <span class="article-date">
     
-    <meta content="2019-01-19 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2019-01-19 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      January 19, 2019
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
 
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-    </div>
 
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
+</article>
 
-    
-  
-    
-      
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2018/10/21/welcome-to-econ-401/" itemprop="url">Welcome to ECON 401</a>
-    </h3>
-
-    
-    
-    
-
-    <div class="stream-meta">
-    
-
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-  
-
-  <span class="article-date">
-    
-    <meta content="2018-10-21 18:56:00 -0400 EDT" itemprop="datePublished">
-    <time datetime="2018-10-21 18:56:00 -0400 EDT" itemprop="dateModified">
-      October 21, 2018
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-    </div>
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-
-  
-
-
-</div>
 <div class="container">
   <footer class="site-footer">
   

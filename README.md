@@ -29,7 +29,9 @@ under `#profile .portrait`.
 `border-radius` modifies how rounded corners are.
 
 
-## Building the `Posts` tab ##
+## Building the `Posts` tab and creating a post ##
+
+### Building ###
 
 This describes the process of creating a page
 (see the documentation in the [Hugo Academic documentation](https://sourcethemes.com/academic/docs/managing-content/)).
@@ -38,6 +40,11 @@ Content is currently drawn from the `content/post` directory.
 - Add `index.md` to the directory `content/posts` directory.
 - The `post` directory contains new posts. 
 New posts written in `Rmarkdown` be in included as `myfile.Rmarkdown`.
+
+### Creating a post ###
+
+In `content/post/`, create a `.md` file (not an R markdown file).
+The 
 
 ## General Resources
 Here are a few resources for using `blogdown`:
