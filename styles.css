@@ -22,6 +22,12 @@
  *  Core
  **************************************************/
 
+/* Added by rwr on 12/8/2019 */
+code .MathJax {
+  color: black;
+  background-color: white;
+}
+
 html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;

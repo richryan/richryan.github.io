@@ -24,15 +24,6 @@ Unemployment rate or number of unemployed as a percentage of the labor force:
     </item>
     
     <item>
-      <title>Copying over old content</title>
-      <link>/2019/06/25/copying-over-old-content/</link>
-      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/06/25/copying-over-old-content/</guid>
-      <description>import shutil, os, re myfiles = os.listdir(&#39;../../python_copy/old/&#39;) # myfiles.remove(&#39;*~&#39;) for filename in myfiles: print(filename)  ## 2017-05-03-welcome.md ## 2017-05-04-add-notes.md ## 2017-05-11-add-435-notes.md ## 2017-05-21-add-tilman-notes.md ## 2017-06-07-MacroSquad-schedule.md ## 2017-06-14-MacroSquad-notes.md ## 2017-06-19-kjump.md ## 2017-06-19-olg-question.md ## 2017-06-26-two-corrections.md ## 2017-07-04-607-notes.md ## 2017-07-13-lag-operator.md ## 2017-07-18-classical-monetary-model.md ## 2017-07-21-607-final.md ## 2017-07-22-optimal-search.md ## 2017-07-24-shimer-planner.md ## 2017-07-24-shimer-planner.md~ ## 2017-07-26-balancing-materials.md ## 2017-08-05-a-functional-mapping.md ## 2017-08-14-a-gif.md ## 2017-10-05-ipython.md ## 2018-01-02-welcome-402.md ## 2018-01-22-ex-ante-ex-post.md ## 2018-01-22-ex-ante-ex-post.md~ ## 2018-01-24-units-gdp-deflator.md ## 2018-02-04-establishment-survey.md ## 2018-02-04-establishment-survey.md~ ## 2018-07-18-IIFET-seattle.md ## 2018-09-11-U-M-econ.</description>
-    </item>
-    
-    <item>
       <title>Many models in R</title>
       <link>/2019/06/15/many-models-in-r/</link>
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
@@ -54,11 +45,266 @@ Data library(forcats) library(tidyquant) date_start &amp;lt;- &amp;quot;1960-01-
     <item>
       <title>Welcome to ECON 401</title>
       <link>/2018/10/21/welcome-to-econ-401/</link>
-      <pubDate>Sun, 21 Oct 2018 18:56:00 -0400</pubDate>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/10/21/welcome-to-econ-401/</guid>
       <description>Welcome to Intermediate Microeconomics, ECON 401.
 🔥 🔥 🔥 The course website is here 🔥 🔥 🔥</description>
+    </item>
+    
+    <item>
+      <title>Info added</title>
+      <link>/2018/10/20/info-added/</link>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/20/info-added/</guid>
+      <description>Website updated.</description>
+    </item>
+    
+    <item>
+      <title>IIFET 2018 Seattle</title>
+      <link>/2018/07/18/iifet-2018-seattle/</link>
+      <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/07/18/iifet-2018-seattle/</guid>
+      <description>Slides are available here and a preliminary draft of the paper is available here.</description>
+    </item>
+    
+    <item>
+      <title>On the establishment survey</title>
+      <link>/2018/02/04/on-the-establishment-survey/</link>
+      <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/02/04/on-the-establishment-survey/</guid>
+      <description>&lt;p&gt;Are people who &amp;ldquo;run their own business&amp;rdquo; included in the Current Employment Statistics program?
+It depends.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>What are the units of the GDP deflator?</title>
+      <link>/2018/01/24/what-are-the-units-of-the-gdp-deflator/</link>
+      <pubDate>Wed, 24 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/01/24/what-are-the-units-of-the-gdp-deflator/</guid>
+      <description>&lt;p&gt;What are the units of the current-year GDP deflator?
+The answer is base-year dollars / current-year dollars.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ex ante versus ex post interest rates</title>
+      <link>/2018/01/22/ex-ante-versus-ex-post-interest-rates/</link>
+      <pubDate>Mon, 22 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/01/22/ex-ante-versus-ex-post-interest-rates/</guid>
+      <description>The difference between ex ante and ex post interest rates has to do with the Fisher equation. If you took a couple more macro classes after ECON 402, you&amp;rsquo;d expect the Fisher effect to be expressed as the relationship between the nominal interest rate and expected inflation:
+$$ i_t = r_t + E_t \pi_{ t+1 }, $$
+where \( E_t \) is the expectations operator conditional on all information available at time \( t \).</description>
+    </item>
+    
+    <item>
+      <title>Welcome to ECON 402</title>
+      <link>/2018/01/02/welcome-to-econ-402/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/01/02/welcome-to-econ-402/</guid>
+      <description>&lt;p&gt;Welcome to ECON 402.&lt;/p&gt;
+
+&lt;p&gt;🔥 🔥 🔥 The course website is &lt;a href=&#34;https://richryan.github.io/econ402/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
+🔥 🔥 🔥&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Example of dynamic inefficiency in the baseline OLG model</title>
+      <link>/2017/10/05/example-of-dynamic-inefficiency-in-the-baseline-olg-model/</link>
+      <pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/10/05/example-of-dynamic-inefficiency-in-the-baseline-olg-model/</guid>
+      <description>&lt;p&gt;Reasonable parameter values are presented that give dynamic inefficiency in the canonical OLG model.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Economic growth</title>
+      <link>/2017/08/14/economic-growth/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/14/economic-growth/</guid>
+      <description>Life expectancy refers to life expectancy at birth. See http://www.gapminder.org/data/ for more details.</description>
+    </item>
+    
+    <item>
+      <title>A functional equation</title>
+      <link>/2017/08/05/a-functional-equation/</link>
+      <pubDate>Sat, 05 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/05/a-functional-equation/</guid>
+      <description>The 2015 midterm from 605 features a functional equation of the form
+$$ V(k,p,s) = \max \left\{ V_{\text{trade}},V_{\text{no trade}} \right\}, $$
+where
+$$ V_{\text{trade}} = u(k^{N}) - pk^{N} + spk^{N} + \mathbb{E} \left[ V(k^{N}(1-\delta),p^{\prime},s^{\prime}) | p,s \right] $$
+and
+$$ V_{\text{no trade}} = u(k) + \beta \mathbb{E} \left[ V(k(1-\delta),p^{\prime},s^{\prime}) | p,s \right] $$
+This post goes through how you can establish that there exists a unique solution to the functional equation.</description>
+    </item>
+    
+    <item>
+      <title>Balancing material</title>
+      <link>/2017/07/26/balancing-material/</link>
+      <pubDate>Wed, 26 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/26/balancing-material/</guid>
+      <description>Here is a handout that goes through national accounting in a market structure that features two types of firms: capital-leasing and final-good firms. You can contrast this setup with the setup in question II of the ECON 607 final.
+Materials must balance in any economy.</description>
+    </item>
+    
+    <item>
+      <title>The planning problem in search models</title>
+      <link>/2017/07/24/the-planning-problem-in-search-models/</link>
+      <pubDate>Mon, 24 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/24/the-planning-problem-in-search-models/</guid>
+      <description>Here is a handout that goes through the algebra of a planning problem in Shimer&amp;rsquo;s manuscript, Labor Markets and Business Cycles. The setup of the problem is non-standard and unlike the problems we&amp;rsquo;ve solved all year, although this point is subtle. After laying out the problem, the non-standard approach is taken to first solve the problem following the lecture notes. Second, the problem is solved following the algorithm we&amp;rsquo;ve used all year; namely, writing the problem so that we choose next period&amp;rsquo;s state.</description>
+    </item>
+    
+    <item>
+      <title>A worker&#39;s optimal search decision</title>
+      <link>/2017/07/22/a-workers-optimal-search-decision/</link>
+      <pubDate>Sat, 22 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/22/a-workers-optimal-search-decision/</guid>
+      <description>&lt;p&gt;A section on a worker&amp;rsquo;s optimal search decision was added to the &lt;a href=&#34;https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud&#34; target=&#34;_blank&#34;&gt;ECON 607 Ottonello notes&lt;/a&gt;.
+They are included in section section 13, under the part titled &amp;ldquo;Odds and ends&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Notes on classical monetary models</title>
+      <link>/2017/07/18/notes-on-classical-monetary-models/</link>
+      <pubDate>Tue, 18 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/18/notes-on-classical-monetary-models/</guid>
+      <description>&lt;p&gt;Notes on economies under the rubric of classical monetary models were added to the
+&lt;a href=&#34;https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud&#34; target=&#34;_blank&#34;&gt;ECON 607 Ottonello notes&lt;/a&gt;.
+They are included in section section 9, which is new.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Practice with lag operators</title>
+      <link>/2017/07/13/practice-with-lag-operators/</link>
+      <pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/13/practice-with-lag-operators/</guid>
+      <description>&lt;p&gt;A few examples dealing with lag operators were added to the ECON 605 Leahy notes.
+They go through the &amp;ldquo;forward&amp;rdquo; and &amp;ldquo;backward&amp;rdquo; solutions to first-order linear difference equations
+and are included in section 2, &amp;ldquo;Practice with the lag operator,&amp;rdquo; which is new.&lt;/p&gt;
+
+&lt;p&gt;I also added Monday office hours from 1:00&amp;ndash;3:00 pm in Foster library.
+They are listed under &lt;a href=&#34;{{ site.url}}/macrosquad&#34; target=&#34;_blank&#34;&gt;MacroSquad&lt;/a&gt;.
+We&amp;rsquo;ll try out this time and adjust accordingly.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ECON 607 notes uploaded</title>
+      <link>/2017/07/04/econ-607-notes-uploaded/</link>
+      <pubDate>Tue, 04 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/04/econ-607-notes-uploaded/</guid>
+      <description>&lt;p&gt;ECON 607 notes are uploaded. 😂
+The ECON 607 Leahy notes are available &lt;a href=&#34;https://umich.box.com/s/0tvft1t167we2xsn2xp4uacetoy5gcyw&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.
+The ECON 607 Ottonello notes are available &lt;a href=&#34;https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A few remarks on the 607 final</title>
+      <link>/2017/07/02/a-few-remarks-on-the-607-final/</link>
+      <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/07/02/a-few-remarks-on-the-607-final/</guid>
+      <description>&lt;p&gt;Notes on the 607 final were added to the &lt;a href=&#34;https://umich.box.com/s/xczz87igzno3lzpfkapiurrp8izzivud&#34; target=&#34;_blank&#34;&gt;ECON 607 Ottonello notes&lt;/a&gt;.
+They are included in section section 12, under the part titled &amp;ldquo;Odds and ends&amp;rdquo;.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Two minor corrections</title>
+      <link>/2017/06/26/two-minor-corrections/</link>
+      <pubDate>Mon, 26 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/26/two-minor-corrections/</guid>
+      <description>&lt;p&gt;Two minor corrections were incorporated into the 605 notes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Determining whether capital jumps</title>
+      <link>/2017/06/19/determining-whether-capital-jumps/</link>
+      <pubDate>Mon, 19 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/19/determining-whether-capital-jumps/</guid>
+      <description>&lt;p&gt;A few people have asked me whether or not \( \tilde{k} \) jumps in the F2014 midterm.
+It does.
+Does that mean the stock of capital jumps?
+What about \(k\)?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>OLG question</title>
+      <link>/2017/06/19/olg-question/</link>
+      <pubDate>Mon, 19 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/19/olg-question/</guid>
+      <description>&lt;p&gt;A few comments were added to section P11 of the
+&lt;a href=&#34;https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g&#34; target=&#34;_blank&#34;&gt;ECON 605 Stolyar notes&lt;/a&gt;
+that address the OLG question from the 2007 macro prelim.
+The economy is a special case of the economy discussed is section 8.
+The comments address the scope for rolling over government debt.&lt;/p&gt;
+
+&lt;p&gt;I also posted the suggested answers to the 605 midterm to the 605 Canvas website in the &amp;ldquo;Section stuff&amp;rdquo; directory.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ECON 605 notes uploaded</title>
+      <link>/2017/06/14/econ-605-notes-uploaded/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/06/14/econ-605-notes-uploaded/</guid>
+      <description>&lt;p&gt;ECON 605 notes are uploaded and are available.
+The ECON 605 Stolyarov notes are available &lt;a href=&#34;https://umich.box.com/s/3x06wji3k2mkmwrcbdggwlrq410vtg0g&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.
+The ECON 605 Leahy notes are available &lt;a href=&#34;https://umich.box.com/s/qwizsx7l6ejrnzdunmrckznnwhge2h9y&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.
+I made several additions to both the Stolyarov and Leahy notes,
+which you might find helpful.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ECON 401 notes uploaded</title>
+      <link>/2017/05/21/econ-401-notes-uploaded/</link>
+      <pubDate>Sun, 21 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/21/econ-401-notes-uploaded/</guid>
+      <description>Section notes for ECON 401, Intermediate Microeconomic Theory, with Professor Tilman B&amp;ouml;rgers are uploaded. They are available here.</description>
+    </item>
+    
+    <item>
+      <title>ECON 435 notes uploaded</title>
+      <link>/2017/05/11/econ-435-notes-uploaded/</link>
+      <pubDate>Thu, 11 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/11/econ-435-notes-uploaded/</guid>
+      <description>Section notes for ECON 435, Financial Economics, with Professor Pablo Ottonello are uploaded. They are available here.</description>
+    </item>
+    
+    <item>
+      <title>ECON 401 notes uploaded</title>
+      <link>/2017/05/04/econ-401-notes-uploaded/</link>
+      <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/04/econ-401-notes-uploaded/</guid>
+      <description>Section notes for ECON 401, Intermediate Microeconomic Theory, with Dr. Chris Proulx are uploaded. They are available here.</description>
+    </item>
+    
+    <item>
+      <title>Welcome</title>
+      <link>/2017/05/03/welcome/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/05/03/welcome/</guid>
+      <description>Initial post: Hello world.</description>
     </item>
     
   </channel>

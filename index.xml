@@ -247,53 +247,6 @@ ggplot(data = payems) +
     </item>
     
     <item>
-      <title>Copying over old content</title>
-      <link>/2019/06/25/copying-over-old-content/</link>
-      <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/2019/06/25/copying-over-old-content/</guid>
-      <description>&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import shutil, os, re
-myfiles = os.listdir(&#39;../../python_copy/old/&#39;)
-
-# myfiles.remove(&#39;*~&#39;)
-for filename in myfiles:
-  print(filename)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## 2017-05-03-welcome.md
-## 2017-05-04-add-notes.md
-## 2017-05-11-add-435-notes.md
-## 2017-05-21-add-tilman-notes.md
-## 2017-06-07-MacroSquad-schedule.md
-## 2017-06-14-MacroSquad-notes.md
-## 2017-06-19-kjump.md
-## 2017-06-19-olg-question.md
-## 2017-06-26-two-corrections.md
-## 2017-07-04-607-notes.md
-## 2017-07-13-lag-operator.md
-## 2017-07-18-classical-monetary-model.md
-## 2017-07-21-607-final.md
-## 2017-07-22-optimal-search.md
-## 2017-07-24-shimer-planner.md
-## 2017-07-24-shimer-planner.md~
-## 2017-07-26-balancing-materials.md
-## 2017-08-05-a-functional-mapping.md
-## 2017-08-14-a-gif.md
-## 2017-10-05-ipython.md
-## 2018-01-02-welcome-402.md
-## 2018-01-22-ex-ante-ex-post.md
-## 2018-01-22-ex-ante-ex-post.md~
-## 2018-01-24-units-gdp-deflator.md
-## 2018-02-04-establishment-survey.md
-## 2018-02-04-establishment-survey.md~
-## 2018-07-18-IIFET-seattle.md
-## 2018-09-11-U-M-econ.md
-## 2018-10-20-cv-added.md
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Many models in R</title>
       <link>/2019/06/15/many-models-in-r/</link>
       <pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate>
@@ -755,13 +708,23 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     <item>
       <title>Welcome to ECON 401</title>
       <link>/2018/10/21/welcome-to-econ-401/</link>
-      <pubDate>Sun, 21 Oct 2018 18:56:00 -0400</pubDate>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>/2018/10/21/welcome-to-econ-401/</guid>
       <description>&lt;p&gt;Welcome to Intermediate Microeconomics, ECON 401.&lt;/p&gt;
 
 &lt;p&gt;🔥 🔥 🔥 The course website is &lt;a href=&#34;https://richryan.github.io/econ401/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
 🔥 🔥 🔥&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Info added</title>
+      <link>/2018/10/20/info-added/</link>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/2018/10/20/info-added/</guid>
+      <description>&lt;p&gt;Website updated.&lt;/p&gt;
 </description>
     </item>
     

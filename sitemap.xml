@@ -44,14 +44,6 @@
     
     <url>
     
-      <loc>/2019/06/25/copying-over-old-content/</loc>
-      <lastmod>2019-06-25T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <loc>/2019/06/15/many-models-in-r/</loc>
       <lastmod>2019-06-15T00:00:00+00:00</lastmod>
     </url>
@@ -117,7 +109,15 @@
     <url>
     
       <loc>/2018/10/21/welcome-to-econ-401/</loc>
-      <lastmod>2018-10-21T18:56:00-04:00</lastmod>
+      <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2018/10/20/info-added/</loc>
+      <lastmod>2018-10-20T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -140,8 +140,192 @@
     
     <url>
     
+      <loc>/2018/07/18/iifet-2018-seattle/</loc>
+      <lastmod>2018-07-18T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/privacy/</loc>
       <lastmod>2018-06-28T00:00:00-04:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2018/02/04/on-the-establishment-survey/</loc>
+      <lastmod>2018-02-04T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2018/01/24/what-are-the-units-of-the-gdp-deflator/</loc>
+      <lastmod>2018-01-24T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2018/01/22/ex-ante-versus-ex-post-interest-rates/</loc>
+      <lastmod>2018-01-22T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2018/01/02/welcome-to-econ-402/</loc>
+      <lastmod>2018-01-02T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/10/05/example-of-dynamic-inefficiency-in-the-baseline-olg-model/</loc>
+      <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/08/14/economic-growth/</loc>
+      <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/08/05/a-functional-equation/</loc>
+      <lastmod>2017-08-05T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/07/26/balancing-material/</loc>
+      <lastmod>2017-07-26T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/07/24/the-planning-problem-in-search-models/</loc>
+      <lastmod>2017-07-24T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/07/22/a-workers-optimal-search-decision/</loc>
+      <lastmod>2017-07-22T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/07/18/notes-on-classical-monetary-models/</loc>
+      <lastmod>2017-07-18T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/07/13/practice-with-lag-operators/</loc>
+      <lastmod>2017-07-13T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/07/04/econ-607-notes-uploaded/</loc>
+      <lastmod>2017-07-04T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/07/02/a-few-remarks-on-the-607-final/</loc>
+      <lastmod>2017-07-02T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/06/26/two-minor-corrections/</loc>
+      <lastmod>2017-06-26T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/06/19/determining-whether-capital-jumps/</loc>
+      <lastmod>2017-06-19T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/06/19/olg-question/</loc>
+      <lastmod>2017-06-19T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/06/14/econ-605-notes-uploaded/</loc>
+      <lastmod>2017-06-14T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/05/21/econ-401-notes-uploaded/</loc>
+      <lastmod>2017-05-21T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/05/11/econ-435-notes-uploaded/</loc>
+      <lastmod>2017-05-11T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/05/04/econ-401-notes-uploaded/</loc>
+      <lastmod>2017-05-04T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/2017/05/03/welcome/</loc>
+      <lastmod>2017-05-03T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -264,8 +448,35 @@
     
     <url>
     
+      <loc>/tags/econ-402/</loc>
+      <lastmod>2018-01-02T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/econ-605/</loc>
+      <lastmod>2017-10-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>/tags/econ-607/</loc>
+      <lastmod>2017-08-05T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>/tags/econ-401/</loc>
-      <lastmod>2018-10-21T18:56:00-04:00</lastmod>
+      <lastmod>2018-10-21T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
