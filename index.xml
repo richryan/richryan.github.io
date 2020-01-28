@@ -7,13 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Tue, 15 Jan 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 00:00:00 -0800</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Intermediate Microeconomic Theory, Fall 2014</title>
       <link>/teaching/econ401_f2014/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ401_f2014/</guid>
       <description>&lt;p&gt;Section notes for Intermediate Microeconomic Theory, ECON 401, with Professor
@@ -84,7 +84,7 @@ modified traffic, &lt;a href=&#34;https://umich.box.com/s/7cchep8mycb6fqdwkysrrv
     <item>
       <title>Intermediate Microeconomic Theory, Fall 2018</title>
       <link>/teaching/econ401_f2018/</link>
-      <pubDate>Sun, 13 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 13 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ401_f2018/</guid>
       <description>&lt;p&gt;Materials for Intermediate Microeconomic Theory, ECON 401, with Dr. &lt;a href=&#34;https://lsa.umich.edu/econ/people/faculty/rabbit.html&#34; target=&#34;_blank&#34;&gt;Chris Proulx&lt;/a&gt;.&lt;/p&gt;
@@ -100,7 +100,7 @@ These notes improve upon the notes from the Winter 2015 semester.&lt;/p&gt;
     <item>
       <title>Intermediate Microeconomic Theory, Winter 2015</title>
       <link>/teaching/econ401_w2015/</link>
-      <pubDate>Tue, 01 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ401_w2015/</guid>
       <description>
@@ -237,7 +237,7 @@ ggplot(data = payems) +
     <item>
       <title>The Economics of Sustainability, Fall 2019</title>
       <link>/teaching/be401_f2019/</link>
-      <pubDate>Thu, 29 Aug 2019 00:00:00 -0400</pubDate>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 -0700</pubDate>
       
       <guid>/teaching/be401_f2019/</guid>
       <description>&lt;p&gt;Materials for The Economics of Sustainability, BEPP 401, with Professor &lt;a href=&#34;https://sites.google.com/a/umich.edu/thomaslyon/&#34; target=&#34;_blank&#34;&gt;Thomas P. Lyon&lt;/a&gt;.&lt;/p&gt;
@@ -549,7 +549,7 @@ See &lt;a href=&#34;http://docs.mathjax.org/en/latest/tex.html#automatic-equatio
     <item>
       <title>Macroeconomic Theory I, Fall 2016</title>
       <link>/teaching/econ605_f2016/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ605_f2016/</guid>
       <description>
@@ -579,7 +579,7 @@ The preservation also represents a desire not to obliterate the hard work that w
     <item>
       <title>Macroeconomic Theory I, Fall 2017</title>
       <link>/teaching/econ605_f2017/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ605_f2017/</guid>
       <description>
@@ -615,7 +615,7 @@ The preservation also represents a desire not to obliterate the hard work that w
     <item>
       <title>Financial Economics, Winter 2016</title>
       <link>/teaching/econ435_w2016/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ435_w2016/</guid>
       <description>
@@ -672,7 +672,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     <item>
       <title>Macroeconomic Theory II, Winter 2017</title>
       <link>/teaching/econ607_w2017/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ607_w2017/</guid>
       <description>
@@ -699,7 +699,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     <item>
       <title>Intermediate Macroeconomic Theory, Winter 2018</title>
       <link>/teaching/econ402_w2018/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0500</pubDate>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
       
       <guid>/teaching/econ402_w2018/</guid>
       <description>&lt;p&gt;Materials for Intermediate Macroeconomics, ECON 402, with Professor &lt;a href=&#34;http://www-personal.umich.edu/~chouse/&#34; target=&#34;_blank&#34;&gt;Chris House&lt;/a&gt;.&lt;/p&gt;
@@ -734,7 +734,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
     <item>
       <title>Example Page</title>
       <link>/tutorial/example/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 -0400</pubDate>
+      <pubDate>Sun, 09 Sep 2018 00:00:00 -0700</pubDate>
       
       <guid>/tutorial/example/</guid>
       <description>
