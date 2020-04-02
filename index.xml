@@ -169,51 +169,8 @@ and selecting &lt;code&gt;Initial Claims&lt;/code&gt;.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
 library(tidyverse)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tidyverse&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;ggplot2&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tibble&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tidyr&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;purrr&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;dplyr&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;forcats&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyquant)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tidyquant&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;PerformanceAnalytics&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;xts&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;zoo&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;quantmod&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;## Warning: package &#39;TTR&#39; was built under R version 3.6.3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
+library(tidyquant)
+library(ggplot2)
 library(ggthemes)
 
 my_blue &amp;lt;- &amp;quot;purple1&amp;quot;

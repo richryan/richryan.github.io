@@ -18,7 +18,7 @@
   <meta name="description" content="Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
 Data on initial claims are available at FRED by browsing data by Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims and selecting Initial Claims.
 Here is the R code for retrieving these data:
-# Load packages library(tidyverse)  ## Warning: package &#39;tidyverse&#39; was built under R version 3.">
+# Load packages library(tidyverse) library(tidyquant) library(ggplot2) library(ggthemes) my_blue &lt;- &quot;purple1&quot; my_orange &lt;- &quot;orangered1&quot; my_shade &lt;- &quot;gray66&quot; claims &lt;- tq_get(&quot;ICSA&quot;, get = &quot;economic.">
 
   
   <link rel="alternate" hreflang="en-us" href="/2020/03/28/initial-claims/">
@@ -110,7 +110,7 @@ Here is the R code for retrieving these data:
   <meta property="og:description" content="Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
 Data on initial claims are available at FRED by browsing data by Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims and selecting Initial Claims.
 Here is the R code for retrieving these data:
-# Load packages library(tidyverse)  ## Warning: package &#39;tidyverse&#39; was built under R version 3."><meta property="og:image" content="/img/portrait.jpg">
+# Load packages library(tidyverse) library(tidyquant) library(ggplot2) library(ggthemes) my_blue &lt;- &quot;purple1&quot; my_orange &lt;- &quot;orangered1&quot; my_shade &lt;- &quot;gray66&quot; claims &lt;- tq_get(&quot;ICSA&quot;, get = &quot;economic."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2020-03-28T00:00:00&#43;00:00">
@@ -378,51 +378,8 @@ and selecting <code>Initial Claims</code>.</p>
 
 <pre><code class="language-r"># Load packages
 library(tidyverse)
-</code></pre>
-
-<pre><code>## Warning: package 'tidyverse' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'ggplot2' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'tibble' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'tidyr' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'purrr' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'dplyr' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'forcats' was built under R version 3.6.3
-</code></pre>
-
-<pre><code class="language-r">library(tidyquant)
-</code></pre>
-
-<pre><code>## Warning: package 'tidyquant' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'PerformanceAnalytics' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'xts' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'zoo' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'quantmod' was built under R version 3.6.3
-</code></pre>
-
-<pre><code>## Warning: package 'TTR' was built under R version 3.6.3
-</code></pre>
-
-<pre><code class="language-r">library(ggplot2)
+library(tidyquant)
+library(ggplot2)
 library(ggthemes)
 
 my_blue &lt;- &quot;purple1&quot;
