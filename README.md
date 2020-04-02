@@ -31,6 +31,28 @@ under `#profile .portrait`.
 **NOTE**: I edited how MathJax works by editing `themes/hugo-academic/layouts/partials/css/academic.css`,
 including code labeled with `Added by rwr on 12/8/2019`.
 
+## Creating a new post ##
+
+To create a new post,
+create an R markdown file with a .Rmarkdown extension (not .Rmd).
+A useful preambamble that I've found to work is:
+
+    ---
+    title: "Initial Claims"
+    author: "Rich Ryan"
+    date: 2020-03-28
+    math: true
+    tags: ["R"]
+
+    reading_time: false  # Show estimated reading time?
+    share: false  # Show social sharing links?
+    profile: false  # Show author profile?
+    comments: false  # Show comments?
+
+    output: 
+      blogdown::html_page:
+        toc: true
+    ---
 
 ## Building the `Posts` tab and creating a post ##
 
