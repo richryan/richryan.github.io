@@ -54,6 +54,15 @@ A useful preambamble that I've found to work is:
         toc: true
     ---
 
+
+- Create the post content, including R content.
+- Run `blogdown::serve_site()` on the command line.
+- Find the html code associated with the post in the `public` directory; 
+for example, `03/28/initial-claims/index.html`.
+Commit this file.
+- 
+
+
 ## Building the `Posts` tab and creating a post ##
 
 ### Building ###

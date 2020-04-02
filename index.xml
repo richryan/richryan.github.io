@@ -152,6 +152,152 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Initial Claims</title>
+      <link>/2020/03/28/initial-claims/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/03/28/initial-claims/</guid>
+      <description>&lt;p&gt;Here are initial-claims data,
+which were covered in a recent &lt;a href=&#34;https://nyti.ms/3akqRjb&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;NY Times&lt;/em&gt; article&lt;/a&gt;.
+I try and replicate a few of the figures detailed in the article.&lt;/p&gt;
+
+&lt;p&gt;Data on initial claims are available at &lt;a href=&#34;https://fred.stlouisfed.org/&#34; target=&#34;_blank&#34;&gt;FRED&lt;/a&gt;
+by browsing data by &lt;code&gt;Category &amp;gt; Population, Employment, &amp;amp; Labor Markets &amp;gt; Weekly Initial Claims&lt;/code&gt;
+and selecting &lt;code&gt;Initial Claims&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here is the R code for retrieving these data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
+library(tidyverse)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tidyverse&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;ggplot2&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tibble&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tidyr&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;purrr&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;dplyr&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;forcats&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(tidyquant)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;tidyquant&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;PerformanceAnalytics&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;xts&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;zoo&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;quantmod&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: package &#39;TTR&#39; was built under R version 3.6.3
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
+library(ggthemes)
+
+my_blue &amp;lt;- &amp;quot;purple1&amp;quot;
+my_orange &amp;lt;- &amp;quot;orangered1&amp;quot;
+my_shade &amp;lt;- &amp;quot;gray66&amp;quot;
+
+claims &amp;lt;- tq_get(&amp;quot;ICSA&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1900-01-01&amp;quot;)
+head(claims)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol date        price
+##   &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;      &amp;lt;int&amp;gt;
+## 1 ICSA   1967-01-07 208000
+## 2 ICSA   1967-01-14 207000
+## 3 ICSA   1967-01-21 217000
+## 4 ICSA   1967-01-28 204000
+## 5 ICSA   1967-02-04 216000
+## 6 ICSA   1967-02-11 229000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tail(claims)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol date         price
+##   &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;       &amp;lt;int&amp;gt;
+## 1 ICSA   2020-02-22  220000
+## 2 ICSA   2020-02-29  217000
+## 3 ICSA   2020-03-07  211000
+## 4 ICSA   2020-03-14  282000
+## 5 ICSA   2020-03-21 3307000
+## 6 ICSA   2020-03-28 6648000
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Convert claims to millions
+dat &amp;lt;- claims %&amp;gt;% 
+  mutate(price = price / 1e+06)
+
+dat_early &amp;lt;- dat %&amp;gt;% 
+  filter(
+    date &amp;gt;= ymd(&amp;quot;2004-01-01&amp;quot;) &amp;amp;
+    date &amp;lt;  ymd(&amp;quot;2020-03-01&amp;quot;))
+
+dat_late &amp;lt;- dat %&amp;gt;% 
+  filter(date &amp;gt;= ymd(&amp;quot;2020-03-01&amp;quot;))
+
+last_date &amp;lt;- max(dat_late$date)
+last_lvl &amp;lt;- dat_late$price[[which(dat_late$date == max(dat_late$date))]]
+
+my_breaks &amp;lt;- seq(0,7)
+my_labels &amp;lt;- paste(my_breaks)
+my_labels[[length(my_labels)]] &amp;lt;- &amp;quot;7 million&amp;quot;
+
+ggplot(data = dat_early, aes(x = date, y = price)) +
+  geom_col(color = my_blue, position = &amp;quot;identity&amp;quot;) +
+  # Highlight March 2020
+  geom_col(data = dat_late,
+             mapping = aes(x = date, y = price),
+             color = my_orange) +
+  xlab(&amp;quot;&amp;quot;) + ggtitle(&amp;quot;Initial jobless claims&amp;quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels, 
+                     limits = c(0,7.5)) +
+  # Label last observation, set off 1 year
+  annotate(&amp;quot;text&amp;quot;, 
+           x = last_date - 360,
+           y = last_lvl, 
+           label = paste0(last_lvl, &amp;quot;\n&amp;quot;, 
+                         month(last_date, label = TRUE), &amp;quot;, &amp;quot;, day(last_date)),
+           color = my_orange,
+           hjust = 0.85) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;, 
+            color = &amp;quot;gray&amp;quot;, 
+            title_family = &amp;quot;sans&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Happy Labor Market Friday!</title>
       <link>/2019/12/06/happy-labor-market-friday/</link>
       <pubDate>Fri, 06 Dec 2019 00:00:00 +0000</pubDate>
@@ -728,26 +874,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
       
       <guid>/2018/10/20/info-added/</guid>
       <description>&lt;p&gt;Website updated.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Example Page</title>
-      <link>/tutorial/example/</link>
-      <pubDate>Sun, 09 Sep 2018 00:00:00 -0700</pubDate>
-      
-      <guid>/tutorial/example/</guid>
-      <description>
-
-&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
-
-&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
-
-&lt;p&gt;&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     

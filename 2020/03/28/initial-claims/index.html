@@ -15,10 +15,13 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
+Data on initial claims are available at FRED by browsing data by Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims and selecting Initial Claims.
+Here is the R code for retrieving these data:
+# Load packages library(tidyverse)  ## Warning: package &#39;tidyverse&#39; was built under R version 3.">
 
   
-  <link rel="alternate" hreflang="en-us" href="">
+  <link rel="alternate" hreflang="en-us" href="/2020/03/28/initial-claims/">
 
   
 
@@ -90,7 +93,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="">
+  <link rel="canonical" href="/2020/03/28/initial-claims/">
 
   
   
@@ -102,19 +105,24 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="RICH RYAN">
-  <meta property="og:url" content="">
-  <meta property="og:title" content="404 Page not found | RICH RYAN">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/portrait.jpg">
+  <meta property="og:url" content="/2020/03/28/initial-claims/">
+  <meta property="og:title" content="Initial Claims | RICH RYAN">
+  <meta property="og:description" content="Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
+Data on initial claims are available at FRED by browsing data by Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims and selecting Initial Claims.
+Here is the R code for retrieving these data:
+# Load packages library(tidyverse)  ## Warning: package &#39;tidyverse&#39; was built under R version 3."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
+  <meta property="article:published_time" content="2020-03-28T00:00:00&#43;00:00">
   
+  <meta property="article:modified_time" content="2020-03-28T00:00:00&#43;00:00">
+  
+
   
 
   
 
-  
-
-  <title>404 Page not found | RICH RYAN</title>
+  <title>Initial Claims | RICH RYAN</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
@@ -270,76 +278,271 @@
   </div>
 </nav>
 
-<div class="container">
 
-  <h1>Page not found</h1>
-  <p>Perhaps you were looking for one of these?</p>
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
   
-  
-  <h2>Posts</h2>
-  
-  <ul>
-    <li><a href="/2020/03/28/initial-claims/">Initial Claims</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="/2019/12/06/happy-labor-market-friday/">Happy Labor Market Friday!</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="/2019/06/15/many-models-in-r/">Many models in R</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="/2019/01/19/converting-the-jekyll-website-to-hugo-and-blogdown/">Converting the Jekyll website to Hugo and Blogdown</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="/2018/10/21/welcome-to-econ-401/">Welcome to ECON 401</a></li>
-  </ul>
-  
+
+
+
+
+
+
+
+
+
+
+
+
   
 
   
   
-  <h2>Publications</h2>
   
-  <ul>
-    <li><a href="/publication/person-re-id/">A Person Re-Identification System For Mobile Devices</a></li>
-  </ul>
+<div class="article-container pt-3">
+  <h1 itemprop="name">Initial Claims</h1>
+
   
-  <ul>
-    <li><a href="/publication/clothing-search/">Mobile visual clothing search</a></li>
-  </ul>
+
   
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Rich Ryan">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2020-03-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2020-03-28 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      March 28, 2020
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Rich Ryan">
+  </span>
+
   
 
   
   
-  <h2>Talks</h2>
-  
-  <ul>
-    <li><a href="/talk/example/">Example Talk</a></li>
-  </ul>
-  
+
   
 
   
   
-  <h2>Projects</h2>
-  
-  <ul>
-    <li><a href="/project/external-project/">External Project</a></li>
-  </ul>
-  
-  <ul>
-    <li><a href="/project/internal-project/">Internal Project</a></li>
-  </ul>
-  
+
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      <p>Here are initial-claims data,
+which were covered in a recent <a href="https://nyti.ms/3akqRjb" target="_blank"><em>NY Times</em> article</a>.
+I try and replicate a few of the figures detailed in the article.</p>
+
+<p>Data on initial claims are available at <a href="https://fred.stlouisfed.org/" target="_blank">FRED</a>
+by browsing data by <code>Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims</code>
+and selecting <code>Initial Claims</code>.</p>
+
+<p>Here is the R code for retrieving these data:</p>
+
+<pre><code class="language-r"># Load packages
+library(tidyverse)
+</code></pre>
+
+<pre><code>## Warning: package 'tidyverse' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'ggplot2' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'tibble' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'tidyr' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'purrr' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'dplyr' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'forcats' was built under R version 3.6.3
+</code></pre>
+
+<pre><code class="language-r">library(tidyquant)
+</code></pre>
+
+<pre><code>## Warning: package 'tidyquant' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'PerformanceAnalytics' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'xts' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'zoo' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'quantmod' was built under R version 3.6.3
+</code></pre>
+
+<pre><code>## Warning: package 'TTR' was built under R version 3.6.3
+</code></pre>
+
+<pre><code class="language-r">library(ggplot2)
+library(ggthemes)
+
+my_blue &lt;- &quot;purple1&quot;
+my_orange &lt;- &quot;orangered1&quot;
+my_shade &lt;- &quot;gray66&quot;
+
+claims &lt;- tq_get(&quot;ICSA&quot;, get = &quot;economic.data&quot;, from = &quot;1900-01-01&quot;)
+head(claims)
+</code></pre>
+
+<pre><code>## # A tibble: 6 x 3
+##   symbol date        price
+##   &lt;chr&gt;  &lt;date&gt;      &lt;int&gt;
+## 1 ICSA   1967-01-07 208000
+## 2 ICSA   1967-01-14 207000
+## 3 ICSA   1967-01-21 217000
+## 4 ICSA   1967-01-28 204000
+## 5 ICSA   1967-02-04 216000
+## 6 ICSA   1967-02-11 229000
+</code></pre>
+
+<pre><code class="language-r">tail(claims)
+</code></pre>
+
+<pre><code>## # A tibble: 6 x 3
+##   symbol date         price
+##   &lt;chr&gt;  &lt;date&gt;       &lt;int&gt;
+## 1 ICSA   2020-02-22  220000
+## 2 ICSA   2020-02-29  217000
+## 3 ICSA   2020-03-07  211000
+## 4 ICSA   2020-03-14  282000
+## 5 ICSA   2020-03-21 3307000
+## 6 ICSA   2020-03-28 6648000
+</code></pre>
+
+<pre><code class="language-r"># Convert claims to millions
+dat &lt;- claims %&gt;% 
+  mutate(price = price / 1e+06)
+
+dat_early &lt;- dat %&gt;% 
+  filter(
+    date &gt;= ymd(&quot;2004-01-01&quot;) &amp;
+    date &lt;  ymd(&quot;2020-03-01&quot;))
+
+dat_late &lt;- dat %&gt;% 
+  filter(date &gt;= ymd(&quot;2020-03-01&quot;))
+
+last_date &lt;- max(dat_late$date)
+last_lvl &lt;- dat_late$price[[which(dat_late$date == max(dat_late$date))]]
+
+my_breaks &lt;- seq(0,7)
+my_labels &lt;- paste(my_breaks)
+my_labels[[length(my_labels)]] &lt;- &quot;7 million&quot;
+
+ggplot(data = dat_early, aes(x = date, y = price)) +
+  geom_col(color = my_blue, position = &quot;identity&quot;) +
+  # Highlight March 2020
+  geom_col(data = dat_late,
+             mapping = aes(x = date, y = price),
+             color = my_orange) +
+  xlab(&quot;&quot;) + ggtitle(&quot;Initial jobless claims&quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels, 
+                     limits = c(0,7.5)) +
+  # Label last observation, set off 1 year
+  annotate(&quot;text&quot;, 
+           x = last_date - 360,
+           y = last_lvl, 
+           label = paste0(last_lvl, &quot;\n&quot;, 
+                         month(last_date, label = TRUE), &quot;, &quot;, day(last_date)),
+           color = my_orange,
+           hjust = 0.85) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &quot;sans&quot;, 
+            color = &quot;gray&quot;, 
+            title_family = &quot;sans&quot;)
+</code></pre>
+
+<p><img src="/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/r/">R</a>
+  
+</div>
+
+
+
+    
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/2019/12/06/happy-labor-market-friday/">Happy Labor Market Friday!</a></li>
+        
+        <li><a href="/2019/06/15/many-models-in-r/">Many models in R</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
 <div class="container">
   <footer class="site-footer">
   
