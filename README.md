@@ -66,7 +66,6 @@ Commit these files.
 - Push the new commits to GitHub.
 The website should update with the new post.
 
-
 ## Building the `Posts` tab and creating a post ##
 
 ### Building ###
