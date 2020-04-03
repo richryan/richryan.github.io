@@ -375,7 +375,10 @@ here are all the data:&lt;/p&gt;
   # Label y-axis for wsj theme
   scale_y_continuous(breaks = my_breaks,
                      labels = my_labels, 
-                     limits = c(0,7.5)) 
+                     limits = c(0,7.5)) +
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;, 
+            color = &amp;quot;gray&amp;quot;, 
+            title_family = &amp;quot;sans&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
