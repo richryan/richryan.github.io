@@ -346,17 +346,39 @@ recess_wide &amp;lt;- recess_dat %&amp;gt;%
 
 &lt;p&gt;Adding recession shading is straightforward:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plt2 &amp;lt;- plt + 
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plt2 &amp;lt;- plt +
   geom_rect(mapping = aes(xmin = begin, xmax = end,
                           ymin = 0, ymax = 7),
             data = filter(recess_wide,
                           begin &amp;gt;= min(dat_early$date)), 
-            fill = &amp;quot;blue&amp;quot;,
-            alpha = 0.2)
+            fill = my_shade,
+            alpha = 0.6) 
 (plt2)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To get a sense of the initial claims,
+here are all the data:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot() +
+  geom_rect(mapping = aes(xmin = begin, xmax = end,
+                          ymin = 0, ymax = 7),
+            data = filter(recess_wide,
+                          begin &amp;gt;= min(dat$date)), 
+            fill = my_shade,
+            alpha = 0.6) + 
+  geom_col(mapping =  aes(x = date, y = price),
+           data = dat,
+           color = my_blue, position = &amp;quot;identity&amp;quot;) +
+  xlab(&amp;quot;&amp;quot;) + ggtitle(&amp;quot;Initial jobless claims&amp;quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels, 
+                     limits = c(0,7.5)) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

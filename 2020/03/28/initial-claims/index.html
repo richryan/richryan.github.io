@@ -553,17 +553,39 @@ recess_wide &lt;- recess_dat %&gt;%
 
 <p>Adding recession shading is straightforward:</p>
 
-<pre><code class="language-r">plt2 &lt;- plt + 
+<pre><code class="language-r">plt2 &lt;- plt +
   geom_rect(mapping = aes(xmin = begin, xmax = end,
                           ymin = 0, ymax = 7),
             data = filter(recess_wide,
                           begin &gt;= min(dat_early$date)), 
-            fill = &quot;blue&quot;,
-            alpha = 0.2)
+            fill = my_shade,
+            alpha = 0.6) 
 (plt2)
 </code></pre>
 
 <p><img src="/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+
+<p>To get a sense of the initial claims,
+here are all the data:</p>
+
+<pre><code class="language-r">ggplot() +
+  geom_rect(mapping = aes(xmin = begin, xmax = end,
+                          ymin = 0, ymax = 7),
+            data = filter(recess_wide,
+                          begin &gt;= min(dat$date)), 
+            fill = my_shade,
+            alpha = 0.6) + 
+  geom_col(mapping =  aes(x = date, y = price),
+           data = dat,
+           color = my_blue, position = &quot;identity&quot;) +
+  xlab(&quot;&quot;) + ggtitle(&quot;Initial jobless claims&quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels, 
+                     limits = c(0,7.5)) 
+</code></pre>
+
+<p><img src="/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 
     </div>
 
