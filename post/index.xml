@@ -20,8 +20,7 @@
       <guid>/2020/03/28/initial-claims/</guid>
       <description>Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
 Data on initial claims are available at FRED by browsing data by Category &amp;gt; Population, Employment, &amp;amp; Labor Markets &amp;gt; Weekly Initial Claims and selecting Initial Claims.
-Here is the R code for retrieving these data:
-# Load packages library(tidyverse) library(tidyquant) library(ggplot2) library(ggthemes) my_blue &amp;lt;- &amp;quot;purple1&amp;quot; my_orange &amp;lt;- &amp;quot;orangered1&amp;quot; my_shade &amp;lt;- &amp;quot;gray66&amp;quot; claims &amp;lt;- tq_get(&amp;quot;ICSA&amp;quot;, get = &amp;quot;economic.</description>
+Here is the R code for retrieving and plotting these data. Data on initial claims from March are highlighted in orange.</description>
     </item>
     
     <item>

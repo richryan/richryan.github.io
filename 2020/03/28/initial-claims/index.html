@@ -17,8 +17,7 @@
   
   <meta name="description" content="Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
 Data on initial claims are available at FRED by browsing data by Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims and selecting Initial Claims.
-Here is the R code for retrieving these data:
-# Load packages library(tidyverse) library(tidyquant) library(ggplot2) library(ggthemes) my_blue &lt;- &quot;purple1&quot; my_orange &lt;- &quot;orangered1&quot; my_shade &lt;- &quot;gray66&quot; claims &lt;- tq_get(&quot;ICSA&quot;, get = &quot;economic.">
+Here is the R code for retrieving and plotting these data. Data on initial claims from March are highlighted in orange.">
 
   
   <link rel="alternate" hreflang="en-us" href="/2020/03/28/initial-claims/">
@@ -109,8 +108,7 @@ Here is the R code for retrieving these data:
   <meta property="og:title" content="Initial Claims | RICH RYAN">
   <meta property="og:description" content="Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
 Data on initial claims are available at FRED by browsing data by Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims and selecting Initial Claims.
-Here is the R code for retrieving these data:
-# Load packages library(tidyverse) library(tidyquant) library(ggplot2) library(ggthemes) my_blue &lt;- &quot;purple1&quot; my_orange &lt;- &quot;orangered1&quot; my_shade &lt;- &quot;gray66&quot; claims &lt;- tq_get(&quot;ICSA&quot;, get = &quot;economic."><meta property="og:image" content="/img/portrait.jpg">
+Here is the R code for retrieving and plotting these data. Data on initial claims from March are highlighted in orange."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
   <meta property="article:published_time" content="2020-03-28T00:00:00&#43;00:00">
@@ -374,7 +372,8 @@ I try and replicate a few of the figures detailed in the article.</p>
 by browsing data by <code>Category &gt; Population, Employment, &amp; Labor Markets &gt; Weekly Initial Claims</code>
 and selecting <code>Initial Claims</code>.</p>
 
-<p>Here is the R code for retrieving these data:</p>
+<p>Here is the R code for retrieving and plotting these data.
+Data on initial claims from March are highlighted in orange.</p>
 
 <pre><code class="language-r"># Load packages
 library(tidyverse)
@@ -386,7 +385,7 @@ my_blue &lt;- &quot;purple1&quot;
 my_orange &lt;- &quot;orangered1&quot;
 my_shade &lt;- &quot;gray66&quot;
 
-claims &lt;- tq_get(&quot;ICSA&quot;, get = &quot;economic.data&quot;, from = &quot;1900-01-01&quot;)
+claims &lt;- tq_get(&quot;ICSA&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;)
 head(claims)
 </code></pre>
 
@@ -434,8 +433,10 @@ my_breaks &lt;- seq(0,7)
 my_labels &lt;- paste(my_breaks)
 my_labels[[length(my_labels)]] &lt;- &quot;7 million&quot;
 
-ggplot(data = dat_early, aes(x = date, y = price)) +
-  geom_col(color = my_blue, position = &quot;identity&quot;) +
+plt &lt;- ggplot() +
+  geom_col(mapping =  aes(x = date, y = price),
+           data = dat_early,
+           color = my_blue, position = &quot;identity&quot;) +
   # Highlight March 2020
   geom_col(data = dat_late,
              mapping = aes(x = date, y = price),
@@ -457,9 +458,112 @@ ggplot(data = dat_early, aes(x = date, y = price)) +
   theme_wsj(base_family = &quot;sans&quot;, 
             color = &quot;gray&quot;, 
             title_family = &quot;sans&quot;)
+# Display the plot
+(plt)
 </code></pre>
 
 <p><img src="/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+
+<p>FRED also provides recession dates.
+These dates can be used to add recession shading to the developing figure.</p>
+
+<p>The goal is highlighting recessions.
+From the NBER&rsquo;s website:</p>
+
+<blockquote>
+<p>Contractions (recessions) start at the peak of a business cycle and end at the trough.</p>
+</blockquote>
+
+<p>Note: The FRED series <code>USRECM</code> indicates periods &ldquo;from the peak through the trough&rdquo;;
+whereas, <code>USREC</code> indicates periods &ldquo;from the period following the peak through the trough.&rdquo;
+(Both series are monthly.)</p>
+
+<pre><code class="language-r">recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;)
+tail(recess)
+</code></pre>
+
+<pre><code>## # A tibble: 6 x 3
+##   symbol date       price
+##   &lt;chr&gt;  &lt;date&gt;     &lt;int&gt;
+## 1 USRECM 2019-10-01     0
+## 2 USRECM 2019-11-01     0
+## 3 USRECM 2019-12-01     0
+## 4 USRECM 2020-01-01     0
+## 5 USRECM 2020-02-01     0
+## 6 USRECM 2020-03-01     0
+</code></pre>
+
+<p>To use <code>geom_rect()</code>,
+the beginning and end of recessions are needed.</p>
+
+<pre><code class="language-r"># Create groups based recessions
+recess_dat &lt;- recess %&gt;% 
+  arrange(date) %&gt;% 
+  mutate(same = 1 - (price == lag(price))) %&gt;% 
+  # Remove first row, an NA, for cumulative sum
+  filter(date &gt; min(recess$date)) %&gt;% 
+  mutate(era = cumsum(same)) %&gt;% 
+  # Filter only recessions
+  filter(price == 1)
+</code></pre>
+
+<p>Now the recessions are grouped according to <code>era</code>.
+The following code groups the data by recessions and
+keeps the first and last element of the group.</p>
+
+<pre><code class="language-r">recess_dat &lt;- recess_dat %&gt;% 
+  group_by(era) %&gt;% 
+  # Unncessary, but to be sure...
+  arrange(date) %&gt;% 
+  filter(row_number() == 1 | row_number() == n())
+
+# Now reshape the data wide.
+# Each row will contain the start and end dates of a recession.
+recess_dat &lt;- recess_dat %&gt;% 
+  mutate(junk = row_number()) %&gt;% 
+  mutate(begin_end = case_when(
+    junk == 1 ~ &quot;begin&quot;,
+    junk == 2 ~ &quot;end&quot;
+  ))
+
+recess_wide &lt;- recess_dat %&gt;%
+  ungroup() %&gt;% 
+  select(symbol, price, date, era, begin_end) %&gt;% 
+  pivot_wider(names_from = begin_end, values_from = date)
+</code></pre>
+
+<p>We can check these dates against the official dates published at the NBER&rsquo;s
+<a href="https://www.nber.org/cycles.html" target="_blank">website</a>.</p>
+
+<pre><code class="language-r">tail(recess_wide)
+</code></pre>
+
+<pre><code>## # A tibble: 6 x 5
+##   symbol price   era begin      end       
+##   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;date&gt;     &lt;date&gt;    
+## 1 USRECM     1    56 1973-11-01 1975-03-01
+## 2 USRECM     1    58 1980-01-01 1980-07-01
+## 3 USRECM     1    60 1981-07-01 1982-11-01
+## 4 USRECM     1    62 1990-07-01 1991-03-01
+## 5 USRECM     1    64 2001-03-01 2001-11-01
+## 6 USRECM     1    66 2007-12-01 2009-06-01
+</code></pre>
+
+<p>These dates agree with the NBER dates.</p>
+
+<p>Adding recession shading is straightforward:</p>
+
+<pre><code class="language-r">plt2 &lt;- plt + 
+  geom_rect(mapping = aes(xmin = begin, xmax = end,
+                          ymin = 0, ymax = 7),
+            data = filter(recess_wide,
+                          begin &gt;= min(dat_early$date)), 
+            fill = &quot;blue&quot;,
+            alpha = 0.2)
+(plt2)
+</code></pre>
+
+<p><img src="/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 
     </div>
 

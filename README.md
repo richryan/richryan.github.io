@@ -60,7 +60,11 @@ A useful preambamble that I've found to work is:
 - Find the html code associated with the post in the `public` directory; 
 for example, `03/28/initial-claims/index.html`.
 Commit this file.
-- 
+- Find the png files associated with the post.
+These files are contained under `post` directory and listed under the dated post.
+Commit these files.
+- Push the new commits to GitHub.
+The website should update with the new post.
 
 
 ## Building the `Posts` tab and creating a post ##

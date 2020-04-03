@@ -165,7 +165,8 @@ I try and replicate a few of the figures detailed in the article.&lt;/p&gt;
 by browsing data by &lt;code&gt;Category &amp;gt; Population, Employment, &amp;amp; Labor Markets &amp;gt; Weekly Initial Claims&lt;/code&gt;
 and selecting &lt;code&gt;Initial Claims&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Here is the R code for retrieving these data:&lt;/p&gt;
+&lt;p&gt;Here is the R code for retrieving and plotting these data.
+Data on initial claims from March are highlighted in orange.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
 library(tidyverse)
@@ -177,7 +178,7 @@ my_blue &amp;lt;- &amp;quot;purple1&amp;quot;
 my_orange &amp;lt;- &amp;quot;orangered1&amp;quot;
 my_shade &amp;lt;- &amp;quot;gray66&amp;quot;
 
-claims &amp;lt;- tq_get(&amp;quot;ICSA&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1900-01-01&amp;quot;)
+claims &amp;lt;- tq_get(&amp;quot;ICSA&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
 head(claims)
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -225,8 +226,10 @@ my_breaks &amp;lt;- seq(0,7)
 my_labels &amp;lt;- paste(my_breaks)
 my_labels[[length(my_labels)]] &amp;lt;- &amp;quot;7 million&amp;quot;
 
-ggplot(data = dat_early, aes(x = date, y = price)) +
-  geom_col(color = my_blue, position = &amp;quot;identity&amp;quot;) +
+plt &amp;lt;- ggplot() +
+  geom_col(mapping =  aes(x = date, y = price),
+           data = dat_early,
+           color = my_blue, position = &amp;quot;identity&amp;quot;) +
   # Highlight March 2020
   geom_col(data = dat_late,
              mapping = aes(x = date, y = price),
@@ -248,9 +251,112 @@ ggplot(data = dat_early, aes(x = date, y = price)) +
   theme_wsj(base_family = &amp;quot;sans&amp;quot;, 
             color = &amp;quot;gray&amp;quot;, 
             title_family = &amp;quot;sans&amp;quot;)
+# Display the plot
+(plt)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;FRED also provides recession dates.
+These dates can be used to add recession shading to the developing figure.&lt;/p&gt;
+
+&lt;p&gt;The goal is highlighting recessions.
+From the NBER&amp;rsquo;s website:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Contractions (recessions) start at the peak of a business cycle and end at the trough.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Note: The FRED series &lt;code&gt;USRECM&lt;/code&gt; indicates periods &amp;ldquo;from the peak through the trough&amp;rdquo;;
+whereas, &lt;code&gt;USREC&lt;/code&gt; indicates periods &amp;ldquo;from the period following the peak through the trough.&amp;rdquo;
+(Both series are monthly.)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;recess &amp;lt;- tq_get(&amp;quot;USRECM&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
+tail(recess)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol date       price
+##   &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+## 1 USRECM 2019-10-01     0
+## 2 USRECM 2019-11-01     0
+## 3 USRECM 2019-12-01     0
+## 4 USRECM 2020-01-01     0
+## 5 USRECM 2020-02-01     0
+## 6 USRECM 2020-03-01     0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To use &lt;code&gt;geom_rect()&lt;/code&gt;,
+the beginning and end of recessions are needed.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Create groups based recessions
+recess_dat &amp;lt;- recess %&amp;gt;% 
+  arrange(date) %&amp;gt;% 
+  mutate(same = 1 - (price == lag(price))) %&amp;gt;% 
+  # Remove first row, an NA, for cumulative sum
+  filter(date &amp;gt; min(recess$date)) %&amp;gt;% 
+  mutate(era = cumsum(same)) %&amp;gt;% 
+  # Filter only recessions
+  filter(price == 1)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now the recessions are grouped according to &lt;code&gt;era&lt;/code&gt;.
+The following code groups the data by recessions and
+keeps the first and last element of the group.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  group_by(era) %&amp;gt;% 
+  # Unncessary, but to be sure...
+  arrange(date) %&amp;gt;% 
+  filter(row_number() == 1 | row_number() == n())
+
+# Now reshape the data wide.
+# Each row will contain the start and end dates of a recession.
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  mutate(junk = row_number()) %&amp;gt;% 
+  mutate(begin_end = case_when(
+    junk == 1 ~ &amp;quot;begin&amp;quot;,
+    junk == 2 ~ &amp;quot;end&amp;quot;
+  ))
+
+recess_wide &amp;lt;- recess_dat %&amp;gt;%
+  ungroup() %&amp;gt;% 
+  select(symbol, price, date, era, begin_end) %&amp;gt;% 
+  pivot_wider(names_from = begin_end, values_from = date)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can check these dates against the official dates published at the NBER&amp;rsquo;s
+&lt;a href=&#34;https://www.nber.org/cycles.html&#34; target=&#34;_blank&#34;&gt;website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tail(recess_wide)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 5
+##   symbol price   era begin      end       
+##   &amp;lt;chr&amp;gt;  &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;date&amp;gt;     &amp;lt;date&amp;gt;    
+## 1 USRECM     1    56 1973-11-01 1975-03-01
+## 2 USRECM     1    58 1980-01-01 1980-07-01
+## 3 USRECM     1    60 1981-07-01 1982-11-01
+## 4 USRECM     1    62 1990-07-01 1991-03-01
+## 5 USRECM     1    64 2001-03-01 2001-11-01
+## 6 USRECM     1    66 2007-12-01 2009-06-01
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These dates agree with the NBER dates.&lt;/p&gt;
+
+&lt;p&gt;Adding recession shading is straightforward:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;plt2 &amp;lt;- plt + 
+  geom_rect(mapping = aes(xmin = begin, xmax = end,
+                          ymin = 0, ymax = 7),
+            data = filter(recess_wide,
+                          begin &amp;gt;= min(dat_early$date)), 
+            fill = &amp;quot;blue&amp;quot;,
+            alpha = 0.2)
+(plt2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-28-initial-claims_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
