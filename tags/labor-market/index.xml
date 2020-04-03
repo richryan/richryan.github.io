@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Labor market on RICH RYAN</title>
+    <link>/tags/labor-market/</link>
+    <description>Recent content in Labor market on RICH RYAN</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2019</copyright>
+    <lastBuildDate>Sat, 28 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/labor-market/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Initial Claims</title>
+      <link>/2020/03/28/initial-claims/</link>
+      <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/03/28/initial-claims/</guid>
+      <description>Here are initial-claims data, which were covered in a recent NY Times article. I try and replicate a few of the figures detailed in the article.
+Data on initial claims are available at FRED by browsing data by Category &amp;gt; Population, Employment, &amp;amp; Labor Markets &amp;gt; Weekly Initial Claims and selecting Initial Claims.
+Here is the R code for retrieving and plotting these data. Data on initial claims from March are highlighted in orange.</description>
+    </item>
+    
+  </channel>
+</rss>
