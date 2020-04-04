@@ -1024,6 +1024,7 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 &lt;li&gt;ECON 607 Ottonello &lt;a href=&#34;https://umich.box.com/s/asenqn5dn9d0pv9yyexigt5wk7uu201r&#34; target=&#34;_blank&#34;&gt;notes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Handout on &lt;a href=&#34;https://umich.box.com/s/463og4p1c995t6cz5ag2awvle9yb4dtu&#34; target=&#34;_blank&#34;&gt;balancing materials&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Handout on Shimer&amp;rsquo;s &lt;a href=&#34;https://umich.box.com/s/xv8pcmwfkh3sbity60v9obppnnbqccz2&#34; target=&#34;_blank&#34;&gt;planner problem&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MATLAB &lt;a href=&#34;https://umich.box.com/s/r9fvggee03ouwuw62vavvpkf7hwtcfz8&#34; target=&#34;_blank&#34;&gt;program&lt;/a&gt; used to generate the comparison of exact and perturbation solutions for the choice of consumption. The program requires the MATLAB program &lt;code&gt;gx_hx.m&lt;/code&gt;, available from  Stephanie Schmitt&amp;ndash;Grohe and Martin Uribe&amp;rsquo;s MATLAB toolbox for first-order-accurate approximations.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
