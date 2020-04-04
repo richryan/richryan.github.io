@@ -65,6 +65,7 @@ These files are contained under `post` directory and listed under the dated post
 Commit these files.
 - Push the new commits to GitHub.
 The website should update with the new post.
+- You can stop serving the site by issuing the command `blogdown::stop_server()`.
 
 ## Building the `Posts` tab and creating a post ##
 

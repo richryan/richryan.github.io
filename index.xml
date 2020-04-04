@@ -152,6 +152,104 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Labor Market Friday</title>
+      <link>/2020/04/03/labor-market-friday/</link>
+      <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/04/03/labor-market-friday/</guid>
+      <description>&lt;p&gt;Here are data from the latest Employment Situation.&lt;/p&gt;
+
+&lt;p&gt;Unemployment rate or number of unemployed as a percentage of the labor force:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
+library(tidyverse)
+library(tidyquant)
+library(ggplot2)
+library(ggthemes)
+
+mygray &amp;lt;- &amp;quot;gray66&amp;quot;
+
+ur &amp;lt;- tq_get(&amp;quot;UNRATE&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2010-01-01&amp;quot;)
+ur &amp;lt;- ur %&amp;gt;% 
+  mutate(series = &amp;quot;Unemployment rate&amp;quot;)
+last_date &amp;lt;- max(ur$date)
+last_lvl &amp;lt;- ur$price[[which(ur$date == max(ur$date))]]
+ggplot(data = ur) +
+  geom_line(mapping = aes(x = date, y = price), size = 1.1, color = mygray) + 
+  # Highlight last observation
+  geom_point(data = filter(ur, date == last_date), 
+             mapping = aes(x = date, y = price),
+             size = 5) +
+  xlab(&amp;quot;&amp;quot;) + ylab(&amp;quot;Percent&amp;quot;) + ggtitle(&amp;quot;Unemployment rate&amp;quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = c(4, 6, 8, 10),
+                     labels = c(&amp;quot;4&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;8&amp;quot;, &amp;quot;10%&amp;quot;)) +
+  # Label last observation 
+  annotate(&amp;quot;text&amp;quot;, x = last_date, y = last_lvl, label = paste0(last_lvl), 
+           color = &amp;quot;black&amp;quot;, vjust = -1.5) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;, 
+            color = &amp;quot;gray&amp;quot;, 
+            title_family = &amp;quot;sans&amp;quot;, 
+            base_size = 12) 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-03-happy-labor-market-friday_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The unemployment rate was &lt;code&gt;last_lvl&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;payems &amp;lt;- tq_get(&amp;quot;PAYEMS&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2002-12-01&amp;quot;) 
+payems &amp;lt;- payems %&amp;gt;% 
+  mutate(change_jobs = price - lag(price),
+         mycat = date == max(date)) %&amp;gt;% 
+  filter(!is.na(change_jobs))
+  
+last_date &amp;lt;- max(payems$date)
+last_lvl &amp;lt;- payems$change_jobs[[which(payems$date == max(payems$date))]]
+
+segment_height &amp;lt;- 100
+# Set up labels for y axis
+my_breaks &amp;lt;- seq(from = -800, to = 400, by = 200)
+my_labels &amp;lt;- paste(my_breaks)
+my_labels[[length(my_labels)]] &amp;lt;- paste(my_labels[[length(my_labels)]], &amp;quot;thousand&amp;quot;)
+ggplot(data = payems) +
+  geom_col(mapping = aes(x = date, y = change_jobs, color = mycat, fill = mycat),
+           inherit.aes = FALSE) +
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels,
+                     limits = c(-800, 400)) +
+  # Label last observation 
+  annotate(&amp;quot;text&amp;quot;, x = last_date - 700, y = last_lvl, 
+           label = paste0(&amp;quot;-&amp;quot;, 
+                          last_lvl, &amp;quot;\n March 2020&amp;quot;), 
+           color = &amp;quot;black&amp;quot;) +
+# +  
+#   annotate(&amp;quot;segment&amp;quot;, x = last_date, xend = last_date, 
+#            y = last_lvl, yend = last_lvl + segment_height - 25,
+#            linetype = &amp;quot;dashed&amp;quot;) +
+  # Color the bars
+  scale_fill_manual(values = c(mygray, &amp;quot;black&amp;quot;)) +
+  scale_color_manual(values = c(mygray, &amp;quot;black&amp;quot;)) +
+  # Turn off legend
+  guides(color = FALSE, fill = FALSE) +
+  ggtitle(&amp;quot;Monthly change in jobs&amp;quot;) +
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;, 
+            color = &amp;quot;gray&amp;quot;, 
+            title_family = &amp;quot;sans&amp;quot;, 
+            base_size = 12) +
+  # Put grid lines on top
+  theme(panel.background = element_rect(fill = NA),
+        panel.ontop = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 2 rows containing missing values (position_stack).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-03-happy-labor-market-friday_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Initial Claims</title>
       <link>/2020/03/28/initial-claims/</link>
       <pubDate>Sat, 28 Mar 2020 00:00:00 +0000</pubDate>
@@ -952,16 +1050,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 
 &lt;p&gt;🔥 🔥 🔥 The course website is &lt;a href=&#34;https://richryan.github.io/econ401/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
 🔥 🔥 🔥&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Info added</title>
-      <link>/2018/10/20/info-added/</link>
-      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/10/20/info-added/</guid>
-      <description>&lt;p&gt;Website updated.&lt;/p&gt;
 </description>
     </item>
     
