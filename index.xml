@@ -152,6 +152,151 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>The Beveridge Curve</title>
+      <link>/2020/04/07/the-beveridge-curve/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/04/07/the-beveridge-curve/</guid>
+      <description>&lt;p&gt;Here are the latest data that depict the negative relationship between unemployment and job vacancies.
+The scatter plot of unemployment rates versus vacancy rates is known as the Beveridge curve.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
+library(tidyverse)
+library(tidyquant)
+library(ggplot2)
+library(ggthemes)
+library(viridis)
+
+mygray &amp;lt;- &amp;quot;gray66&amp;quot;
+
+# Data series
+my_series &amp;lt;- c(&amp;quot;JTSJOL&amp;quot;, &amp;quot;PAYEMS&amp;quot;, &amp;quot;UNRATE&amp;quot;)
+dat &amp;lt;- tq_get(my_series, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1900-01-01&amp;quot;)
+print(unique(dat$symbol))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;JTSJOL&amp;quot; &amp;quot;PAYEMS&amp;quot; &amp;quot;UNRATE&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Data for recession shading
+recess &amp;lt;- tq_get(&amp;quot;USRECM&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
+tail(recess)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol date       price
+##   &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+## 1 USRECM 2019-10-01     0
+## 2 USRECM 2019-11-01     0
+## 3 USRECM 2019-12-01     0
+## 4 USRECM 2020-01-01     0
+## 5 USRECM 2020-02-01     0
+## 6 USRECM 2020-03-01     0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;recess_dat &amp;lt;- recess %&amp;gt;% 
+  arrange(date) %&amp;gt;% 
+  mutate(same = 1 - (price == lag(price))) %&amp;gt;% 
+  # Remove first row, an NA, for cumulative sum
+  filter(date &amp;gt; min(recess$date)) %&amp;gt;% 
+  mutate(era = cumsum(same)) %&amp;gt;% 
+  # Filter only recessions
+  filter(price == 1)
+
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  group_by(era) %&amp;gt;% 
+  # Unncessary, but to be sure...
+  arrange(date) %&amp;gt;% 
+  filter(row_number() == 1 | row_number() == n())
+
+# Now reshape the data wide.
+# Each row will contain the start and end dates of a recession.
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  mutate(junk = row_number()) %&amp;gt;% 
+  mutate(begin_end = case_when(
+    junk == 1 ~ &amp;quot;begin&amp;quot;,
+    junk == 2 ~ &amp;quot;end&amp;quot;
+  ))
+
+recess_wide &amp;lt;- recess_dat %&amp;gt;%
+  ungroup() %&amp;gt;% 
+  select(symbol, price, date, era, begin_end) %&amp;gt;% 
+  pivot_wider(names_from = begin_end, values_from = date)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here is the unemployment-rate series:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat_ur &amp;lt;- filter(dat, symbol == &amp;quot;UNRATE&amp;quot;)
+ggplot(data = dat_ur) +
+  geom_line(mapping = aes(x = date, y = price)) +
+  geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(dat_ur$date)), 
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = &amp;quot;blue&amp;quot;, alpha = 0.2) +
+  xlab(&amp;quot;&amp;quot;) + ylab(&amp;quot;Percent&amp;quot;) + ggtitle(&amp;quot;Unemployment rate&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-07-beveridge-curve_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the vacancy-rate series:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat_wide &amp;lt;- dat %&amp;gt;% 
+  pivot_wider(names_from = symbol, values_from = price) %&amp;gt;% 
+  mutate(vac = 100*JTSJOL / (JTSJOL + PAYEMS)) %&amp;gt;% 
+  drop_na(vac)
+tail(dat_wide)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 5
+##   date       JTSJOL PAYEMS UNRATE   vac
+##   &amp;lt;date&amp;gt;      &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1 2019-09-01   7046 151368    3.5  4.45
+## 2 2019-10-01   7309 151553    3.6  4.60
+## 3 2019-11-01   6793 151814    3.5  4.28
+## 4 2019-12-01   6552 151998    3.5  4.13
+## 5 2020-01-01   7012 152212    3.6  4.40
+## 6 2020-02-01   6882 152487    3.5  4.32
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(data = dat_wide) +
+  geom_line(mapping = aes(x = date, y = vac)) +
+  geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(dat_wide$date)), 
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = &amp;quot;blue&amp;quot;, alpha = 0.2) +
+  xlab(&amp;quot;&amp;quot;) + ylab(&amp;quot;Percent&amp;quot;) + ggtitle(&amp;quot;Vacancy rate&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-07-beveridge-curve_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;rsquo;s the Beveridge curve:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Subset based on last recession
+latest_recess &amp;lt;- max(recess_wide$begin)
+dat_wide &amp;lt;- dat_wide %&amp;gt;% 
+  mutate(late = case_when(
+    date &amp;gt;= latest_recess ~ paste(month(latest_recess, label = TRUE),
+                                  year(latest_recess),
+                                  &amp;quot;on&amp;quot;),
+    TRUE ~ &amp;quot;Early period&amp;quot;)) 
+
+ggplot(dat_wide) +
+  geom_path(mapping = aes(x = UNRATE, y = vac), color = &amp;quot;gray&amp;quot;) + 
+  geom_point(mapping = aes(x = UNRATE, y = vac, color = late)) +
+  guides(color = FALSE) +
+  xlab(&amp;quot;Unemployment rate&amp;quot;) + ylab(&amp;quot;Job vacancy rate&amp;quot;) + 
+  ggtitle(&amp;quot;Beveridge curve&amp;quot;) +
+  scale_color_viridis(discrete=TRUE) +
+  theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-07-beveridge-curve_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Labor Market Friday</title>
       <link>/2020/04/03/labor-market-friday/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
@@ -1038,19 +1183,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
       <description>&lt;p&gt;Materials for Intermediate Macroeconomics, ECON 402, with Professor &lt;a href=&#34;http://www-personal.umich.edu/~chouse/&#34; target=&#34;_blank&#34;&gt;Chris House&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The course website is &lt;a href=&#34;https://richryan.github.io/econ402/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Welcome to ECON 401</title>
-      <link>/2018/10/21/welcome-to-econ-401/</link>
-      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>/2018/10/21/welcome-to-econ-401/</guid>
-      <description>&lt;p&gt;Welcome to Intermediate Microeconomics, ECON 401.&lt;/p&gt;
-
-&lt;p&gt;🔥 🔥 🔥 The course website is &lt;a href=&#34;https://richryan.github.io/econ401/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;
-🔥 🔥 🔥&lt;/p&gt;
 </description>
     </item>
     

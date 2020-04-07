@@ -109,7 +109,7 @@
   <meta property="og:description" content=""><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2020-04-03T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2020-04-07T00:00:00&#43;00:00">
   
 
   
@@ -308,6 +308,16 @@
   
 
   
+  
+  <div>
+    <h2><a href="/2020/04/07/the-beveridge-curve/">The Beveridge Curve</a></h2>
+    <div class="article-style">
+      
+      Here are the latest data that depict the negative relationship between unemployment and job vacancies. The scatter plot of unemployment rates versus vacancy rates is known as the Beveridge curve.
+# Load packages library(tidyverse) library(tidyquant) library(ggplot2) library(ggthemes) library(viridis) mygray &lt;- &quot;gray66&quot; # Data series my_series &lt;- c(&quot;JTSJOL&quot;, &quot;PAYEMS&quot;, &quot;UNRATE&quot;) dat &lt;- tq_get(my_series, get = &quot;economic.data&quot;, from = &quot;1900-01-01&quot;) print(unique(dat$symbol))  ## [1] &quot;JTSJOL&quot; &quot;PAYEMS&quot; &quot;UNRATE&quot;  # Data for recession shading recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/2020/04/03/labor-market-friday/">Labor Market Friday</a></h2>

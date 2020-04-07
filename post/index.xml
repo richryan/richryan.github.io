@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Beveridge Curve</title>
+      <link>/2020/04/07/the-beveridge-curve/</link>
+      <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/04/07/the-beveridge-curve/</guid>
+      <description>Here are the latest data that depict the negative relationship between unemployment and job vacancies. The scatter plot of unemployment rates versus vacancy rates is known as the Beveridge curve.
+# Load packages library(tidyverse) library(tidyquant) library(ggplot2) library(ggthemes) library(viridis) mygray &amp;lt;- &amp;quot;gray66&amp;quot; # Data series my_series &amp;lt;- c(&amp;quot;JTSJOL&amp;quot;, &amp;quot;PAYEMS&amp;quot;, &amp;quot;UNRATE&amp;quot;) dat &amp;lt;- tq_get(my_series, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1900-01-01&amp;quot;) print(unique(dat$symbol))  ## [1] &amp;quot;JTSJOL&amp;quot; &amp;quot;PAYEMS&amp;quot; &amp;quot;UNRATE&amp;quot;  # Data for recession shading recess &amp;lt;- tq_get(&amp;quot;USRECM&amp;quot;, get = &amp;quot;economic.</description>
+    </item>
     
     <item>
       <title>Labor Market Friday</title>
