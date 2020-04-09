@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -16,10 +15,11 @@
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="Here are a few details of the most recent Employment Situation. The latest data on labor-force participation, highlighted in this Brookings post, and the employment-population ratio.
+# Load packages library(tidyverse) library(tidyquant) library(ggplot2) # Data for recession shading recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;) tail(recess)  ## # A tibble: 6 x 3 ## symbol date price ## &lt;chr&gt; &lt;date&gt; &lt;int&gt; ## 1 USRECM 2019-10-01 0 ## 2 USRECM 2019-11-01 0 ## 3 USRECM 2019-12-01 0 ## 4 USRECM 2020-01-01 0 ## 5 USRECM 2020-02-01 0 ## 6 USRECM 2020-03-01 0  recess_dat &lt;- recess %&gt;% arrange(date) %&gt;% mutate(same = 1 - (price == lag(price))) %&gt;% # Remove first row, an NA, for cumulative sum filter(date &gt; min(recess$date)) %&gt;% mutate(era = cumsum(same)) %&gt;% # Filter only recessions filter(price == 1) recess_dat &lt;- recess_dat %&gt;% group_by(era) %&gt;% # Unncessary, but to be sure.">
 
   
-  <link rel="alternate" hreflang="en-us" href="/">
+  <link rel="alternate" hreflang="en-us" href="/2020/04/08/facts-from-the-employment-situation/">
 
   
 
@@ -91,7 +91,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="/">
+  <link rel="canonical" href="/2020/04/08/facts-from-the-employment-situation/">
 
   
   
@@ -103,22 +103,25 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="RICH RYAN">
-  <meta property="og:url" content="/">
-  <meta property="og:title" content="RICH RYAN">
-  <meta property="og:description" content=""><meta property="og:image" content="/img/portrait.jpg">
+  <meta property="og:url" content="/2020/04/08/facts-from-the-employment-situation/">
+  <meta property="og:title" content="Facts from the Employment Situation | RICH RYAN">
+  <meta property="og:description" content="Here are a few details of the most recent Employment Situation. The latest data on labor-force participation, highlighted in this Brookings post, and the employment-population ratio.
+# Load packages library(tidyverse) library(tidyquant) library(ggplot2) # Data for recession shading recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;) tail(recess)  ## # A tibble: 6 x 3 ## symbol date price ## &lt;chr&gt; &lt;date&gt; &lt;int&gt; ## 1 USRECM 2019-10-01 0 ## 2 USRECM 2019-11-01 0 ## 3 USRECM 2019-12-01 0 ## 4 USRECM 2020-01-01 0 ## 5 USRECM 2020-02-01 0 ## 6 USRECM 2020-03-01 0  recess_dat &lt;- recess %&gt;% arrange(date) %&gt;% mutate(same = 1 - (price == lag(price))) %&gt;% # Remove first row, an NA, for cumulative sum filter(date &gt; min(recess$date)) %&gt;% mutate(era = cumsum(same)) %&gt;% # Filter only recessions filter(price == 1) recess_dat &lt;- recess_dat %&gt;% group_by(era) %&gt;% # Unncessary, but to be sure."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2019-01-15T00:00:00-08:00">
+  <meta property="article:published_time" content="2020-04-08T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2020-04-08T00:00:00&#43;00:00">
   
 
   
 
   
 
-  <title>RICH RYAN</title>
+  <title>Facts from the Employment Situation | RICH RYAN</title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
   <aside class="search-results" id="search">
   <div class="container">
     <section class="search-header">
@@ -180,7 +183,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/#about" data-target="#about">
+          <a class="nav-link" href="/#about">
             
             <span>Home</span>
             
@@ -199,7 +202,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/#research" data-target="#research">
+          <a class="nav-link" href="/#research">
             
             <span>Research</span>
             
@@ -218,7 +221,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/#posts" data-target="#posts">
+          <a class="nav-link" href="/#posts">
             
             <span>Posts</span>
             
@@ -237,7 +240,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link" href="/teaching" data-target="/teaching">
+          <a class="nav-link" href="/teaching">
             
             <span>Teaching</span>
             
@@ -272,9 +275,7 @@
 </nav>
 
 
-
-<span id="homepage" style="display: none"></span>
-
+<article class="article" itemscope itemtype="http://schema.org/Article">
 
   
 
@@ -282,221 +283,24 @@
 
 
 
-  
-  
-  
-  <section id="about" class="home-section">
-    <div class="container">
-      
 
 
 
-<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="person-email person-address">
-  <div class="col-12 col-lg-4">
-    <div id="profile">
-
-      
-      <img class="portrait" src="/img/portrait.jpg" itemprop="image" alt="Avatar">
-      
-
-      <div class="portrait-title">
-        <h2 itemprop="name">Rich Ryan</h2>
-        
-
-        
-        
-
-        
-        <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
-          <a href="https://lsa.umich.edu/econ" target="_blank" itemprop="url" rel="noopener">
-          <span itemprop="name">University of Michigan</span>
-          </a>
-        </h3>
-        
-      </div>
-
-      <link itemprop="url" href="/">
-
-      <ul class="network-icon" aria-hidden="true">
-        
-        
-        
-        
-          
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://github.com/richryan" target="_blank" rel="noopener">
-            <i class="fab fa-github big-icon"></i>
-          </a>
-        </li>
-        
-        
-        
-        
-        
-        
-        
-        
-          
-        
-        <li>
-          <a itemprop="sameAs" href="https://umich.box.com/s/i8q697ho09qqutbakyn0go3doo6y761h" target="_blank" rel="noopener">
-            <i class="ai ai-cv big-icon"></i>
-          </a>
-        </li>
-        
-      </ul>
-
-    </div>
-  </div>
-  <div class="col-12 col-lg-8" itemprop="description">
-
-    
-
-<h2 id="contact-information">Contact Information</h2>
-
-<p>Department of Economics<br>
-611 Tappan Ave.<br>
-Ann Arbor, MI 48109&ndash;1220<br>
-Email: RichRyan@umich.edu</p>
-
-<h2 id="research-fields">Research Fields</h2>
-
-<ul>
-<li>Macroeconomics</li>
-<li>Labor Economics</li>
-<li>Environmental and Natural Resource Economics</li>
-</ul>
 
 
-    <div class="row">
 
-      
 
-      
-
-    </div>
-  </div>
-</div>
-
-    </div>
-  </section>
   
 
   
   
   
-  <section id="research" class="home-section">
-    <div class="container">
-      
+<div class="article-container pt-3">
+  <h1 itemprop="name">Facts from the Employment Situation</h1>
 
-
-<div class="row">
-  
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Research</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
-
-<h2 id="working-papers">Working Papers</h2>
-
-<ul>
-<li><a href="https://umich.box.com/s/cpluc0l5d8upexz1ycvzgfhioe067xsd" target="_blank">Tracking Earnings Ability over the Business Cycle</a>. <!-- [Slides](https://umich.box.com/s/66amav2f3n14ivbvk15eu15wfih5f1p9) --></li>
-<li><a href="https://umich.box.com/s/6aa8qaoiz6te4rck452f3gcmfi76riac" target="_blank">On the Tension between Maximum Sustainable Yield and Maximum Economic Yield</a>. <a href="https://umich.box.com/s/q7gipampeao3ozqvenhzguf7nfppbrd5" target="_blank">Appendix</a>. <a href="https://umich.box.com/s/f73ncn92dyoic0hpnhekdq01q98p2huc" target="_blank">Slides</a></li>
-</ul>
-
-<h2 id="published-papers">Published Papers</h2>
-
-<ul>
-<li><p><a href="https://www.journals.uchicago.edu/doi/full/10.1086/680656" target="_blank">Labor-Market Polarization over the Business Cycle</a>, with Christopher L. Foote.
-In NBER Macroeconomics Annual, vol. 29, edited by Jonathan Parker and Michael Woodford, 371&ndash;413, 2014.
-Chicago: University of Chicago Press.<br />
-Also available as <a href="https://www.nber.org/papers/w21030" target="_blank">NBER Working Paper No. 21030</a>.</p></li>
-
-<li><p><a href="https://www.jstor.org/stable/10.1086/676288" target="_blank">Ecosystem Externalities in Fisheries</a>, with Daniel S. Holland and Guillermo E. Herrera.
-Marine Resource Economics, 29(1): 39&ndash;53, 2014.</p></li>
-
-<li><p><a href="https://www.jstor.org/stable/10.5950/0738-1360-25.3.281" target="_blank">Bioeconomic Equilibrium in a Bait-Constrained Fishery</a>, with Daniel S. Holland and Guillermo E. Herrera.
-Marine Resource Economics, 25(3): 281&ndash;293, 2010.</p></li>
-
-<li><p><a href="https://doi.org/10.1890/06-1090.1" target="_blank">Robust Population Management under Uncertainty for Structured Population Models</a>, with A. Deines, E. Peterson, D. Boeckner, J. Boyle, A. Keighley, J. Kogut, J. Lubben, R. Rebarber, B. Tenhumberg, S. Townly, and A. J. Tyre.
-Ecological Applications, 17(8): 2,175&ndash;2,183, 2007.</p></li>
-</ul>
-
-  </div>
-  
-</div>
-
-    </div>
-  </section>
   
 
   
-  
-  
-  <section id="posts" class="home-section">
-    <div class="container">
-      
-
-
-
-
-
-
-
-
-
-
-
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-
-    <h1>Recent Posts</h1>
-    
-    
-    <p class="view-all">
-      <a href="/post/">
-        More Posts
-        <i class="fas fa-angle-double-right"></i>
-      </a>
-    </p>
-    
-
-  </div>
-  <div class="col-12 col-lg-8">
-
-    
-
-    
-      
-        
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2020/04/08/facts-from-the-employment-situation/" itemprop="url">Facts from the Employment Situation</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      Here are a few details of the most recent Employment Situation. The latest data on labor-force participation, highlighted in this …
-    </div>
-    
-
-    <div class="stream-meta">
     
 
 <div class="article-metadata">
@@ -527,161 +331,252 @@ Ecological Applications, 17(8): 2,175&ndash;2,183, 2007.</p></li>
   
 
   
+  
+
+  
 
 </div>
 
-    </div>
+    
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </div>
 
-      
-    
-      
-        
 
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
 
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2020/04/07/the-beveridge-curve/" itemprop="url">The Beveridge Curve</a>
-    </h3>
 
-    
-    
-      
-    
-    
+  <div class="article-container">
+
     <div class="article-style" itemprop="articleBody">
-      Here are the latest data that depict the negative relationship between unemployment and job vacancies. The scatter plot of unemployment …
+      <p>Here are a few details of the most recent Employment Situation.
+The latest data on labor-force participation,
+highlighted in this <a href="https://www.brookings.edu/blog/up-front/2020/04/03/labor-market-in-march-deteriorated-much-more-quickly-than-the-unemployment-rate-suggests/" target="_blank">Brookings post</a>, and
+the employment-population ratio.</p>
+
+<pre><code class="language-r"># Load packages
+library(tidyverse)
+library(tidyquant)
+library(ggplot2)
+
+# Data for recession shading
+recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;)
+tail(recess)
+</code></pre>
+
+<pre><code>## # A tibble: 6 x 3
+##   symbol date       price
+##   &lt;chr&gt;  &lt;date&gt;     &lt;int&gt;
+## 1 USRECM 2019-10-01     0
+## 2 USRECM 2019-11-01     0
+## 3 USRECM 2019-12-01     0
+## 4 USRECM 2020-01-01     0
+## 5 USRECM 2020-02-01     0
+## 6 USRECM 2020-03-01     0
+</code></pre>
+
+<pre><code class="language-r">recess_dat &lt;- recess %&gt;% 
+  arrange(date) %&gt;% 
+  mutate(same = 1 - (price == lag(price))) %&gt;% 
+  # Remove first row, an NA, for cumulative sum
+  filter(date &gt; min(recess$date)) %&gt;% 
+  mutate(era = cumsum(same)) %&gt;% 
+  # Filter only recessions
+  filter(price == 1)
+
+recess_dat &lt;- recess_dat %&gt;% 
+  group_by(era) %&gt;% 
+  # Unncessary, but to be sure...
+  arrange(date) %&gt;% 
+  filter(row_number() == 1 | row_number() == n())
+
+# Now reshape the data wide.
+# Each row will contain the start and end dates of a recession.
+recess_dat &lt;- recess_dat %&gt;% 
+  mutate(junk = row_number()) %&gt;% 
+  mutate(begin_end = case_when(
+    junk == 1 ~ &quot;begin&quot;,
+    junk == 2 ~ &quot;end&quot;
+  ))
+
+recess_wide &lt;- recess_dat %&gt;%
+  ungroup() %&gt;% 
+  select(symbol, price, date, era, begin_end) %&gt;% 
+  pivot_wider(names_from = begin_end, values_from = date)
+
+dat &lt;- tq_get(c(&quot;CIVPART&quot;, &quot;EMRATIO&quot;), 
+              get = &quot;economic.data&quot;, from = &quot;1900-01-01&quot;)
+
+# Name series
+dat &lt;- dat %&gt;% 
+  mutate(Series = case_when(
+    symbol == &quot;CIVPART&quot; ~ &quot;Labor-force participation rate&quot;,
+    symbol == &quot;EMRATIO&quot; ~ &quot;Employment-population ratio&quot;
+  ))
+
+dat2plt &lt;- dat %&gt;% 
+  mutate(last = date == max(date))
+
+ggplot() +
+  geom_path(data = dat2plt, 
+            mapping = aes(x = date, y = price, color = Series),
+            key_glyph = &quot;timeseries&quot;) +
+  geom_point(filter(dat2plt, last == 1),
+             mapping = aes(x = date, y = price)) +
+  labs(x = &quot;&quot;, y = &quot;Percent&quot;) +
+  geom_rect(data = filter(recess_wide,
+                          begin &gt;= min(dat2plt$date)),
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = &quot;blue&quot;, alpha = 0.2) +
+  theme_bw()
+</code></pre>
+
+<p><img src="/post/2020-04-08-lfp_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+
+<p><a href="http://gregmankiw.blogspot.com/" target="_blank">GREG MANKIW&rsquo;S BLOG: Random Observations for Students of Economics</a> compares
+the number of job losers on temporary layoff to the number of permanent job losers.
+To facilitate the comparison between the two job-loss series,
+I indexed the previous month to 100 for both series.</p>
+
+<p>The job-loss series are depicted below.
+To make the graph,
+it is important to know that
+both series are available at a monthly frequency, seasonally adjusted, and quoted in thousands of persons.</p>
+
+<pre><code class="language-r">loss_series &lt;- c(&quot;LNS13023653&quot;, &quot;LNS13026638&quot;)
+loss &lt;- tq_get(loss_series, get = &quot;economic.data&quot;, from = &quot;1900-01-01&quot;)
+
+head(loss)
+</code></pre>
+
+<pre><code>## # A tibble: 6 x 3
+##   symbol      date       price
+##   &lt;chr&gt;       &lt;date&gt;     &lt;int&gt;
+## 1 LNS13023653 1967-01-01   381
+## 2 LNS13023653 1967-02-01   355
+## 3 LNS13023653 1967-03-01   375
+## 4 LNS13023653 1967-04-01   420
+## 5 LNS13023653 1967-05-01   414
+## 6 LNS13023653 1967-06-01   418
+</code></pre>
+
+<pre><code class="language-r">tail(loss)
+</code></pre>
+
+<pre><code>## # A tibble: 6 x 3
+##   symbol      date       price
+##   &lt;chr&gt;       &lt;date&gt;     &lt;int&gt;
+## 1 LNS13026638 2019-10-01  1260
+## 2 LNS13026638 2019-11-01  1422
+## 3 LNS13026638 2019-12-01  1295
+## 4 LNS13026638 2020-01-01  1289
+## 5 LNS13026638 2020-02-01  1279
+## 6 LNS13026638 2020-03-01  1456
+</code></pre>
+
+<pre><code class="language-r"># Grab the 2nd-to-last date, uneloquently
+last2 &lt;- nth(loss$date, -2L)
+dat_loss &lt;- loss %&gt;% 
+  group_by(symbol) %&gt;% 
+  mutate(index_maker = max(price*(date == last2)),
+         index = 100*price/index_maker) %&gt;% 
+  mutate(`Unemployment level` = case_when(
+    symbol == &quot;LNS13023653&quot; ~ &quot;Job losers on layoff&quot;,
+    symbol == &quot;LNS13026638&quot; ~ &quot;Permanent job losers&quot;
+  ))
+
+ggplot(filter(dat_loss, date &gt;= ymd(&quot;2015-01-01&quot;))) +
+  geom_line(mapping = aes(x = date, y = index, 
+                          color = `Unemployment level`),
+            key_glyph = &quot;timeseries&quot;) +
+  labs(x = &quot;&quot;, 
+       y = paste0(&quot;Index (&quot;, 
+                  month(last2, label = TRUE), 
+                  &quot; &quot;, year(last2), 
+                  &quot;= 100)&quot;)) +
+  theme_bw()
+</code></pre>
+
+<p><img src="/post/2020-04-08-lfp_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+
+<p>And zooming out:</p>
+
+<pre><code class="language-r">ggplot() +
+  geom_path(data = dat_loss,
+            mapping = aes(x = date, 
+                          y = price,
+                          color = `Unemployment level`)) +
+    geom_rect(data = filter(recess_wide,
+                          begin &gt;= min(dat_loss$date)),
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = &quot;blue&quot;, alpha = 0.2) +
+  labs(x = &quot;&quot;, y = &quot;Thousands of persons&quot;) +
+  theme_bw()
+</code></pre>
+
+<p><img src="/post/2020-04-08-lfp_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+
     </div>
+
     
 
-    <div class="stream-meta">
-    
 
-<div class="article-metadata">
-
+<div class="article-tags">
   
+  <a class="badge badge-light" href="/tags/r/">R</a>
   
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
+  <a class="badge badge-light" href="/tags/labor-markets/">Labor markets</a>
   
-
-  <span class="article-date">
-    
-    <meta content="2020-04-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2020-04-07 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      April 7, 2020
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-
-  
-
-  
-  
-
-  
-
-  
-
 </div>
 
-    </div>
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
 
-      
     
-      
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
         
-
-<div class="media stream-item" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  <div class="media-body">
-
-    <h3 class="article-title mb-0 mt-0" itemprop="headline">
-      <a href="/2020/04/03/labor-market-friday/" itemprop="url">Labor Market Friday</a>
-    </h3>
-
-    
-    
-      
-    
-    
-    <div class="article-style" itemprop="articleBody">
-      Here are data from the latest Employment Situation.
-Unemployment rate or number of unemployed as a percentage of the labor force:
-# …
+        <li><a href="/2020/04/07/the-beveridge-curve/">The Beveridge Curve</a></li>
+        
+        <li><a href="/2020/04/03/labor-market-friday/">Labor Market Friday</a></li>
+        
+        <li><a href="/2020/03/28/initial-claims/">Initial Claims</a></li>
+        
+        <li><a href="/2019/12/06/happy-labor-market-friday/">Happy Labor Market Friday!</a></li>
+        
+        <li><a href="/2019/06/15/many-models-in-r/">Many models in R</a></li>
+        
+      </ul>
     </div>
     
 
-    <div class="stream-meta">
     
 
-<div class="article-metadata">
-
-  
-  
-  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
-  
-
-  <span class="article-date">
     
-    <meta content="2020-04-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-    <time datetime="2020-04-03 00:00:00 &#43;0000 UTC" itemprop="dateModified">
-      April 3, 2020
-    </time>
-  </span>
-  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Rich Ryan">
-  </span>
 
-  
-
-  
-  
-
-  
-
-  
-
-</div>
-
-    </div>
 
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-      
-    
-
-  </div>
-</div>
-
-    </div>
-  </section>
-  
-
-
+</article>
 
 <div class="container">
   <footer class="site-footer">
@@ -872,5 +767,4 @@ Unemployment rate or number of unemployed as a percentage of the labor force:
 
   </body>
 </html>
-
 

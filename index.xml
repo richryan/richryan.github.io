@@ -152,6 +152,183 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Facts from the Employment Situation</title>
+      <link>/2020/04/08/facts-from-the-employment-situation/</link>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/04/08/facts-from-the-employment-situation/</guid>
+      <description>&lt;p&gt;Here are a few details of the most recent Employment Situation.
+The latest data on labor-force participation,
+highlighted in this &lt;a href=&#34;https://www.brookings.edu/blog/up-front/2020/04/03/labor-market-in-march-deteriorated-much-more-quickly-than-the-unemployment-rate-suggests/&#34; target=&#34;_blank&#34;&gt;Brookings post&lt;/a&gt;, and
+the employment-population ratio.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
+library(tidyverse)
+library(tidyquant)
+library(ggplot2)
+
+# Data for recession shading
+recess &amp;lt;- tq_get(&amp;quot;USRECM&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
+tail(recess)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol date       price
+##   &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+## 1 USRECM 2019-10-01     0
+## 2 USRECM 2019-11-01     0
+## 3 USRECM 2019-12-01     0
+## 4 USRECM 2020-01-01     0
+## 5 USRECM 2020-02-01     0
+## 6 USRECM 2020-03-01     0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;recess_dat &amp;lt;- recess %&amp;gt;% 
+  arrange(date) %&amp;gt;% 
+  mutate(same = 1 - (price == lag(price))) %&amp;gt;% 
+  # Remove first row, an NA, for cumulative sum
+  filter(date &amp;gt; min(recess$date)) %&amp;gt;% 
+  mutate(era = cumsum(same)) %&amp;gt;% 
+  # Filter only recessions
+  filter(price == 1)
+
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  group_by(era) %&amp;gt;% 
+  # Unncessary, but to be sure...
+  arrange(date) %&amp;gt;% 
+  filter(row_number() == 1 | row_number() == n())
+
+# Now reshape the data wide.
+# Each row will contain the start and end dates of a recession.
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  mutate(junk = row_number()) %&amp;gt;% 
+  mutate(begin_end = case_when(
+    junk == 1 ~ &amp;quot;begin&amp;quot;,
+    junk == 2 ~ &amp;quot;end&amp;quot;
+  ))
+
+recess_wide &amp;lt;- recess_dat %&amp;gt;%
+  ungroup() %&amp;gt;% 
+  select(symbol, price, date, era, begin_end) %&amp;gt;% 
+  pivot_wider(names_from = begin_end, values_from = date)
+
+dat &amp;lt;- tq_get(c(&amp;quot;CIVPART&amp;quot;, &amp;quot;EMRATIO&amp;quot;), 
+              get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1900-01-01&amp;quot;)
+
+# Name series
+dat &amp;lt;- dat %&amp;gt;% 
+  mutate(Series = case_when(
+    symbol == &amp;quot;CIVPART&amp;quot; ~ &amp;quot;Labor-force participation rate&amp;quot;,
+    symbol == &amp;quot;EMRATIO&amp;quot; ~ &amp;quot;Employment-population ratio&amp;quot;
+  ))
+
+dat2plt &amp;lt;- dat %&amp;gt;% 
+  mutate(last = date == max(date))
+
+ggplot() +
+  geom_path(data = dat2plt, 
+            mapping = aes(x = date, y = price, color = Series),
+            key_glyph = &amp;quot;timeseries&amp;quot;) +
+  geom_point(filter(dat2plt, last == 1),
+             mapping = aes(x = date, y = price)) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Percent&amp;quot;) +
+  geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(dat2plt$date)),
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = &amp;quot;blue&amp;quot;, alpha = 0.2) +
+  theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-08-lfp_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://gregmankiw.blogspot.com/&#34; target=&#34;_blank&#34;&gt;GREG MANKIW&amp;rsquo;S BLOG: Random Observations for Students of Economics&lt;/a&gt; compares
+the number of job losers on temporary layoff to the number of permanent job losers.
+To facilitate the comparison between the two job-loss series,
+I indexed the previous month to 100 for both series.&lt;/p&gt;
+
+&lt;p&gt;The job-loss series are depicted below.
+To make the graph,
+it is important to know that
+both series are available at a monthly frequency, seasonally adjusted, and quoted in thousands of persons.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;loss_series &amp;lt;- c(&amp;quot;LNS13023653&amp;quot;, &amp;quot;LNS13026638&amp;quot;)
+loss &amp;lt;- tq_get(loss_series, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1900-01-01&amp;quot;)
+
+head(loss)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol      date       price
+##   &amp;lt;chr&amp;gt;       &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+## 1 LNS13023653 1967-01-01   381
+## 2 LNS13023653 1967-02-01   355
+## 3 LNS13023653 1967-03-01   375
+## 4 LNS13023653 1967-04-01   420
+## 5 LNS13023653 1967-05-01   414
+## 6 LNS13023653 1967-06-01   418
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;tail(loss)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol      date       price
+##   &amp;lt;chr&amp;gt;       &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+## 1 LNS13026638 2019-10-01  1260
+## 2 LNS13026638 2019-11-01  1422
+## 3 LNS13026638 2019-12-01  1295
+## 4 LNS13026638 2020-01-01  1289
+## 5 LNS13026638 2020-02-01  1279
+## 6 LNS13026638 2020-03-01  1456
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Grab the 2nd-to-last date, uneloquently
+last2 &amp;lt;- nth(loss$date, -2L)
+dat_loss &amp;lt;- loss %&amp;gt;% 
+  group_by(symbol) %&amp;gt;% 
+  mutate(index_maker = max(price*(date == last2)),
+         index = 100*price/index_maker) %&amp;gt;% 
+  mutate(`Unemployment level` = case_when(
+    symbol == &amp;quot;LNS13023653&amp;quot; ~ &amp;quot;Job losers on layoff&amp;quot;,
+    symbol == &amp;quot;LNS13026638&amp;quot; ~ &amp;quot;Permanent job losers&amp;quot;
+  ))
+
+ggplot(filter(dat_loss, date &amp;gt;= ymd(&amp;quot;2015-01-01&amp;quot;))) +
+  geom_line(mapping = aes(x = date, y = index, 
+                          color = `Unemployment level`),
+            key_glyph = &amp;quot;timeseries&amp;quot;) +
+  labs(x = &amp;quot;&amp;quot;, 
+       y = paste0(&amp;quot;Index (&amp;quot;, 
+                  month(last2, label = TRUE), 
+                  &amp;quot; &amp;quot;, year(last2), 
+                  &amp;quot;= 100)&amp;quot;)) +
+  theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-08-lfp_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And zooming out:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot() +
+  geom_path(data = dat_loss,
+            mapping = aes(x = date, 
+                          y = price,
+                          color = `Unemployment level`)) +
+    geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(dat_loss$date)),
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = &amp;quot;blue&amp;quot;, alpha = 0.2) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Thousands of persons&amp;quot;) +
+  theme_bw()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-04-08-lfp_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>The Beveridge Curve</title>
       <link>/2020/04/07/the-beveridge-curve/</link>
       <pubDate>Tue, 07 Apr 2020 00:00:00 +0000</pubDate>
@@ -1171,18 +1348,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 &lt;li&gt;Handout on Shimer&amp;rsquo;s &lt;a href=&#34;https://umich.box.com/s/xv8pcmwfkh3sbity60v9obppnnbqccz2&#34; target=&#34;_blank&#34;&gt;planner problem&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;MATLAB &lt;a href=&#34;https://umich.box.com/s/r9fvggee03ouwuw62vavvpkf7hwtcfz8&#34; target=&#34;_blank&#34;&gt;program&lt;/a&gt; used to generate the comparison of exact and perturbation solutions for the choice of consumption. The program requires the MATLAB program &lt;code&gt;gx_hx.m&lt;/code&gt;, available from  Stephanie Schmitt&amp;ndash;Grohe and Martin Uribe&amp;rsquo;s &lt;a href=&#34;http://www.columbia.edu/~mu2166/1st_order/1st_order.htm&#34; target=&#34;_blank&#34;&gt;MATLAB toolbox&lt;/a&gt; for first-order-accurate approximations.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Intermediate Macroeconomic Theory, Winter 2018</title>
-      <link>/teaching/econ402_w2018/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
-      
-      <guid>/teaching/econ402_w2018/</guid>
-      <description>&lt;p&gt;Materials for Intermediate Macroeconomics, ECON 402, with Professor &lt;a href=&#34;http://www-personal.umich.edu/~chouse/&#34; target=&#34;_blank&#34;&gt;Chris House&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The course website is &lt;a href=&#34;https://richryan.github.io/econ402/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     

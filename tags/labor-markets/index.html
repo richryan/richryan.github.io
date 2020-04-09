@@ -109,7 +109,7 @@
   <meta property="og:description" content=""><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2020-04-07T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2020-04-08T00:00:00&#43;00:00">
   
 
   
@@ -308,6 +308,16 @@
   
 
   
+  
+  <div>
+    <h2><a href="/2020/04/08/facts-from-the-employment-situation/">Facts from the Employment Situation</a></h2>
+    <div class="article-style">
+      
+      Here are a few details of the most recent Employment Situation. The latest data on labor-force participation, highlighted in this Brookings post, and the employment-population ratio.
+# Load packages library(tidyverse) library(tidyquant) library(ggplot2) # Data for recession shading recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;) tail(recess)  ## # A tibble: 6 x 3 ## symbol date price ## &lt;chr&gt; &lt;date&gt; &lt;int&gt; ## 1 USRECM 2019-10-01 0 ## 2 USRECM 2019-11-01 0 ## 3 USRECM 2019-12-01 0 ## 4 USRECM 2020-01-01 0 ## 5 USRECM 2020-02-01 0 ## 6 USRECM 2020-03-01 0  recess_dat &lt;- recess %&gt;% arrange(date) %&gt;% mutate(same = 1 - (price == lag(price))) %&gt;% # Remove first row, an NA, for cumulative sum filter(date &gt; min(recess$date)) %&gt;% mutate(era = cumsum(same)) %&gt;% # Filter only recessions filter(price == 1) recess_dat &lt;- recess_dat %&gt;% group_by(era) %&gt;% # Unncessary, but to be sure.
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="/2020/04/07/the-beveridge-curve/">The Beveridge Curve</a></h2>
