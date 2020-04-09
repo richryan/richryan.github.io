@@ -15,7 +15,7 @@
   
     
   
-  <meta name="description" content="Here are a few details of the most recent Employment Situation. The latest data on labor-force participation, highlighted in this Brookings post, and the employment-population ratio.
+  <meta name="description" content="Here are a few facts from the most recent Employment Situation. The latest data on labor-force participation, highlighted in this Brookings post, and the employment-population ratio are depicted below.
 # Load packages library(tidyverse) library(tidyquant) library(ggplot2) # Data for recession shading recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;) tail(recess)  ## # A tibble: 6 x 3 ## symbol date price ## &lt;chr&gt; &lt;date&gt; &lt;int&gt; ## 1 USRECM 2019-10-01 0 ## 2 USRECM 2019-11-01 0 ## 3 USRECM 2019-12-01 0 ## 4 USRECM 2020-01-01 0 ## 5 USRECM 2020-02-01 0 ## 6 USRECM 2020-03-01 0  recess_dat &lt;- recess %&gt;% arrange(date) %&gt;% mutate(same = 1 - (price == lag(price))) %&gt;% # Remove first row, an NA, for cumulative sum filter(date &gt; min(recess$date)) %&gt;% mutate(era = cumsum(same)) %&gt;% # Filter only recessions filter(price == 1) recess_dat &lt;- recess_dat %&gt;% group_by(era) %&gt;% # Unncessary, but to be sure.">
 
   
@@ -105,7 +105,7 @@
   <meta property="og:site_name" content="RICH RYAN">
   <meta property="og:url" content="/2020/04/08/facts-from-the-employment-situation/">
   <meta property="og:title" content="Facts from the Employment Situation | RICH RYAN">
-  <meta property="og:description" content="Here are a few details of the most recent Employment Situation. The latest data on labor-force participation, highlighted in this Brookings post, and the employment-population ratio.
+  <meta property="og:description" content="Here are a few facts from the most recent Employment Situation. The latest data on labor-force participation, highlighted in this Brookings post, and the employment-population ratio are depicted below.
 # Load packages library(tidyverse) library(tidyquant) library(ggplot2) # Data for recession shading recess &lt;- tq_get(&quot;USRECM&quot;, get = &quot;economic.data&quot;, from = &quot;1800-01-01&quot;) tail(recess)  ## # A tibble: 6 x 3 ## symbol date price ## &lt;chr&gt; &lt;date&gt; &lt;int&gt; ## 1 USRECM 2019-10-01 0 ## 2 USRECM 2019-11-01 0 ## 3 USRECM 2019-12-01 0 ## 4 USRECM 2020-01-01 0 ## 5 USRECM 2020-02-01 0 ## 6 USRECM 2020-03-01 0  recess_dat &lt;- recess %&gt;% arrange(date) %&gt;% mutate(same = 1 - (price == lag(price))) %&gt;% # Remove first row, an NA, for cumulative sum filter(date &gt; min(recess$date)) %&gt;% mutate(era = cumsum(same)) %&gt;% # Filter only recessions filter(price == 1) recess_dat &lt;- recess_dat %&gt;% group_by(era) %&gt;% # Unncessary, but to be sure."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
@@ -362,10 +362,10 @@
   <div class="article-container">
 
     <div class="article-style" itemprop="articleBody">
-      <p>Here are a few details of the most recent Employment Situation.
+      <p>Here are a few facts from the most recent Employment Situation.
 The latest data on labor-force participation,
 highlighted in this <a href="https://www.brookings.edu/blog/up-front/2020/04/03/labor-market-in-march-deteriorated-much-more-quickly-than-the-unemployment-rate-suggests/" target="_blank">Brookings post</a>, and
-the employment-population ratio.</p>
+the employment-population ratio are depicted below.</p>
 
 <pre><code class="language-r"># Load packages
 library(tidyverse)
@@ -450,7 +450,8 @@ ggplot() +
 <p><a href="http://gregmankiw.blogspot.com/" target="_blank">GREG MANKIW&rsquo;S BLOG: Random Observations for Students of Economics</a> compares
 the number of job losers on temporary layoff to the number of permanent job losers.
 To facilitate the comparison between the two job-loss series,
-I indexed the previous month to 100 for both series.</p>
+I indexed the previous month to 100 for both series.
+(I stole the title of this post from the post.)</p>
 
 <p>The job-loss series are depicted below.
 To make the graph,

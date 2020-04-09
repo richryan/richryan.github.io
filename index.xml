@@ -157,10 +157,10 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/04/08/facts-from-the-employment-situation/</guid>
-      <description>&lt;p&gt;Here are a few details of the most recent Employment Situation.
+      <description>&lt;p&gt;Here are a few facts from the most recent Employment Situation.
 The latest data on labor-force participation,
 highlighted in this &lt;a href=&#34;https://www.brookings.edu/blog/up-front/2020/04/03/labor-market-in-march-deteriorated-much-more-quickly-than-the-unemployment-rate-suggests/&#34; target=&#34;_blank&#34;&gt;Brookings post&lt;/a&gt;, and
-the employment-population ratio.&lt;/p&gt;
+the employment-population ratio are depicted below.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
 library(tidyverse)
@@ -245,7 +245,8 @@ ggplot() +
 &lt;p&gt;&lt;a href=&#34;http://gregmankiw.blogspot.com/&#34; target=&#34;_blank&#34;&gt;GREG MANKIW&amp;rsquo;S BLOG: Random Observations for Students of Economics&lt;/a&gt; compares
 the number of job losers on temporary layoff to the number of permanent job losers.
 To facilitate the comparison between the two job-loss series,
-I indexed the previous month to 100 for both series.&lt;/p&gt;
+I indexed the previous month to 100 for both series.
+(I stole the title of this post from the post.)&lt;/p&gt;
 
 &lt;p&gt;The job-loss series are depicted below.
 To make the graph,
