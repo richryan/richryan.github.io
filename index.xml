@@ -152,6 +152,382 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Labor Market Friday</title>
+      <link>/2020/05/09/labor-market-friday/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/09/labor-market-friday/</guid>
+      <description>
+
+&lt;p&gt;Here are data from the latest Employment Situation.
+The charts are based on &lt;a href=&#34;https://nyti.ms/2WJhtQS&#34; target=&#34;_blank&#34;&gt;this &lt;em&gt;NY Times&lt;/em&gt; article&lt;/a&gt;,
+which begins
+&amp;ldquo;The American economy plunged deeper into crisis last month, losing 20.5 million jobs as the unemployment rate jumped to 14.7 percent, the worst devastation since the Great Depression.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;The R code shared below
+replicates some of the charts included in the article.
+The charts are listed in the table of contents.&lt;/p&gt;
+
+&lt;p&gt;It should be noted that the BLS published a &lt;a href=&#34;https://www.bls.gov/cps/employment-situation-covid19-faq-april-2020.pdf&#34; target=&#34;_blank&#34;&gt;statement&lt;/a&gt; on how the Coronavirus impacted the data from the April 2020 Establishment and Household Surveys.
+While the collection rate for the Establishment Survey was &amp;ldquo;essentially unchanged&amp;rdquo; from collection rates prior to the pandemic (partly due to a longer collection period),
+the Household Survey response rate &amp;ldquo;at about 70 percent,
+was about 13 percentage points lower than in months prior to the pandemic.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;As David Blanchflower put it for &lt;a href=&#34;https://www.nybooks.com/daily/2020/05/08/the-pandemic-jobless-youthquake/&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;The New York Review of Books&lt;/em&gt;&lt;/a&gt;:
+&amp;ldquo;The data are hard to interpret because any idea of &amp;lsquo;normal&amp;rsquo; has gone out of the window.&amp;rdquo;
+Blanchflower points out that the data from the Establishment Survey does not include the self-employed.&lt;/p&gt;
+
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#monthly-change-in-jobs&#34;&gt;Monthly change in jobs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#unemployment-rate&#34;&gt;Unemployment rate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#share-of-the-population-that-is-employed&#34;&gt;Share of the population that is employed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#share-of-unemployed-on-temporary-layoff-some-hope&#34;&gt;Share of unemployed on temporary layoff&amp;mdash;some hope&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+
+&lt;h1 id=&#34;monthly-change-in-jobs&#34;&gt;Monthly change in jobs&lt;/h1&gt;
+
+&lt;p&gt;The calculation of the monthly change in jobs uses data from the Establishment Survey.
+From &lt;a href=&#34;https://www.bls.gov/news.release/empsit.nr0.htm&#34; target=&#34;_blank&#34;&gt;the BLS&lt;/a&gt;:
+&amp;ldquo;In the establishment survey,
+workers who are paid by their employer for all or any part of the pay period including the 12th of the month are counted as employed, even if they were not actually at their jobs.
+Workers who are temporarily or permanently absent from their jobs and are not being paid are not counted as employed, even if they are continuing to receive benefits.
+The length of  the reference period does vary across the respondents in the establishment survey; one-third of businesses have a weekly pay period, slightly over 40 percent a bi-weekly, about 20 percent semi-monthly, and a small amount monthly.&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
+library(tidyverse)
+library(tidyquant)
+library(ggplot2)
+library(ggthemes)
+
+# Chart parameters
+mygray &amp;lt;- &amp;quot;gray66&amp;quot;
+
+# Data for recession shading
+recess &amp;lt;- tq_get(&amp;quot;USRECM&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
+tail(recess)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol date       price
+##   &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+## 1 USRECM 2019-11-01     0
+## 2 USRECM 2019-12-01     0
+## 3 USRECM 2020-01-01     0
+## 4 USRECM 2020-02-01     0
+## 5 USRECM 2020-03-01     0
+## 6 USRECM 2020-04-01     0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;recess_dat &amp;lt;- recess %&amp;gt;% 
+  arrange(date) %&amp;gt;% 
+  mutate(same = 1 - (price == lag(price))) %&amp;gt;% 
+  # Remove first row, an NA, for cumulative sum
+  filter(date &amp;gt; min(recess$date)) %&amp;gt;% 
+  mutate(era = cumsum(same)) %&amp;gt;% 
+  # Filter only recessions
+  filter(price == 1)
+
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  group_by(era) %&amp;gt;% 
+  # Unncessary, but to be sure...
+  arrange(date) %&amp;gt;% 
+  filter(row_number() == 1 | row_number() == n())
+
+# Now reshape the data wide.
+# Each row will contain the start and end dates of a recession.
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  mutate(junk = row_number()) %&amp;gt;% 
+  mutate(begin_end = case_when(
+    junk == 1 ~ &amp;quot;begin&amp;quot;,
+    junk == 2 ~ &amp;quot;end&amp;quot;
+  ))
+
+recess_wide &amp;lt;- recess_dat %&amp;gt;%
+  ungroup() %&amp;gt;% 
+  select(symbol, price, date, era, begin_end) %&amp;gt;% 
+  pivot_wider(names_from = begin_end, values_from = date)
+
+# All Employees, Total Nonfarm
+payems &amp;lt;- tq_get(&amp;quot;PAYEMS&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;) 
+payems &amp;lt;- payems %&amp;gt;% 
+  # Convert to millions
+  mutate(price = price / 1000,
+         change_jobs = price - lag(price),
+         mycat = date == max(date)) %&amp;gt;% 
+  filter(!is.na(change_jobs))
+
+payems &amp;lt;- payems %&amp;gt;% 
+  left_join(recess, by = &amp;quot;date&amp;quot;) %&amp;gt;% 
+  mutate(neg = change_jobs &amp;lt; 0)
+  
+last_date &amp;lt;- max(payems$date)
+last_lvl &amp;lt;- payems$change_jobs[[which(payems$date == last_date)]]
+
+segment_height &amp;lt;- 1.5
+
+# Set up labels for y axis
+my_breaks &amp;lt;- c(seq(1, -2), seq(-5, -20, by= -5))
+my_labels &amp;lt;- c(&amp;quot;+1 million&amp;quot;, 
+               paste(c(seq(0, -2), seq(-5, -20, by= -5))))
+
+# Plot
+ggplot(data = payems) +
+  geom_col(mapping = aes(x = date, y = change_jobs,
+                         color = neg, fill = neg)) +
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels) +
+  # Color the bars
+  scale_fill_manual(values = c(mygray, &amp;quot;red&amp;quot;)) +
+  scale_color_manual(values = c(mygray, &amp;quot;red&amp;quot;) ) + 
+  # Label last observation 
+  annotate(&amp;quot;text&amp;quot;, x = last_date - 12*100, y = 3.0, 
+           label = paste(last_lvl, &amp;quot;million&amp;quot;), 
+           color = &amp;quot;red&amp;quot;) +
+  annotate(&amp;quot;segment&amp;quot;, x = last_date, xend = last_date,
+           y = 0, yend = 2.5,
+           linetype = &amp;quot;dashed&amp;quot;,
+           color = &amp;quot;black&amp;quot;) +
+  # Turn off legend
+  guides(color = FALSE, fill = FALSE) +
+  ggtitle(&amp;quot;Monthly change in jobs&amp;quot;) +
+  # theme_pander() 
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;,
+            color = &amp;quot;gray&amp;quot;,
+            title_family = &amp;quot;sans&amp;quot;,
+            base_size = 8) +
+  # Put grid lines on top
+  theme(panel.background = element_rect(fill = NA),
+        panel.ontop = TRUE)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-05-09-labor-market-friday_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;unemployment-rate&#34;&gt;Unemployment rate&lt;/h1&gt;
+
+&lt;p&gt;Data used to calculate the unemployment rate come from the Current Population Survey or Household Survey.
+The Household Survey &lt;a href=&#34;https://www.bls.gov/news.release/empsit.nr0.htm&#34; target=&#34;_blank&#34;&gt;classifies people&lt;/a&gt; as
+employed, unemployed, or not in the labor force &amp;ldquo;based on their answers to a series of questions about their activities during the survey reference week (April 12th through April 18th).&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;The unemployment rate or number of unemployed as a percentage of the labor force is depicted below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ur &amp;lt;- tq_get(&amp;quot;UNRATE&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
+ur &amp;lt;- ur %&amp;gt;% 
+  mutate(series = &amp;quot;Unemployment rate&amp;quot;)
+
+# Last observation
+last_date &amp;lt;- max(ur$date)
+last_lvl &amp;lt;- ur$price[[which(ur$date == max(ur$date))]]
+
+# Scale
+my_breaks &amp;lt;- seq(2, 14, by = 2)
+my_labels &amp;lt;- paste(seq(2, 12, by = 2))
+my_labels &amp;lt;- c(my_labels, &amp;quot;14%&amp;quot;)
+
+ggplot(data = ur) +
+  # Add recession shading
+  geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(ur$date)), 
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = mygray, alpha = 0.7) +
+  geom_line(mapping = aes(x = date, y = price), 
+            size = 0.8, color = &amp;quot;black&amp;quot;) + 
+  # Highlight last observation
+  geom_point(data = filter(ur, date == last_date), 
+             mapping = aes(x = date, y = price),
+             size = 3) +
+  xlab(&amp;quot;&amp;quot;) + ylab(&amp;quot;Percent&amp;quot;) + ggtitle(&amp;quot;Unemployment rate&amp;quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels) +
+  # Make sure start at 0%
+  expand_limits(y = 0) +
+  # Label last observation
+  annotate(&amp;quot;text&amp;quot;, x = last_date, y = last_lvl + 1, 
+           label = paste0(last_lvl, &amp;quot;%&amp;quot;),
+           color = &amp;quot;black&amp;quot;) +
+  xlab(&amp;quot;&amp;quot;) + ylab(&amp;quot;Percent&amp;quot;) + ggtitle(&amp;quot;Unemployment rate&amp;quot;) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;,
+            color = &amp;quot;gray&amp;quot;,
+            title_family = &amp;quot;sans&amp;quot;,
+            base_size = 8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-05-09-labor-market-friday_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;share-of-the-population-that-is-employed&#34;&gt;Share of the population that is employed&lt;/h1&gt;
+
+&lt;p&gt;The BLS&amp;rsquo;s &lt;a href=&#34;https://www.bls.gov/news.release/empsit.nr0.htm&#34; target=&#34;_blank&#34;&gt;Employment Situation Summary&lt;/a&gt; reports:
+&amp;ldquo;The employment&amp;ndash;population ratio, at 51.3 percent,
+dropped by 8.7 percentage points over the month.
+This is the lowest rate and largest over-the-month decline in the history of the series
+(seasonally adjusted data are available back to January 1948).&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Here is the employment&amp;ndash;population series:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;epop &amp;lt;- tq_get(&amp;quot;EMRATIO&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
+
+# Last observation
+last_date &amp;lt;- max(epop$date)
+last_lvl &amp;lt;- epop$price[[which(epop$date == max(epop$date))]]
+
+# Scale
+my_breaks &amp;lt;- seq(50, 65, by = 5)
+my_labels &amp;lt;- paste(seq(50, 60, by = 5))
+my_labels &amp;lt;- c(my_labels, &amp;quot;65%&amp;quot;)
+
+ggplot(data = epop) +
+  # Add recession shading
+  geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(ur$date)), 
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = mygray, alpha = 0.7) +
+  geom_line(mapping = aes(x = date, y = price), 
+            size = 0.8, color = &amp;quot;black&amp;quot;) + 
+  # Highlight last observation
+  geom_point(data = filter(epop, date == last_date), 
+             mapping = aes(x = date, y = price),
+             size = 3) +
+  ggtitle(&amp;quot;Share of the population that is employed&amp;quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels) +
+  # Label last observation
+  annotate(&amp;quot;text&amp;quot;, x = last_date, y = last_lvl - 2, 
+           label = paste0(last_lvl, &amp;quot;%&amp;quot;),
+           color = &amp;quot;black&amp;quot;) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;,
+            color = &amp;quot;gray&amp;quot;,
+            title_family = &amp;quot;sans&amp;quot;,
+            base_size = 8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-05-09-labor-market-friday_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;share-of-unemployed-on-temporary-layoff-some-hope&#34;&gt;Share of unemployed on temporary layoff&amp;mdash;some hope&lt;/h1&gt;
+
+&lt;p&gt;There is some hope&amp;mdash;with the caveat that the BLS classified unemployed respondents who couldn&amp;rsquo;t answer when they expected to be recalled to work as unemployed on temporary layoff.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://fred.stlouisfed.org/categories/32446&#34; target=&#34;_blank&#34;&gt;unemployed includes&lt;/a&gt;
+&amp;ldquo;all persons who had no employment during the reference week, were available for work, except for temporary illness, and had made specific efforts to find employment some time during the 4 week-period ending with the reference week. Persons who were waiting to be recalled to a job from which they had been laid off need not have been looking for work to be classified as unemployed.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;For April 2020, the reference week was from April 12 through April 18th.
+&amp;ldquo;Workers who indicate they were not working during the entire survey reference week and expect to be recalled to their jobs should be classified as unemployed on temporary layoff.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Temporary layoff is one of the categories used by the BLS to classify the unemployed.
+The BLS uses the following categories:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Job losers and persons who completed temporary jobs
+
+&lt;ul&gt;
+&lt;li&gt;On temporary layoff&lt;/li&gt;
+&lt;li&gt;Not on temporary layoff
+
+&lt;ul&gt;
+&lt;li&gt;Permanent job losers&lt;/li&gt;
+&lt;li&gt;Persons who completed temporary jobs&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Job leavers&lt;/li&gt;
+&lt;li&gt;Reentrants&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;New entrants&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The chart in this section depicts the share of unemployed on temporary layoff.
+To be classified as unemployed on temporary layoff,
+a person has either been given a date to return to work by their employer or expects to be recalled to their job within 6 months.
+From the &lt;a href=&#34;https://www.bls.gov/cps/employment-situation-covid19-faq-april-2020.pdf&#34; target=&#34;_blank&#34;&gt;BLS&lt;/a&gt;:
+&amp;ldquo;If, because of the coronavirus,
+a person was uncertain of when they would be able to return to work and thus was unsure of how to answer the question,
+the interviewer was instructed to enter a response of &amp;lsquo;yes,&amp;rsquo; rather than &amp;lsquo;don’t know.&amp;rsquo;
+This would allow the individual to be included among the unemployed on temporary layoff.&amp;rdquo;
+In other words, this was
+&amp;ldquo;an attempt to classify people who were effectively laid off due to pandemic-related closures among the
+unemployed on temporary layoff.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Some unemployed people on temporary layoff may also have &lt;a href=&#34;https://www.bls.gov/cps/employment-situation-covid19-faq-april-2020.pdf&#34; target=&#34;_blank&#34;&gt;received pay from their employer&lt;/a&gt;:
+&amp;ldquo;Under the guidance provided to the household survey interviewers,
+workers who indicate that they were not working during the entire reference week due to efforts to contain the spread of the coronavirus should be classified as unemployed on temporary layoff,
+whether or not they are paid for the time they were off work.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;With this caveat,
+from &lt;a href=&#34;https://nyti.ms/2WJhtQS&#34; target=&#34;_blank&#34;&gt;the &lt;em&gt;NY Times&lt;/em&gt; article&lt;/a&gt;:
+&amp;ldquo;It remains possible that the recovery, too, will be swift, and that as the pandemic retreats, businesses that were fundamentally healthy before the virus will reopen, rehire and return more or less to normal. The one bright spot in Friday’s report was that nearly 80 percent of the unemployed said they had been temporarily laid off and expected to return to their jobs in the coming months.&amp;rdquo;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;loss_series &amp;lt;- c(&amp;quot;LNS13023653&amp;quot;, &amp;quot;UNEMPLOY&amp;quot;)
+                  
+loss &amp;lt;- tq_get(loss_series, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1900-01-01&amp;quot;)
+
+# Rename for ease
+loss &amp;lt;- loss %&amp;gt;%
+  mutate(series_name = case_when(
+    symbol == &amp;quot;UNEMPLOY&amp;quot; ~ &amp;quot;unemp&amp;quot;,
+    symbol == &amp;quot;LNS13023653&amp;quot; ~ &amp;quot;layoff&amp;quot;)) %&amp;gt;% 
+  select(-symbol)
+
+# Reshape wide
+loss &amp;lt;- loss %&amp;gt;% 
+  pivot_wider(names_from = series_name,
+              values_from = price)
+
+# Create share of unemployed on temporary layoff
+loss &amp;lt;- loss %&amp;gt;% 
+  mutate(share = 100*layoff / unemp) %&amp;gt;% 
+  drop_na(share)
+
+# Last observation
+last_date &amp;lt;- max(loss$date)
+last_lvl &amp;lt;- loss$share[[which(loss$date == last_date)]]
+last_lvl &amp;lt;- round(last_lvl, 1)
+
+# Scale
+my_breaks &amp;lt;- seq(10, 80, by = 10)
+my_labels &amp;lt;- paste(seq(10, 70, by = 10))
+my_labels &amp;lt;- c(my_labels, &amp;quot;80%&amp;quot;)
+
+ggplot(data = loss) +
+  # Add recession shading
+  geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(loss$date)), 
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = mygray, alpha = 0.7) +
+  geom_line(mapping = aes(x = date, y = share), 
+            size = 0.8, color = &amp;quot;black&amp;quot;) + 
+  # Highlight last observation
+  geom_point(data = filter(loss, date == last_date), 
+             mapping = aes(x = date, y = share),
+             size = 3) +
+  ggtitle(&amp;quot;Share of unemployed on temporary layoff&amp;quot;) +
+  # Label y-axis for wsj theme
+  scale_y_continuous(breaks = my_breaks,
+                     labels = my_labels) +
+  # Make sure start at 0%
+  expand_limits(y = 0) +
+  # Label last observation
+  annotate(&amp;quot;text&amp;quot;, x = last_date, y = last_lvl + 5, 
+           label = paste0(last_lvl, &amp;quot;%&amp;quot;),
+           color = &amp;quot;black&amp;quot;) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;,
+            color = &amp;quot;gray&amp;quot;,
+            title_family = &amp;quot;sans&amp;quot;,
+            base_size = 8)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-05-09-labor-market-friday_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Facts from the Employment Situation</title>
       <link>/2020/04/08/facts-from-the-employment-situation/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
@@ -1324,34 +1700,6 @@ option premium, open interest, at-the-money, in-the-money, out-of-the-money,
 &lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/bei4b6x0uiwl9fbjm8ysa8mb3ebg3t4c&#34; target=&#34;_blank&#34;&gt;Problem set 10&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/25igqg7f1tjrws2rxfuuh7xweyhrksr7&#34; target=&#34;_blank&#34;&gt;Proposed solutions to the Second Midterm Exam&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Macroeconomic Theory II, Winter 2017</title>
-      <link>/teaching/econ607_w2017/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
-      
-      <guid>/teaching/econ607_w2017/</guid>
-      <description>
-
-&lt;p&gt;Materials for Macroeconomic Theory I, ECON 605, with Professors &lt;a href=&#34;https://sites.google.com/umich.edu/johnleahy/home&#34; target=&#34;_blank&#34;&gt;John Leahy&lt;/a&gt; and
-&lt;a href=&#34;https://sites.google.com/site/ottonellopablo/&#34; target=&#34;_blank&#34;&gt;Pablo Ottonello&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;leahy&#34;&gt;Leahy&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ECON 607 Leahy &lt;a href=&#34;https://umich.box.com/s/eavv25aglyxfnsewbl5fq1vhjtwg0svq&#34; target=&#34;_blank&#34;&gt;notes&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;ottonello&#34;&gt;Ottonello&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;ECON 607 Ottonello &lt;a href=&#34;https://umich.box.com/s/asenqn5dn9d0pv9yyexigt5wk7uu201r&#34; target=&#34;_blank&#34;&gt;notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Handout on &lt;a href=&#34;https://umich.box.com/s/463og4p1c995t6cz5ag2awvle9yb4dtu&#34; target=&#34;_blank&#34;&gt;balancing materials&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Handout on Shimer&amp;rsquo;s &lt;a href=&#34;https://umich.box.com/s/xv8pcmwfkh3sbity60v9obppnnbqccz2&#34; target=&#34;_blank&#34;&gt;planner problem&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;MATLAB &lt;a href=&#34;https://umich.box.com/s/r9fvggee03ouwuw62vavvpkf7hwtcfz8&#34; target=&#34;_blank&#34;&gt;program&lt;/a&gt; used to generate the comparison of exact and perturbation solutions for the choice of consumption. The program requires the MATLAB program &lt;code&gt;gx_hx.m&lt;/code&gt;, available from  Stephanie Schmitt&amp;ndash;Grohe and Martin Uribe&amp;rsquo;s &lt;a href=&#34;http://www.columbia.edu/~mu2166/1st_order/1st_order.htm&#34; target=&#34;_blank&#34;&gt;MATLAB toolbox&lt;/a&gt; for first-order-accurate approximations.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

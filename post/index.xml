@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2019</copyright>
-    <lastBuildDate>Wed, 08 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Labor Market Friday</title>
+      <link>/2020/05/09/labor-market-friday/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/09/labor-market-friday/</guid>
+      <description>Here are data from the latest Employment Situation. The charts are based on this NY Times article, which begins &amp;ldquo;The American economy plunged deeper into crisis last month, losing 20.5 million jobs as the unemployment rate jumped to 14.7 percent, the worst devastation since the Great Depression.&amp;rdquo;
+The R code shared below replicates some of the charts included in the article. The charts are listed in the table of contents.</description>
+    </item>
     
     <item>
       <title>Facts from the Employment Situation</title>
