@@ -159,8 +159,9 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
       <guid>/2020/05/12/two-series-based-on-core-cpi/</guid>
       <description>
 
-&lt;p&gt;Here are data from the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average.
-From FRED:&lt;/p&gt;
+&lt;p&gt;Here are two series based on the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average.&lt;/p&gt;
+
+&lt;p&gt;From FRED:&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;The &amp;ldquo;Consumer Price Index for All Urban Consumers: All Items Less Food &amp;amp; Energy&amp;rdquo; is an aggregate of prices paid by urban consumers for a typical basket of goods, excluding food and energy. This measurement, known as &amp;ldquo;Core CPI,&amp;rdquo; is widely used by economists because food and energy have very volatile prices.&lt;/p&gt;
@@ -260,7 +261,7 @@ which also agrees with the above number listed last in the &lt;code&gt;change12&
 
 &lt;h2 id=&#34;percent-change-from-one-year-ago&#34;&gt;Percent change from one year ago&lt;/h2&gt;
 
-&lt;p&gt;Here is the chart for percent change from one year ago:&lt;/p&gt;
+&lt;p&gt;Here is the chart for percent change from one year ago:&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(data = core) +
   # Add recession shading
@@ -271,7 +272,7 @@ which also agrees with the above number listed last in the &lt;code&gt;change12&
             fill = mygray, alpha = 0.7) +
   geom_line(mapping = aes(x = date, y = change12), 
             size = 0.8, color = &amp;quot;black&amp;quot;) +
-  ggtitle(&amp;quot;One-month percent change in core CPI&amp;quot;) +
+  ggtitle(&amp;quot;12-month percent change in core CPI&amp;quot;) +
   # Make sure start at 0%
   expand_limits(y = 0) +
   # Use sans serif font instead of mono, use gray color
@@ -307,6 +308,15 @@ ggplot(data = core1yr) +
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;/post/2020-05-12-core-cpi_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Note: It is probably more appropriate to use the not-seasonally-adjusted series to compute the 12-month percent change. 
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     

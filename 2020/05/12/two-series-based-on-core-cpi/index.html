@@ -15,7 +15,8 @@
   
     
   
-  <meta name="description" content="Here are data from the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average. From FRED:
+  <meta name="description" content="Here are two series based on the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average.
+From FRED:
  The &ldquo;Consumer Price Index for All Urban Consumers: All Items Less Food &amp; Energy&rdquo; is an aggregate of prices paid by urban consumers for a typical basket of goods, excluding food and energy. This measurement, known as &ldquo;Core CPI,&rdquo; is widely used by economists because food and energy have very volatile prices.">
 
   
@@ -105,7 +106,8 @@
   <meta property="og:site_name" content="RICH RYAN">
   <meta property="og:url" content="/2020/05/12/two-series-based-on-core-cpi/">
   <meta property="og:title" content="Two Series Based on Core CPI | RICH RYAN">
-  <meta property="og:description" content="Here are data from the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average. From FRED:
+  <meta property="og:description" content="Here are two series based on the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average.
+From FRED:
  The &ldquo;Consumer Price Index for All Urban Consumers: All Items Less Food &amp; Energy&rdquo; is an aggregate of prices paid by urban consumers for a typical basket of goods, excluding food and energy. This measurement, known as &ldquo;Core CPI,&rdquo; is widely used by economists because food and energy have very volatile prices."><meta property="og:image" content="/img/portrait.jpg">
   <meta property="og:locale" content="en-us">
   
@@ -364,8 +366,9 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<p>Here are data from the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average.
-From FRED:</p>
+<p>Here are two series based on the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average.</p>
+
+<p>From FRED:</p>
 
 <blockquote>
 <p>The &ldquo;Consumer Price Index for All Urban Consumers: All Items Less Food &amp; Energy&rdquo; is an aggregate of prices paid by urban consumers for a typical basket of goods, excluding food and energy. This measurement, known as &ldquo;Core CPI,&rdquo; is widely used by economists because food and energy have very volatile prices.</p>
@@ -465,7 +468,7 @@ which also agrees with the above number listed last in the <code>change12</code>
 
 <h2 id="percent-change-from-one-year-ago">Percent change from one year ago</h2>
 
-<p>Here is the chart for percent change from one year ago:</p>
+<p>Here is the chart for percent change from one year ago:<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup></p>
 
 <pre><code class="language-r">ggplot(data = core) +
   # Add recession shading
@@ -476,7 +479,7 @@ which also agrees with the above number listed last in the <code>change12</code>
             fill = mygray, alpha = 0.7) +
   geom_line(mapping = aes(x = date, y = change12), 
             size = 0.8, color = &quot;black&quot;) +
-  ggtitle(&quot;One-month percent change in core CPI&quot;) +
+  ggtitle(&quot;12-month percent change in core CPI&quot;) +
   # Make sure start at 0%
   expand_limits(y = 0) +
   # Use sans serif font instead of mono, use gray color
@@ -512,6 +515,15 @@ ggplot(data = core1yr) +
 </code></pre>
 
 <p><img src="/post/2020-05-12-core-cpi_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Note: It is probably more appropriate to use the not-seasonally-adjusted series to compute the 12-month percent change. 
+ <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+</ol>
+</div>
 
     </div>
 
