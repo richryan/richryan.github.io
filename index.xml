@@ -166,7 +166,7 @@ which begins
 
 &lt;p&gt;The R code shared below
 replicates some of the charts included in the article.
-The charts are listed in the table of contents.&lt;/p&gt;
+The charts are listed in the table of contents.&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
 &lt;p&gt;It should be noted that the BLS published a &lt;a href=&#34;https://www.bls.gov/cps/employment-situation-covid19-faq-april-2020.pdf&#34; target=&#34;_blank&#34;&gt;statement&lt;/a&gt; on how the Coronavirus impacted the data from the April 2020 Establishment and Household Surveys.
 While the collection rate for the Establishment Survey was &amp;ldquo;essentially unchanged&amp;rdquo; from collection rates prior to the pandemic (partly due to a longer collection period),
@@ -524,6 +524,15 @@ ggplot(data = loss) +
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;img src=&#34;/post/2020-05-09-labor-market-friday_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;The BLS&amp;rsquo;s &lt;a href=&#34;https://www.bls.gov/opub/ted/2020/payroll-employment-down-20-point-5-million-in-april-2020.htm&#34; target=&#34;_blank&#34;&gt;May 12 Economics Daily&lt;/a&gt; chart discusses the drop in payroll employment in April 2020. 
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
 </description>
     </item>
     
