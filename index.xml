@@ -152,6 +152,165 @@ An improved version of these notes is available &lt;a href=&#34;https://richryan
     </item>
     
     <item>
+      <title>Two Series Based on Core CPI</title>
+      <link>/2020/05/12/two-series-based-on-core-cpi/</link>
+      <pubDate>Tue, 12 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/05/12/two-series-based-on-core-cpi/</guid>
+      <description>
+
+&lt;p&gt;Here are data from the Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in US City Average.
+From FRED:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The &amp;ldquo;Consumer Price Index for All Urban Consumers: All Items Less Food &amp;amp; Energy&amp;rdquo; is an aggregate of prices paid by urban consumers for a typical basket of goods, excluding food and energy. This measurement, known as &amp;ldquo;Core CPI,&amp;rdquo; is widely used by economists because food and energy have very volatile prices.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&#34;tidying-data&#34;&gt;Tidying data&lt;/h2&gt;
+
+&lt;p&gt;To calculate some of the statistics reported in the &lt;a href=&#34;https://www.bls.gov/news.release/cpi.nr0.htm&#34; target=&#34;_blank&#34;&gt;Consumer Price Index Summary&lt;/a&gt;,
+FRED publishes &lt;a href=&#34;https://fredhelp.stlouisfed.org/fred/data/understanding-the-data/formulas-calculate-growth-rates/&#34; target=&#34;_blank&#34;&gt;formulas&lt;/a&gt; used to transform data series.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# Load packages
+library(tidyverse)
+library(tidyquant)
+library(ggplot2)
+library(ggthemes)
+
+# Chart parameters
+mygray &amp;lt;- &amp;quot;gray66&amp;quot;
+
+# Data for recession shading
+recess &amp;lt;- tq_get(&amp;quot;USRECM&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;)
+tail(recess)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   symbol date       price
+##   &amp;lt;chr&amp;gt;  &amp;lt;date&amp;gt;     &amp;lt;int&amp;gt;
+## 1 USRECM 2019-11-01     0
+## 2 USRECM 2019-12-01     0
+## 3 USRECM 2020-01-01     0
+## 4 USRECM 2020-02-01     0
+## 5 USRECM 2020-03-01     0
+## 6 USRECM 2020-04-01     0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;recess_dat &amp;lt;- recess %&amp;gt;% 
+  arrange(date) %&amp;gt;% 
+  mutate(same = 1 - (price == lag(price))) %&amp;gt;% 
+  # Remove first row, an NA, for cumulative sum
+  filter(date &amp;gt; min(recess$date)) %&amp;gt;% 
+  mutate(era = cumsum(same)) %&amp;gt;% 
+  # Filter only recessions
+  filter(price == 1)
+
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  group_by(era) %&amp;gt;% 
+  # Unncessary, but to be sure...
+  arrange(date) %&amp;gt;% 
+  filter(row_number() == 1 | row_number() == n())
+
+# Now reshape the data wide.
+# Each row will contain the start and end dates of a recession.
+recess_dat &amp;lt;- recess_dat %&amp;gt;% 
+  mutate(junk = row_number()) %&amp;gt;% 
+  mutate(begin_end = case_when(
+    junk == 1 ~ &amp;quot;begin&amp;quot;,
+    junk == 2 ~ &amp;quot;end&amp;quot;
+  ))
+
+recess_wide &amp;lt;- recess_dat %&amp;gt;%
+  ungroup() %&amp;gt;% 
+  select(symbol, price, date, era, begin_end) %&amp;gt;% 
+  pivot_wider(names_from = begin_end, values_from = date)
+
+# Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average
+core &amp;lt;- tq_get(&amp;quot;CPILFESL&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;1800-01-01&amp;quot;) 
+core &amp;lt;- core %&amp;gt;% 
+  mutate(change = 100*(price/lag(price) - 1),
+         change12 = 100*(price/lag(price, n = 12) - 1))
+# Drop NAs
+core &amp;lt;- core %&amp;gt;% 
+  drop_na(change)
+
+# These numbers should agree with the published BLS summary
+tail(select(core, date, change, change12))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6 x 3
+##   date       change change12
+##   &amp;lt;date&amp;gt;      &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1 2019-11-01  0.194     2.32
+## 2 2019-12-01  0.125     2.25
+## 3 2020-01-01  0.242     2.27
+## 4 2020-02-01  0.223     2.37
+## 5 2020-03-01 -0.103     2.10
+## 6 2020-04-01 -0.448     1.44
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;According to the &lt;a href=&#34;https://www.bls.gov/news.release/pdf/cpi.pdf&#34; target=&#34;_blank&#34;&gt;release&lt;/a&gt;:
+&amp;ldquo;The index for all items less food and energy fell 0.4 percent in April,
+the largest monthly decline in the history of the series, which dates to 1957,&amp;rdquo;
+which agrees with the above number listed last in the &lt;code&gt;change&lt;/code&gt; column.
+And:
+&amp;ldquo;The index for all items less food and energy increased 1.4 percent over the last 12
+months, its smallest increase since April 2011,&amp;rdquo;
+which also agrees with the above number listed last in the &lt;code&gt;change12&lt;/code&gt; column.&lt;/p&gt;
+
+&lt;h2 id=&#34;percent-change-from-one-year-ago&#34;&gt;Percent change from one year ago&lt;/h2&gt;
+
+&lt;p&gt;Here is the chart for percent change from one year ago:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;ggplot(data = core) +
+  # Add recession shading
+  geom_rect(data = filter(recess_wide,
+                          begin &amp;gt;= min(core$date)), 
+            mapping = aes(xmin = begin, xmax = end,
+                          ymin = -Inf, ymax = Inf),
+            fill = mygray, alpha = 0.7) +
+  geom_line(mapping = aes(x = date, y = change12), 
+            size = 0.8, color = &amp;quot;black&amp;quot;) +
+  ggtitle(&amp;quot;One-month percent change in core CPI&amp;quot;) +
+  # Make sure start at 0%
+  expand_limits(y = 0) +
+  # Use sans serif font instead of mono, use gray color
+  theme_wsj(base_family = &amp;quot;sans&amp;quot;,
+            color = &amp;quot;gray&amp;quot;,
+            title_family = &amp;quot;sans&amp;quot;,
+            base_size = 10)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 11 row(s) containing missing values (geom_path).
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-05-12-core-cpi_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;one-month-percent-change&#34;&gt;One-month percent change&lt;/h2&gt;
+
+&lt;p&gt;And here is the chart for one-month percent change, April 2019&amp;ndash;April 2020:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;core1yr &amp;lt;- core %&amp;gt;% 
+  filter(date &amp;gt;= ymd(&amp;quot;2019-04-01&amp;quot;)) %&amp;gt;% 
+  mutate(mnth = month(date, label = TRUE, abbr = TRUE),
+         yr = round(100*(year(date)/100 - round(year(date)/100, 0))),
+         my_x = factor(paste0(mnth, &amp;quot; &#39;&amp;quot;, yr))) %&amp;gt;% 
+  mutate(my_x = fct_reorder(my_x, date))
+
+ggplot(data = core1yr) +
+  geom_col(mapping = aes(x = my_x, y = change)) +
+  theme_wsj(color = &amp;quot;gray&amp;quot;, 
+            base_family = &amp;quot;sans&amp;quot;, 
+            title_family = &amp;quot;sans&amp;quot;,
+            base_size = 8) +
+  ggtitle(&amp;quot;One-month percent change in core CPI&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;img src=&#34;/post/2020-05-12-core-cpi_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Labor Market Friday</title>
       <link>/2020/05/09/labor-market-friday/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
@@ -1652,63 +1811,6 @@ The preservation also represents a desire not to obliterate the hard work that w
 &lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/xkm9tnama1w61lcx7r3gy0l2jno9xayb&#34; target=&#34;_blank&#34;&gt;Worked examples of dynamic programming&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/fy41pfiibebos1cuod48xo1etowjkc66&#34; target=&#34;_blank&#34;&gt;ECON 605 Leahy notes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Financial Economics, Winter 2016</title>
-      <link>/teaching/econ435_w2016/</link>
-      <pubDate>Tue, 15 Jan 2019 00:00:00 -0800</pubDate>
-      
-      <guid>/teaching/econ435_w2016/</guid>
-      <description>
-
-&lt;p&gt;Materials for Financial Economics, ECON 435, with Professor &lt;a href=&#34;https://sites.google.com/site/ottonellopablo/home&#34; target=&#34;_blank&#34;&gt;Pablo Ottonello&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;notes&#34;&gt;Notes&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;What an interest rate is, the value of money over time, annuities, perpetuities, &lt;a href=&#34;https://umich.box.com/s/4zstahib6qrpy5ip0c6ey0qg4fk8gxb1&#34; target=&#34;_blank&#34;&gt;bonds&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Present value,
-future value,
-internal rate of return,
-effective annual rate,
-annual percentage rate,
-coupon rate,
-zero-coupon bond,
-&lt;a href=&#34;https://umich.box.com/s/930tmo315l0j1526mtkiz5whbzh1smhu&#34; target=&#34;_blank&#34;&gt;yield to maturity&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Bonds continued, &lt;a href=&#34;https://umich.box.com/s/4ov457u3ic8ltaaj6b00qaodyo7u3594&#34; target=&#34;_blank&#34;&gt;stocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/ciaz47f1vozfkdkapxghkr565n1lfwhz&#34; target=&#34;_blank&#34;&gt;Valuing stocks&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Happy Labor Market Friday, Exam 1 &lt;a href=&#34;https://umich.box.com/s/bbt48cnkfllqolr2k2gbx8kfmix02qne&#34; target=&#34;_blank&#34;&gt;solutions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Random variables, variance, standard deviation, &lt;a href=&#34;https://umich.box.com/s/slzq9q68nuusdk27siamkz3b98j6ocb7&#34; target=&#34;_blank&#34;&gt;diversification in stock portfolios&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The volatility of a large portfolio, &lt;a href=&#34;https://umich.box.com/s/d2hefa4vc0izf9p4auj0wq9ihn869dcg&#34; target=&#34;_blank&#34;&gt;risk-free saving and borrowing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The efficient portfolio, &lt;a href=&#34;https://umich.box.com/s/4oyfe4790105iwo547fuf6ghetka668d&#34; target=&#34;_blank&#34;&gt;CAPM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Identifying a stock&amp;rsquo;s \(\alpha\), &lt;a href=&#34;https://umich.box.com/s/nqa0q7p6oy5gbc6tfrhd6rzu93oezquu&#34; target=&#34;_blank&#34;&gt;Fama&amp;ndash;French&amp;ndash;Carhart&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Capital structure, unlevered equity, levered equity, &lt;a href=&#34;https://umich.box.com/s/ry2marceqsf5i4lbbpds6rgarx4pk0ip&#34; target=&#34;_blank&#34;&gt;Modigliani&amp;ndash;Miler&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;MM continued, Vandelay Industries, &lt;a href=&#34;https://umich.box.com/s/f67kqkzfi3d3878w740hawbznahi4815&#34; target=&#34;_blank&#34;&gt;interest tax shield&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Happy Labor Market Friday, \(V^{\text{L}} = V^{\text{U}} + \text{PV}(\text{interest tax shield})\), financial options,
-call option, put option, option writer, strike or exercise price, American option, European option, long and short positions,
-option premium, open interest, at-the-money, in-the-money, out-of-the-money,
-&lt;a href=&#34;https://umich.box.com/s/bm1nli6f2j2ado564itf38kznm273t1i&#34; target=&#34;_blank&#34;&gt;deep in-the-money or out-of-the-money&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Put&amp;ndash;call parity, \(S + P = \text{PV}(K) + C\), &lt;a href=&#34;https://umich.box.com/s/dyfjf5gfeaq3oggb15exobmw4ve7xv04&#34; target=&#34;_blank&#34;&gt;\(\text{PV}(K) = K - D(K)\)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A call option graphically, more put-call parity, &lt;a href=&#34;https://umich.box.com/s/blfy8hhb2ixkgitkc41rjt7gvjs5j4jn&#34; target=&#34;_blank&#34;&gt;thanks&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;problem-sets-and-proposed-solutions&#34;&gt;Problem sets and proposed solutions&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/1dyrmdw2pk37ulq3pzt68giv4kbyitqp&#34; target=&#34;_blank&#34;&gt;Problem set 1&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/fzo75hlipabci06c7ad7h3rfwuhn5f3m&#34; target=&#34;_blank&#34;&gt;Problem set 2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/n89axls4ohqxnzp60ldv27zdgl8rjgcg&#34; target=&#34;_blank&#34;&gt;Problem set 3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/wnz87pb5kg4yw7u8qv1ygtg7luwk768m&#34; target=&#34;_blank&#34;&gt;Problem set 4&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/tovx464ewqphzxku9zi1fgk2dvqlyr88&#34; target=&#34;_blank&#34;&gt;Problem set 5&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/qbemscg39cts60eb8fbye6eccryzyzop&#34; target=&#34;_blank&#34;&gt;Problem set 6&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/dvnu4x0tphnaykfd0k8gcmnofdzka3xf&#34; target=&#34;_blank&#34;&gt;Problem set 7&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/j9zmpx8kwo7cx4log56tcaz3w9ii2stf&#34; target=&#34;_blank&#34;&gt;Problem set 8&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/gzk0aaxefytpvltid8ffng10d75yuyrv&#34; target=&#34;_blank&#34;&gt;Problem set 9&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/bei4b6x0uiwl9fbjm8ysa8mb3ebg3t4c&#34; target=&#34;_blank&#34;&gt;Problem set 10&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://umich.box.com/s/25igqg7f1tjrws2rxfuuh7xweyhrksr7&#34; target=&#34;_blank&#34;&gt;Proposed solutions to the Second Midterm Exam&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     
