@@ -28,6 +28,9 @@ That HTML file must be included in the GitHub directory.
 under `#profile .portrait`. 
 `border-radius` modifies how rounded corners are.
 
+**NOTE**: I edited how public/img/hugo-logo.png was displayed in the footer (took it out).
+I simply commented out a line in footer_section.html (indicated with the date 5/13/2020).
+
 **NOTE**: I edited how MathJax works by editing `themes/hugo-academic/layouts/partials/css/academic.css`,
 including code labeled with `Added by rwr on 12/8/2019`.
 
