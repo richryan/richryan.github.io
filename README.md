@@ -39,6 +39,8 @@ including code labeled with `Added by rwr on 12/8/2019`.
 
 **NOTE**: And referenced image, say by `<img src="img/my-image.something">`, needs to commited to Git in `public/img`
 
+**NOTE**: you can turn on or off night-mode in richryan.blogdown/config.toml
+
 ## Creating a new post ##
 
 To create a new post,
