@@ -37,6 +37,8 @@ including code labeled with `Added by rwr on 12/8/2019`.
 
 **NOTE**: The portrait is `static/img`.
 
+**NOTE**: And referenced image, say by `<img src="img/my-image.something">`, needs to commited to Git in `public/img`
+
 ## Creating a new post ##
 
 To create a new post,
