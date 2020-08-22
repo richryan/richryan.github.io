@@ -13,7 +13,8 @@ this should be done in the `content/research.md` file.
 - Requires `blogdown` package
 - You can preview the site by running `blogdown::serve_site()`,
 which I was able to do in the directory `richryan.blogdown`
-- Manage content in the `content` directory in `richryan.blogdown`
+- Manage content in the `content` directory in `richryan.blogdown`.
+For example, the landing pages can be managed in `content/about.md`.
 - Tabs under the homepage can be configured in `config.toml`
 - For *sections* on the main page,
 edit *sections* in `richryan.blogdown\content\home`.
@@ -33,6 +34,8 @@ I simply commented out a line in footer_section.html (indicated with the date 5/
 
 **NOTE**: I edited how MathJax works by editing `themes/hugo-academic/layouts/partials/css/academic.css`,
 including code labeled with `Added by rwr on 12/8/2019`.
+
+**NOTE**: The portrait is `static/img`.
 
 ## Creating a new post ##
 
