@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R | RICH RYAN</title>
+    <link>https://richryan.github.io/tag/r/</link>
+      <atom:link href="https://richryan.github.io/tag/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>R</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 R$^2$</copyright><lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://richryan.github.io/media/icon_hu8c4833a3093c88f1cebea6682ae07f17_1462702_512x512_fill_lanczos_center_2.PNG</url>
+      <title>R</title>
+      <link>https://richryan.github.io/tag/r/</link>
+    </image>
+    
+    <item>
+      <title>Plotting in R</title>
+      <link>https://richryan.github.io/post/plotting-in-r/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://richryan.github.io/post/plotting-in-r/</guid>
+      <description>&lt;p&gt;Do people care more about inflation or unemployment?
+Here&amp;rsquo;s R code to reproduce a plot featured by Professor Justin Wolfers
+in &lt;a href=&#34;https://twitter.com/JustinWolfers/status/1394458987748155392&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this tweet&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
+library(gtrendsR)
+library(ggrepel)
+library(tidyverse)
+library(lubridate)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- gtrends(c(&amp;quot;inflation&amp;quot;, &amp;quot;unemployment&amp;quot;), geo = c(&amp;quot;US&amp;quot;))
+interest &amp;lt;- as_tibble(dat$interest_over_time)
+
+interest &amp;lt;- interest %&amp;gt;% 
+  rename(date_time = date) %&amp;gt;% 
+  mutate(date = as_date(date_time, tz = NULL),
+         my_label = case_when(
+    date == ymd(&amp;quot;2020-03-29&amp;quot;) ~ keyword,
+    TRUE ~ &amp;quot;&amp;quot;
+  ))
+
+ggplot(data = interest) +
+  geom_line(mapping = aes(x = date, y = hits, color = keyword),
+            size = 0.8) +
+  geom_text_repel(mapping = aes(x = date, y = hits, 
+                                label = my_label, color = keyword),
+                  max.overlaps = 100) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Index, maximum interest = 100&amp;quot;) +
+  scale_color_ordinal(end = 0.4) +
+  theme_minimal() +
+  guides(color = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://richryan.github.io/post/plotting-in-r/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;
+As Professor Wolfers put it:
+&amp;ldquo;But by jingo, there&amp;rsquo;s a lot more interest in unemployment than inflation.&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

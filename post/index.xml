@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts | RICH RYAN</title>
+    <link>https://richryan.github.io/post/</link>
+      <atom:link href="https://richryan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <description>Posts</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 R$^2$</copyright><lastBuildDate>Fri, 28 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://richryan.github.io/media/icon_hu8c4833a3093c88f1cebea6682ae07f17_1462702_512x512_fill_lanczos_center_2.PNG</url>
+      <title>Posts</title>
+      <link>https://richryan.github.io/post/</link>
+    </image>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://richryan.github.io/post/hello-world/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://richryan.github.io/post/hello-world/</guid>
+      <description>&lt;!-- &lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;&lt;/nav&gt;
+&lt;/details&gt;
+ --&gt;
+&lt;!-- {{ if .Params.toc }} --&gt;
+&lt;!-- {{ .TableOfContents }} --&gt;
+&lt;!-- {{ end }} --&gt;
+&lt;p&gt;Welcome to my professional website!&lt;/p&gt;
+&lt;!-- It is a pleasure to connect.  --&gt;
+&lt;p&gt;I made the devastating choice of updating Hugo and blogdown,
+which required a major revamp of my professional website
+This &lt;a href=&#34;https://alison.rbind.io/blog/2020-12-new-year-new-blogdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; 
+by &lt;a href=&#34;https://alison.rbind.io/about/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Alison Hill&lt;/a&gt;
+was useful for learning about the latest version of blogdown.&lt;/p&gt;
+&lt;p&gt;Below is documentation for writing Markdown.&lt;/p&gt;
+&lt;h1 id=&#34;math&#34;&gt;Math&lt;/h1&gt;
+&lt;!-- &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt; --&gt;
+&lt;script src=&#34;//yihui.org/js/math-code.js&#34;&gt;&lt;/script&gt;
+&lt;!-- &lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js&#34;&gt;&lt;/script&gt; --&gt;
+&lt;!-- &lt;script&gt; --&gt;
+&lt;!--   MathJax = { --&gt;
+&lt;!--     tex: { --&gt;
+&lt;!--       tags: &#39;ams&#39;,  // should be &#39;ams&#39;, &#39;none&#39;, or &#39;all&#39; --&gt;
+&lt;!--       tagSide: &#39;right&#39;, --&gt;
+&lt;!--       inlineMath: [              // start/end delimiter pairs for in-line math --&gt;
+&lt;!--       [&#39;$&#39;, &#39;$&#39;], --&gt;
+&lt;!--       [&#39;\\(&#39;, &#39;\\)&#39;] --&gt;
+&lt;!--       ], --&gt;
+&lt;!--     displayMath: [             // start/end delimiter pairs for display math --&gt;
+&lt;!--       [&#39;$$&#39;, &#39;$$&#39;], --&gt;
+&lt;!--       [&#39;\\[&#39;, &#39;\\]&#39;] --&gt;
+&lt;!--     ], --&gt;
+&lt;!--     processEscapes: true,      // use \$ to produce a literal dollar sign --&gt;
+&lt;!--     processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode --&gt;
+&lt;!--     processRefs: true          // process \ref{...} outside of math mode --&gt;
+&lt;!--     } --&gt;
+&lt;!--   }; --&gt;
+&lt;!-- &lt;/script&gt; --&gt;
+&lt;script async type=&#34;text/javascript&#34;
+  src=&#34;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&#34;&gt;
+&lt;/script&gt;
+&lt;script type=&#34;text/x-mathjax-config&#34;&gt;
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
+    displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\[&#39;,&#39;\]&#39;]],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;],
+    TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; },
+         extensions: [&#34;AMSmath.js&#34;, &#34;AMSsymbols.js&#34;] }
+  }
+});
+&lt;/script&gt;
+&lt;!-- \\( \alpha  \\) or `\(\beta\)`  --&gt;
+&lt;p&gt;Including &lt;code&gt;\(\LaTeX\)&lt;/code&gt; is straightforward:
+When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+&lt;code&gt;$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$&lt;/code&gt;&lt;/p&gt;
+&lt;!-- Academic supports a Markdown extension for `\(\LaTeX\)` math. You can enable this feature by toggling the `math` option in your `config/_default/params.toml` file. --&gt;
+&lt;!-- To render *inline* or *block* math, wrap your LaTeX math with `$...$` or `$$...$$`, respectively. --&gt;
+&lt;p&gt;Example &lt;strong&gt;math block&lt;/strong&gt;:&lt;/p&gt;
+&lt;!-- ```latex --&gt;
+&lt;!-- $$\gamma_{n} = \frac{  --&gt;
+&lt;!-- \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T  --&gt;
+&lt;!-- \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |} --&gt;
+&lt;!-- {\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$ --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- renders as --&gt;
+&lt;p&gt;&lt;code&gt;\begin{align*} \gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2} \end{align*}&lt;/code&gt;&lt;/p&gt;
+&lt;!-- Example **inline math** `\$\nabla F(\mathbf{x}_{n})\$` renders as  --&gt;
+&lt;!-- `\(\nabla F \left( \mathbf{x}_{n} \right)\)`. --&gt;
+&lt;!-- Example **multi-line math** using the `\\\\` math linebreak: --&gt;
+&lt;!-- ```latex --&gt;
+&lt;!-- $$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp; \text{if }k=1, \\\\ --&gt;
+&lt;!-- 1-p_{0}^{*} &amp; \text{if }k=0.\end{cases}$$ --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- renders as --&gt;
+&lt;!-- $$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} &amp; \text{if }k=1, \\ --&gt;
+&lt;!-- 1-p_{0}^{*} &amp; \text{if }k=0.\end{cases}$$ --&gt;
+&lt;h1 id=&#34;r&#34;&gt;R&lt;/h1&gt;
+&lt;p&gt;Here is R code that runs a linear regression:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;summary(cars)
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+fit &amp;lt;- lm(dist ~ speed, data = cars)
+summary(fit)
+## 
+## Call:
+## lm(formula = dist ~ speed, data = cars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -29.069  -9.525  -2.272   9.215  43.201 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&amp;gt;|t|)    
+## (Intercept) -17.5791     6.7584  -2.601   0.0123 *  
+## speed         3.9324     0.4155   9.464 1.49e-12 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 15.38 on 48 degrees of freedom
+## Multiple R-squared:  0.6511,	Adjusted R-squared:  0.6438 
+## F-statistic: 89.57 on 1 and 48 DF,  p-value: 1.49e-12
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And here is R code that plots figure &lt;a href=&#34;#fig:UR&#34;&gt;1&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
+library(tidyquant)
+## Loading required package: lubridate
+## 
+## Attaching package: &#39;lubridate&#39;
+## The following objects are masked from &#39;package:base&#39;:
+## 
+##     date, intersect, setdiff, union
+## Loading required package: PerformanceAnalytics
+## Loading required package: xts
+## Loading required package: zoo
+## 
+## Attaching package: &#39;zoo&#39;
+## The following objects are masked from &#39;package:base&#39;:
+## 
+##     as.Date, as.Date.numeric
+## 
+## Attaching package: &#39;PerformanceAnalytics&#39;
+## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     legend
+## Loading required package: quantmod
+## Loading required package: TTR
+## Registered S3 method overwritten by &#39;quantmod&#39;:
+##   method            from
+##   as.zoo.data.frame zoo
+## == Need to Learn tidyquant? ====================================================
+## Business Science offers a 1-hour course - Learning Lab #9: Performance Analysis &amp;amp; Portfolio Optimization with tidyquant!
+## &amp;lt;/&amp;gt; Learn more at: https://university.business-science.io/p/learning-labs-pro &amp;lt;/&amp;gt;
+dat &amp;lt;- tq_get(&amp;quot;UNRATE&amp;quot;, get = &amp;quot;economic.data&amp;quot;, from = &amp;quot;2000-01-01&amp;quot;)
+
+ggplot(data = dat) +
+  geom_line(mapping = aes(x = date, y = price)) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Percent of the laborforce&amp;quot;) +
+  theme_minimal()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://richryan.github.io/post/hello-world/index_files/figure-html/UR-1.png&#34; alt=&#34;Unemployment rate from 2000 onwards, monthly.&#34; width=&#34;672&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Figure 1: Unemployment rate from 2000 onwards, monthly.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Plotting in R</title>
+      <link>https://richryan.github.io/post/plotting-in-r/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://richryan.github.io/post/plotting-in-r/</guid>
+      <description>&lt;p&gt;Do people care more about inflation or unemployment?
+Here&amp;rsquo;s R code to reproduce a plot featured by Professor Justin Wolfers
+in &lt;a href=&#34;https://twitter.com/JustinWolfers/status/1394458987748155392&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this tweet&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;library(ggplot2)
+library(gtrendsR)
+library(ggrepel)
+library(tidyverse)
+library(lubridate)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;dat &amp;lt;- gtrends(c(&amp;quot;inflation&amp;quot;, &amp;quot;unemployment&amp;quot;), geo = c(&amp;quot;US&amp;quot;))
+interest &amp;lt;- as_tibble(dat$interest_over_time)
+
+interest &amp;lt;- interest %&amp;gt;% 
+  rename(date_time = date) %&amp;gt;% 
+  mutate(date = as_date(date_time, tz = NULL),
+         my_label = case_when(
+    date == ymd(&amp;quot;2020-03-29&amp;quot;) ~ keyword,
+    TRUE ~ &amp;quot;&amp;quot;
+  ))
+
+ggplot(data = interest) +
+  geom_line(mapping = aes(x = date, y = hits, color = keyword),
+            size = 0.8) +
+  geom_text_repel(mapping = aes(x = date, y = hits, 
+                                label = my_label, color = keyword),
+                  max.overlaps = 100) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;Index, maximum interest = 100&amp;quot;) +
+  scale_color_ordinal(end = 0.4) +
+  theme_minimal() +
+  guides(color = FALSE)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://richryan.github.io/post/plotting-in-r/index_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;
+As Professor Wolfers put it:
+&amp;ldquo;But by jingo, there&amp;rsquo;s a lot more interest in unemployment than inflation.&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

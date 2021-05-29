@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses | RICH RYAN</title>
+    <link>https://richryan.github.io/courses/</link>
+      <atom:link href="https://richryan.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
+    <description>Courses</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 R$^2$</copyright><lastBuildDate>Sat, 29 May 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://richryan.github.io/media/icon_hu8c4833a3093c88f1cebea6682ae07f17_1462702_512x512_fill_lanczos_center_2.PNG</url>
+      <title>Courses</title>
+      <link>https://richryan.github.io/courses/</link>
+    </image>
+    
+  </channel>
+</rss>
