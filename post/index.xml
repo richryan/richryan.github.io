@@ -5,12 +5,21 @@
     <link>https://richryan.github.io/post/</link>
       <atom:link href="https://richryan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 R$^2$</copyright><lastBuildDate>Wed, 16 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 R$^2$</copyright><lastBuildDate>Fri, 22 Apr 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://richryan.github.io/media/icon_hu8c4833a3093c88f1cebea6682ae07f17_1462702_512x512_fill_lanczos_center_2.PNG</url>
       <title>Posts</title>
       <link>https://richryan.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Slides for Kern Economic Summit</title>
+      <link>https://richryan.github.io/post/slides-for-kern-economic-summit/</link>
+      <pubDate>Fri, 22 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>https://richryan.github.io/post/slides-for-kern-economic-summit/</guid>
+      <description>&lt;p&gt;Here is the &lt;a href=&#34;https://csub.box.com/s/wt4z36cwr9kn9gke3lq5jscml1hcge7g&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;link&lt;/a&gt; to slides given at the Kern Economic Summit.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Slides on UBI for Political Science Senior Seminar</title>
